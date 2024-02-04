@@ -84,7 +84,7 @@ header{
     line-height: 95%;
     padding-left: 6%;
     padding-right: 6%;
-    margin-top: 17%;
+    margin-top: 25%;
 }
 
 .first-section{
@@ -171,9 +171,103 @@ header{
     display: flex;
 }
 
-.header-positives{
+.header-positives-first{
     font-family: Cairo;
     font-weight: 400;
     color: #B48D56;
     font-size: 28px;
+    margin-bottom: 0;
+}
+
+.positive-content-first{
+    font-family: Cairo;
+    font-size: 24px;
+    font-weight: 200;
+    color: #FFFFFF;
+    opacity: 70%;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.first-column{
+    padding-top: 5%;
+    width: 35%;
+    padding-left: 7%;
+}
+
+.second-column{
+    padding-top: 5%;
+    width: 35%;
+    padding-left: 0.5%;
+    padding-right: 7%;
+}
+
+.header-positives-second{
+    font-family: Cairo;
+    font-weight: 400;
+    color: #B48D56;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.positive-content-second{
+    font-family: 'Cairo';
+    font-size: 24px;
+    font-weight: 200;
+    color: #FFFFFF;
+    opacity: 70%;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.line{
+    color: #FFFFFF;
+    opacity: 20%;
+}
+
+.since-text{
+    padding-top: 1%;
+    margin-left: 20px;
+    font-family: 'Sawarabi Mincho';
+    font-weight: lighter;
+    font-size: 28px;
+    color: #FFFFFF;
+    opacity: 80%;
+    text-decoration: line-through #B48D56;
+}
+
+.exclusive-content{
+    margin-top: 4%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.square-container{
+    width: 18%;
+    height: 30vh;
+    border: 1px solid #B48D56;
+    text-align: center;
+}
+
+.header-of-square{
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.content-of-square{
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: lighter;
+    color: #FFFFFF;
+}
+
+.brands{
+    font-family: 'Cairo';
+    font-weight: 100;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: center;
 }
