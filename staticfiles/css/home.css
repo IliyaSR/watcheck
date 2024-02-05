@@ -233,7 +233,7 @@ header{
     font-size: 28px;
     color: #FFFFFF;
     opacity: 80%;
-    text-decoration: line-through #B48D56;
+    text-decoration: underline #B48D56;
 }
 
 .exclusive-content{
@@ -271,3 +271,14 @@ header{
     color: #FFFFFF;
     text-align: center;
 }
+
+footer{
+    background-color: #F2EBDF;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.customer-service-content{
+    display: flex;
+}
+
