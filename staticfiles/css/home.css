@@ -272,6 +272,8 @@ header{
     text-align: center;
 }
 
+/* Footer */
+
 footer{
     background-color: #F2EBDF;
     padding-left: 3%;
@@ -282,3 +284,39 @@ footer{
     display: flex;
 }
 
+.first-customer-service{
+    padding-right: 130px;
+}
+
+.customer-service-header{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    color: #404040;
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-top: 17px;
+}
+
+.customer-service-content p{
+    font-family: 'Poppins';
+    font-weight: lighter;
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+.customer-service-content{
+    border-top: 1px solid #B48D56;
+    width: 24%;
+    padding-bottom: 17px;
+}
+
+footer{
+    display: flex;
+}
+
+.customer-service{
+    width: 800px;
+}
