@@ -309,14 +309,48 @@ footer{
 
 .customer-service-content{
     border-top: 1px solid #B48D56;
-    width: 24%;
+    width: 420px;
     padding-bottom: 17px;
 }
 
-footer{
+.footer-container{
     display: flex;
 }
 
-.customer-service{
-    width: 800px;
+.about-header{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    color: #404040;
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-top: 17px;
+}
+
+.about-content{
+    display: flex;
+    border-top: 1px solid #B48D56;
+    width: 420px;
+    padding-bottom: 17px;
+}
+
+.first-about{
+    padding-right: 130px;
+}
+
+.about-content p{
+    font-family: 'Poppins';
+    font-weight: lighter;
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+.about{
+    margin-left: 250px;
+}
+
+.email{
+    display: flex;
 }
