@@ -270,6 +270,7 @@ header{
     font-size: 36px;
     color: #FFFFFF;
     text-align: center;
+    margin-bottom: 0;
 }
 
 /* Footer */
@@ -315,6 +316,7 @@ footer{
 
 .footer-container{
     display: flex;
+    justify-content: space-between;
 }
 
 .about-header{
@@ -347,10 +349,35 @@ footer{
     margin-top: 7px;
 }
 
-.about{
-    margin-left: 250px;
-}
+
 
 .email{
     display: flex;
+}
+
+.subscribe-header{
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: bold;
+    color: #404040;
+    margin-bottom: 7px;
+}
+
+.input-email{
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 4vh;
+    border: 0;
+    padding-left: 30px;
+}
+
+.sign-up-button{
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #000000;
+    opacity: 90%;
+    padding: 8px;
+    cursor: pointer;
 }
