@@ -66,11 +66,98 @@ header{
     cursor: pointer;
 }
 
+/* Main */
 
+main{
+    background-color: #000000;
+}
 
+.main-header{
+    font-family: 'Poppins';
+    font-weight: lighter;
+    font-size: 46px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
 
+.main-image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.botique-container{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
 
+.botique-content{
+    font-family: 'Cairo';
+    font-weight: 200;
+    font-size: 38px;
+    color: #FFFFFF;
+    width: 50%;
+    margin-top: 0;
+}
+
+.brand-container{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.brand-second-container{
+    width: 50%;
+}
+
+.brand-content{
+    font-family: 'Cairo';
+    font-weight: 200;
+    font-size: 38px;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.brand-second-content{
+    font-family: 'Cairo';
+    font-weight: 200;
+    font-size: 38px;
+    color: #FFFFFF;
+}
+
+.stores-container{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stores-second-container{
+    width: 45%;
+}
+
+.stores-content{
+    font-family: 'Cairo';
+    font-weight: 200;
+    font-size: 38px;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.stores-second-content{
+    font-family: 'Cairo';
+    font-weight: 200;
+    font-size: 38px;
+    color: #FFFFFF;
+}
+
+.stores-image{
+    height: 516px;
+    width: 779px;
+}
 
 /* Footer */
 
