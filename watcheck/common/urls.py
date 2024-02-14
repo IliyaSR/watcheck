@@ -3,5 +3,7 @@ from django.urls import path, include
 from watcheck.common import views
 
 urlpatterns = [
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('stores/', views.stores, name='stores')
 ]
