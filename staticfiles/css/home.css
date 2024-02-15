@@ -1,5 +1,5 @@
 /* HEADER */
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-header{
+header {
     background-color: #F2EBDF;
     opacity: 100%;
     top: 0;
@@ -23,14 +23,14 @@ header{
     cursor: pointer;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.nav-links{
+.nav-links {
     width: 75%;
     display: flex;
     text-align: center;
@@ -39,29 +39,34 @@ header{
     padding-left: 0;
 }
 
-.nav-links li{
+.nav-links li {
     font-family: Poppins;
     font-size: 19px;
     font-weight: 500;
 }
 
-.link{
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+}
+
+.link {
     padding-left: 2%;
 }
 
 
-.nav-links li:hover{
+.nav-links li a:hover {
     text-decoration: underline;
     color: #B48D56;
     cursor: pointer;
 }
 
-.icons-contaniner{
+.icons-contaniner {
     width: 10%;
     text-align: end;
 }
 
-.icons-contaniner a{
+.icons-contaniner a {
     padding-left: 5%;
     cursor: pointer;
 }
@@ -70,11 +75,14 @@ header{
 /* MAIN */
 
 
+
+
+
 .first-section {
     background-color: #000000;
 }
 
-.main-header{
+.main-header-home {
     font-family: Bungee Hairline;
     color: #E7CFAC;
     opacity: 100%;
@@ -87,11 +95,11 @@ header{
     margin-top: 25%;
 }
 
-.first-section{
+.first-section {
     display: flex;
 }
 
-.shop-button{
+.shop-button {
     color: #F2EBDF;
     opacity: 67%;
     font-family: Poppins;
@@ -101,7 +109,7 @@ header{
     cursor: pointer;
 }
 
-.something{
+.something {
     text-align: center;
 }
 
@@ -120,11 +128,11 @@ header{
 }
 
 
-.second-section{
+.second-section {
     background-color: #191919;
 }
 
-.new-collection{
+.new-collection {
     color: #FFFFFF;
     opacity: 70%;
     font-family: Poppins;
@@ -134,21 +142,21 @@ header{
     margin: 0;
 }
 
-.collection-images{
+.collection-images {
     text-align: center;
     height: 73.2vh;
 }
 
-.second-section-image{
+.second-section-image {
     max-width: 100%;
     height: auto;
 }
 
-.third-section{
+.third-section {
     background-color: #000000;
 }
 
-.third-section-header{
+.third-section-header {
     font-family: Poppins;
     color: #B48D56;
     font-weight: lighter;
@@ -159,7 +167,7 @@ header{
     margin-bottom: 0;
 }
 
-.third-section-content{
+.third-section-content {
     color: #FFFFFF;
     font-size: 35px;
     font-weight: 300;
@@ -167,11 +175,11 @@ header{
     margin-top: 0;
 }
 
-.third-section-positives{
+.third-section-positives {
     display: flex;
 }
 
-.header-positives-first{
+.header-positives-first {
     font-family: Cairo;
     font-weight: 400;
     color: #B48D56;
@@ -179,7 +187,7 @@ header{
     margin-bottom: 0;
 }
 
-.positive-content-first{
+.positive-content-first {
     font-family: Cairo;
     font-size: 24px;
     font-weight: 200;
@@ -189,20 +197,20 @@ header{
     margin-bottom: 10px;
 }
 
-.first-column{
+.first-column {
     padding-top: 5%;
     width: 35%;
     padding-left: 7%;
 }
 
-.second-column{
+.second-column {
     padding-top: 5%;
     width: 35%;
     padding-left: 0.5%;
     padding-right: 7%;
 }
 
-.header-positives-second{
+.header-positives-second {
     font-family: Cairo;
     font-weight: 400;
     color: #B48D56;
@@ -210,7 +218,7 @@ header{
     margin-bottom: 0;
 }
 
-.positive-content-second{
+.positive-content-second {
     font-family: 'Cairo';
     font-size: 24px;
     font-weight: 200;
@@ -220,12 +228,12 @@ header{
     margin-bottom: 10px;
 }
 
-.line{
+.line {
     color: #FFFFFF;
     opacity: 20%;
 }
 
-.since-text{
+.since-text {
     padding-top: 1%;
     margin-left: 20px;
     font-family: 'Sawarabi Mincho';
@@ -236,35 +244,35 @@ header{
     text-decoration: underline #B48D56;
 }
 
-.exclusive-content{
+.exclusive-content {
     margin-top: 4%;
     margin-bottom: 25px;
     display: flex;
     justify-content: space-around;
 }
 
-.square-container{
+.square-container {
     width: 18%;
     height: 30vh;
     border: 1px solid #B48D56;
     text-align: center;
 }
 
-.header-of-square{
+.header-of-square {
     font-family: 'Poppins';
     font-weight: 200;
     font-size: 16px;
     color: #FFFFFF;
 }
 
-.content-of-square{
+.content-of-square {
     font-family: 'Poppins';
     font-size: 12px;
     font-weight: lighter;
     color: #FFFFFF;
 }
 
-.brands{
+.brands {
     font-family: 'Cairo';
     font-weight: 100;
     font-size: 36px;
@@ -275,21 +283,21 @@ header{
 
 /* Footer */
 
-footer{
+footer {
     background-color: #F2EBDF;
     padding-left: 3%;
     padding-right: 3%;
 }
 
-.customer-service-content{
+.customer-service-content {
     display: flex;
 }
 
-.first-customer-service{
+.first-customer-service {
     padding-right: 130px;
 }
 
-.customer-service-header{
+.customer-service-header {
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 16px;
@@ -299,7 +307,7 @@ footer{
     padding-top: 17px;
 }
 
-.customer-service-content p{
+.customer-service-content p {
     font-family: 'Poppins';
     font-weight: lighter;
     color: #404040;
@@ -308,18 +316,18 @@ footer{
     margin-top: 7px;
 }
 
-.customer-service-content{
+.customer-service-content {
     border-top: 1px solid #B48D56;
     width: 420px;
     padding-bottom: 17px;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-between;
 }
 
-.about-header{
+.about-header {
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 16px;
@@ -329,18 +337,18 @@ footer{
     padding-top: 17px;
 }
 
-.about-content{
+.about-content {
     display: flex;
     border-top: 1px solid #B48D56;
     width: 420px;
     padding-bottom: 17px;
 }
 
-.first-about{
+.first-about {
     padding-right: 130px;
 }
 
-.about-content p{
+.about-content p {
     font-family: 'Poppins';
     font-weight: lighter;
     color: #404040;
@@ -350,12 +358,11 @@ footer{
 }
 
 
-
-.email{
+.email {
     display: flex;
 }
 
-.subscribe-header{
+.subscribe-header {
     font-family: 'Poppins';
     font-size: 14px;
     font-weight: bold;
@@ -363,7 +370,7 @@ footer{
     margin-bottom: 7px;
 }
 
-.input-email{
+.input-email {
     background-color: #FFFFFF;
     width: 400px;
     height: 4vh;
@@ -371,7 +378,7 @@ footer{
     padding-left: 30px;
 }
 
-.sign-up-button{
+.sign-up-button {
     font-family: 'Poppins';
     font-size: 13px;
     font-weight: 500;

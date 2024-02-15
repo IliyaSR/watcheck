@@ -1,89 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/staticfiles/css/about-us.css">
-    <link href='https://fonts.googleapis.com/css?family=Sawarabi Mincho' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <h1 class="logo"><a>WATCHECK</a></h1>
-            <ul class="nav-links">
-                <li><a>Home</a></li>
-                <li class="link"><a>Men's</a></li>
-                <li class="link"><a>Women's</a></li>
-                <li class="link"><a>Stores</a></li>
-                <li class="link"><a>About Us</a></li>
-            </ul>
-            <div class="icons-contaniner">
-                <a><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a><i class="fa-solid fa-bag-shopping"></i></a>
-                <a><i class="fa-solid fa-user"></i></a>
-            </div>
-        </nav>
-    </header>
+{% extends 'base.html' %}
+
+{% block main_content %}
     <main>
-        <h2 class="main-header">About Us</h2>
+        <h2 class="main-header-about">About Us</h2>
         <img class="main-image" src="/staticfiles/images/Group 1000003598.png">
         <div class="botique-container">
-            <p class="botique-content">Watcheck boutiques are the undisputed leader in the trade and service of watches. Over time, the company has become a symbol of professionalism, kindness and high standards, and Watcheck boutiques are the best destination for luxury watches and jewelry in Italy.</p>
+            <p class="botique-content">Watcheck boutiques are the undisputed leader in the trade and service of watches.
+                Over time, the company has become a symbol of professionalism, kindness and high standards, and Watcheck
+                boutiques are the best destination for luxury watches and jewelry in Italy.</p>
             <img src="/staticfiles/images/Group 1000003606.png" alt="">
         </div>
         <div class="brand-container">
             <img src="/staticfiles/images/image 2.png" alt="">
             <div class="brand-second-container">
-                <p class="brand-content">As an official representative of world leaders in the industry, namely brands such as Omega, Breitling, Zenith, Tag Heuer, Rado, Longines, Montblanc, Roberto Coin, Marco Bicego, Damiani and others, the Watcheck company is a pioneer at the national and regional level.</p>
-                <p class="brand-second-content">The story begins way back in 1990 and represents an endless quest to improve and meet the highest standards.</p>
+                <p class="brand-content">As an official representative of world leaders in the industry, namely brands
+                    such as Omega, Breitling, Zenith, Tag Heuer, Rado, Longines, Montblanc, Roberto Coin, Marco Bicego,
+                    Damiani and others, the Watcheck company is a pioneer at the national and regional level.</p>
+                <p class="brand-second-content">The story begins way back in 1990 and represents an endless quest to
+                    improve and meet the highest standards.</p>
             </div>
         </div>
         <div class="stores-container">
             <div class="stores-second-container">
-                <p class="stores-content">Today Watcheck has stores in Rome, Milano, Florence, and Verona, as well as the only Service Center of its kind in Italy and the region for all kinds of repair and maintenance of watches. We at Watcheck believe that every customer deserves competent and courteous service, and we strive not only to meet foreign standards, but also to further develop and raise them, guaranteeing the highest quality, authenticity of products and peace of mind after purchase.</p>
+                <p class="stores-content-about-page">Today Watcheck has stores in Rome, Milano, Florence, and Verona, as well as
+                    the only Service Center of its kind in Italy and the region for all kinds of repair and maintenance
+                    of watches. We at Watcheck believe that every customer deserves competent and courteous service, and
+                    we strive not only to meet foreign standards, but also to further develop and raise them,
+                    guaranteeing the highest quality, authenticity of products and peace of mind after purchase.</p>
                 <p class="stores-second-content">When you think watches, think the best in the business, think us.</p>
             </div>
             <img class="stores-image" src="/staticfiles/images/Group 1000003607.png" alt="">
         </div>
     </main>
-    <footer>
-        <div class="footer-container">
-            <div class="customer-service">
-                <h4 class="customer-service-header">Customer service</h4>
-                <div class="customer-service-content">
-                    <div class="first-customer-service">
-                        <p>Guarantee & Warranty</p>
-                        <p>Shipping Policy</p>
-                    </div>
-                    <div class="second-customer-service">
-                        <p>Payment Options</p>
-                        <p>Contact Us</p>
-                    </div>
-                </div>
-            </div>
-            <div class="about">
-                <h4 class="about-header">About WATCHECK</h4>
-                <div class="about-content">
-                    <div class="first-about">
-                        <p>About Us</p>
-                        <p>FAQ</p>
-                    </div>
-                    <p>Reviews</p>
-                </div>
-            </div>
-            <div class="subscribe">
-                <h4 class="subscribe-header">Subscribe to out newsletter</h4>
-                <div class="email">
-                    <input class="input-email" type="text" placeholder="Your Email Address">
-                    <a class="sign-up-button">Sign Up</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock %}
