@@ -38,7 +38,102 @@
                 <p>Experience the Ultimate in Luxury and Style, Because You Deserve it!</p>
             </div>
         </div>
-        <div class="second-section-shop">
+        <h2 class="filter-section-header">Filters</h2>
+        <div class="filter-section">
+            <div class="filter-container">
+                <ul class="filters">
+                    <div class="current-filters">
+                        <li>Brand</li>
+                        <img src="../staticfiles/images/Vector(10).png" alt="" id="toggle-image">
+                        <ul id="toggle-ul">
+                            <div class="toggle-ul-container">
+                                <input type="checkbox" checked="checked">
+                                <li>Item 1</li>
+                            </div>
+                            <div class="toggle-ul-container">
+                                <input type="checkbox" checked="checked">
+                                <li>Item 1</li>
+                            </div>
+                            <div class="toggle-ul-container">
+                                <input type="checkbox" checked="checked">
+                                <li>Item 1</li>
+                            </div>
+                          </ul>
+                    </div>
+                    <div class="current-filters">
+                        <li>Style</li>
+                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    </div>
+                    <div class="current-filters">
+                        <li>Case Material</li>
+                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    </div>
+                    <div class="current-filters">
+                        <li>Price</li>
+                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    </div>
+                    <div class="current-filters">
+                        <li>Dial Color</li>
+                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    </div>
+                    <div class="current-filters">
+                        <li>Case Diameter</li>
+                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    </div>
+                </ul>
+            </div>
+            <div class="watches-container">
+                <div class="watches-images">
+                    <div class="image">
+                        <img src="../staticfiles/images/image 11.png" alt="">
+                        <div class="name-price-container">
+                            <h4 class="watch-name">ARNOLD & SON</h4>
+                            <p class="watch-price">$830</p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../staticfiles/images/image 12.png" alt="">
+                        <div class="name-price-container">
+                            <h4 class="watch-name">ARNOLD & SON</h4>
+                            <p class="watch-price">$830</p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../staticfiles/images/image 9.png" alt="">
+                        <div class="name-price-container">
+                            <h4 class="watch-name">ARNOLD & SON</h4>
+                            <p class="watch-price">$830</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="watches-images">
+                    <div class="image">
+                        <img src="../staticfiles/images/image 11.png" alt="">
+                        <div class="name-price-container">
+                            <h4 class="watch-name">ARNOLD & SON</h4>
+                            <p class="watch-price">$830</p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../staticfiles/images/image 12.png" alt="">
+                        <div class="name-price-container">
+                            <h4 class="watch-name">ARNOLD & SON</h4>
+                            <p class="watch-price">$830</p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../staticfiles/images/image 9.png" alt="">
+                        <div class="name-price-container">
+                            <h4 class="watch-name">ARNOLD & SON</h4>
+                            <p class="watch-price">$830</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -64,7 +159,7 @@
                         <p>FAQ</p>
                     </div>
                     <p>Reviews</p>
-                </div> 
+                </div>
             </div>
             <div class="subscribe">
                 <h4 class="subscribe-header">Subscribe to out newsletter</h4>
@@ -75,5 +170,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Get reference to the image and ul element
+        const toggleImage = document.getElementById('toggle-image');
+        const toggleUl = document.getElementById('toggle-ul');
+
+        // Add click event listener to the image
+        toggleImage.addEventListener('click', function() {
+          // Toggle the visibility of the ul
+          if (toggleUl.style.display === 'none') {
+            toggleUl.style.display = 'block';
+          } else {
+            toggleUl.style.display = 'none';
+          }
+        });
+        </script>
 </body>
 </html>
+

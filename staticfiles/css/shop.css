@@ -100,8 +100,6 @@ main{
     left: 3%;
 }
 
-.first-section img{
-}
 
 .first-section-text h3{
     font-family: 'Poppins';
@@ -119,6 +117,89 @@ main{
     color: #272727;
     width: 400px;
 
+}
+
+.filter-section{
+    color: #FFFFFF;
+    opacity: 80%;
+    margin-left: 50px;
+    display: flex;
+}
+
+.filter-section-header{
+    font-family: 'Poppins';
+    font-size: 34px;
+    font-weight: 500;
+    padding-left: 65px;
+    color: #FFFFFF;
+    opacity: 80%;
+}
+
+.filters{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-size: 21px;
+    font-weight: 500;
+    width: 300px;
+}
+
+.toggle-ul-container{
+    display: flex;
+}
+
+.toggle-ul-container input{
+    color: black;
+    margin-right: 12px;
+    accent-color: #FFFFFF;
+}
+
+
+#toggle-image{
+    cursor: pointer;
+    display: block;
+}
+
+.current-filters{
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    padding-left: 35px;
+    padding-bottom: 7px;
+    display: flex;
+}
+
+.current-filters img{
+    height: 25.95px;
+    width: 24px;
+    left: 16.5%;
+    position: absolute;
+}
+
+.watches-container{
+    width: 100%;
+}
+
+.watches-images{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.watch-name{
+    margin-top: 16px;
+}
+
+.name-price-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggle-ul{
+    list-style-type: none;
+    padding-top: 50px;
+    padding-left: 0;
+    position: relative;
+    right: 18%;
 }
 /* Footer */
 
