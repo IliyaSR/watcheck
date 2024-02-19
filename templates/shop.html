@@ -42,43 +42,137 @@
         <div class="filter-section">
             <div class="filter-container">
                 <ul class="filters">
-                    <div class="current-filters">
-                        <li>Brand</li>
-                        <img src="../staticfiles/images/Vector(10).png" alt="" id="toggle-image">
-                        <ul id="toggle-ul">
-                            <div class="toggle-ul-container">
-                                <input type="checkbox" checked="checked">
-                                <li>Item 1</li>
+                    <div class="filters-container">
+                        <div class="current-filters">
+                            <li>Brand</li>
+                            <img src="../staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
                             </div>
-                            <div class="toggle-ul-container">
-                                <input type="checkbox" checked="checked">
-                                <li>Item 1</li>
+                        </ul>
+                    </div>
+                    <div class="filters-container">
+                        <div class="current-filters">
+                            <li>Style</li>
+                            <img src="../staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
                             </div>
-                            <div class="toggle-ul-container">
-                                <input type="checkbox" checked="checked">
-                                <li>Item 1</li>
+                        </ul>
+                    </div>
+                    <div class="filters-container">
+                        <div class="current-filters">
+                            <li>Case Material</li>
+                            <img src="../staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
                             </div>
-                          </ul>
+                        </ul>
                     </div>
-                    <div class="current-filters">
-                        <li>Style</li>
-                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    <div class="filters-container">
+                        <div class="current-filters">
+                            <li>Price</li>
+                            <img src="../staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                            </div>
+                        </ul>
                     </div>
-                    <div class="current-filters">
-                        <li>Case Material</li>
-                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    <div class="filters-container">
+                        <div class="current-filters">
+                            <li>Dial Color</li>
+                            <img src="../staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                            </div>
+                        </ul>
                     </div>
-                    <div class="current-filters">
-                        <li>Price</li>
-                        <img src="../staticfiles/images/Vector(10).png" alt="">
-                    </div>
-                    <div class="current-filters">
-                        <li>Dial Color</li>
-                        <img src="../staticfiles/images/Vector(10).png" alt="">
-                    </div>
-                    <div class="current-filters">
-                        <li>Case Diameter</li>
-                        <img src="../staticfiles/images/Vector(10).png" alt="">
+                    <div class="filters-container">
+                        <div class="current-filters">
+                            <li>Case Diameter</li>
+                            <img src="../staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox">
+                                    <li>Item 1</li>
+                                </div>
+                            </div>
+                        </ul>
                     </div>
                 </ul>
             </div>
@@ -172,20 +266,11 @@
     </footer>
 
     <script>
-        // Get reference to the image and ul element
-        const toggleImage = document.getElementById('toggle-image');
-        const toggleUl = document.getElementById('toggle-ul');
-
-        // Add click event listener to the image
-        toggleImage.addEventListener('click', function() {
-          // Toggle the visibility of the ul
-          if (toggleUl.style.display === 'none') {
-            toggleUl.style.display = 'block';
-          } else {
-            toggleUl.style.display = 'none';
-          }
-        });
-        </script>
+        function toggleList(element) {
+            var ul = element.parentElement.nextElementSibling;
+            ul.classList.toggle("hidden");
+        }
+    </script>
 </body>
 </html>
 

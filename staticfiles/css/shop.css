@@ -145,6 +145,10 @@ main{
     width: 300px;
 }
 
+.plus{
+    cursor: pointer;
+}
+
 .toggle-ul-container{
     display: flex;
 }
@@ -155,17 +159,32 @@ main{
     accent-color: #FFFFFF;
 }
 
+.toggle-ul-container li{
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    opacity: 85%;
+    list-style-type: none;
+}
 
-#toggle-image{
-    cursor: pointer;
-    display: block;
+.hidden{
+    display: none;
+    padding: 0;
+}
+
+.hidden-container{
+    padding-bottom: 5px;
+}
+
+.filters-container{
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 10px;
 }
 
 .current-filters{
-    margin-bottom: 20px;
-    border-bottom: 1px solid white;
+    margin-bottom: 10px;
     padding-left: 35px;
-    padding-bottom: 7px;
     display: flex;
 }
 
@@ -194,13 +213,6 @@ main{
     justify-content: space-between;
 }
 
-#toggle-ul{
-    list-style-type: none;
-    padding-top: 50px;
-    padding-left: 0;
-    position: relative;
-    right: 18%;
-}
 /* Footer */
 
 footer{
