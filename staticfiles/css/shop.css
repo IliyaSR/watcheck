@@ -85,133 +85,182 @@ header{
 
 
 /* MAIN */
-
 main{
     background-color: #000000;
 }
 
-.first-section{
-    position: relative;
-}
-
-.first-section-text{
-    position: absolute;
-    top: 30%;
-    left: 3%;
-}
-
-
-.first-section-text h3{
-    font-family: 'Poppins';
-    font-size: 34px;
-    font-weight: 300;
-    color: #272727;
-    margin-bottom: 4px;
-}
-
-.first-section-text p{
-    margin-top: 7px;
-    font-size: 20px;
-    font-family: 'Poppins';
-    font-weight: 300;
-    color: #272727;
-    width: 400px;
-
-}
-
-.filter-section{
+.main-header-sign-in{
+    font-family: 'Sawarabi Mincho';
+    font-size: 32px;
     color: #FFFFFF;
-    opacity: 80%;
-    margin-left: 50px;
-    display: flex;
-}
-
-.filter-section-header{
-    font-family: 'Poppins';
-    font-size: 34px;
-    font-weight: 500;
-    padding-left: 65px;
-    color: #FFFFFF;
-    opacity: 80%;
-}
-
-.filters{
-    list-style-type: none;
+    font-weight: 600;
+    text-align: center;
     margin: 0;
-    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.sign-in-container{
+    width: 1000px;
+    height: 750px;
+    background-color: #FFFFFF;
+    margin: auto;
+}
+
+.container-header a{
     font-family: 'Poppins';
-    font-size: 21px;
-    font-weight: 500;
-    width: 300px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
 }
 
-.plus{
-    cursor: pointer;
-}
-
-.toggle-ul-container{
+.container-header{
     display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
 }
 
-.toggle-ul-container input{
-    color: black;
-    margin-right: 12px;
-    accent-color: #FFFFFF;
+.vertical-line{
+    border-left: 2px solid #939393;
+    height: 35px;
+    display: inline-block;
 }
 
-.toggle-ul-container li{
+.horizontal-line{
+    border-top: 2px solid #939393;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.email-sign-in{
     font-family: 'Poppins';
-    font-size: 15px;
-    font-weight: lighter;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    position: relative;
+    left: 29%;
+    margin-bottom: 15px;
+    margin-top: 80px;
+}
+
+.password-sign-in{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    position: relative;
+    left: 29%;
+    margin-bottom: 15px;
+}
+
+.email-sign-in-input{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    height: 50px;
+    width: 420px;
+    font-size: 17px;
+}
+
+.password-sign-in-input{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    height: 50px;
+    width: 420px;
+    font-size: 17px;
+}
+
+.sign-in-button{
+    display: block;
+    text-decoration: none;
+    width: 420px;
+    height: 50px;
+    font-size: 22px;
     color: #FFFFFF;
-    opacity: 85%;
-    list-style-type: none;
+    background-color: #000000;
+    font-weight: 500;
+    margin: 35px auto;
+    text-align: center;
+    padding-top: 8px;
+    font-family: 'Poppins';
 }
 
-.hidden{
-    display: none;
-    padding: 0;
+.forgot-password{
+    display: block;
+    color: #000000;
+    font-family: 'Poppins';
+    font-size: 17px;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration: none;
+    opacity: 90%;
 }
 
-.hidden-container{
-    padding-bottom: 5px;
+
+.some-p{
+    display: block;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.filters-container{
-    border-bottom: 1px solid #FFFFFF;
-    margin-bottom: 10px;
-}
-
-.current-filters{
-    margin-bottom: 10px;
-    padding-left: 35px;
-    display: flex;
-}
-
-.current-filters img{
-    height: 25.95px;
-    width: 24px;
-    left: 16.5%;
-    position: absolute;
-}
-
-.watches-container{
-    width: 100%;
-}
-
-.watches-images{
+.icons{
     display: flex;
     justify-content: space-evenly;
 }
 
-.watch-name{
-    margin-top: 16px;
+.google{
+    display: flex;
+    width: 240px;
+    border: 1px solid black;
+    justify-content: space-evenly;
 }
 
-.name-price-container{
-    display: flex;
-    justify-content: space-between;
+.google p{
+    font-family: 'Poppins';
+    font-size: 21px;
+    font-weight: 600;
+    color: #000000;
+    margin: 15px;
 }
+
+.google img{
+    height: 42px;
+    width: 42px;
+    margin: auto 0;
+}
+
+.facebook{
+    display: flex;
+    width: 240px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+
+.facebook p{
+    font-family: 'Poppins';
+    font-size: 21px;
+    font-weight: 600;
+    color: #000000;
+    margin: 15px;
+}
+
+.facebook img{
+    height: 42px;
+    width: 42px;
+    margin: auto 0;
+}
+
+.some{
+    height: 100px;
+}
+
 
 /* Footer */
 
