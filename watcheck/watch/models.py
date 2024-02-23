@@ -3,12 +3,12 @@ from django.db import models
 
 # Create your models here.
 class Watch(models.Model):
-    main_image = models.ImageField()
-    image_for_shop_page = models.ImageField()
-    first_small_image = models.ImageField()
-    second_small_image = models.ImageField()
-    third_small_image = models.ImageField()
-    fourth_small_image = models.ImageField()
+    main_image = models.ImageField(upload_to='images/')
+    image_for_shop_page = models.ImageField(upload_to='images/')
+    first_small_image = models.ImageField(upload_to='images/')
+    second_small_image = models.ImageField(upload_to='images/')
+    third_small_image = models.ImageField(upload_to='images/')
+    fourth_small_image = models.ImageField(upload_to='images/')
     brand = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
     details_text = models.TextField()

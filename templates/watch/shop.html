@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block main_content %}
-        <main>
+    <main>
         <div class="first-section">
             <img src="/staticfiles/images/image%201%2010.png" alt="">
             <div class="first-section-text">
@@ -15,7 +15,8 @@
                     <div class="filters-container">
                         <div class="current-filters">
                             <li>Brand</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -37,7 +38,8 @@
                     <div class="filters-container">
                         <div class="current-filters">
                             <li>Style</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -59,7 +61,8 @@
                     <div class="filters-container">
                         <div class="current-filters">
                             <li>Case Material</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -81,7 +84,8 @@
                     <div class="filters-container">
                         <div class="current-filters">
                             <li>Price</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -103,7 +107,8 @@
                     <div class="filters-container">
                         <div class="current-filters">
                             <li>Dial Color</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -125,7 +130,8 @@
                     <div class="filters-container">
                         <div class="current-filters">
                             <li>Case Diameter</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus" onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -148,54 +154,15 @@
             </div>
             <div class="watches-container">
                 <div class="watches-images">
-                    <div class="image">
-                        <img src="/staticfiles/images/image 11.png" alt="">
-                        <div class="name-price-container">
-                            <h4 class="watch-name">ARNOLD & SON</h4>
-                            <p class="watch-price">$830</p>
+                    {% for watch in watches %}
+                        <div class="image">
+                            <img src="/images/image_123.png" alt="">
+                            <div class="name-price-container">
+                                <h4 class="watch-name">{{ watch.brand }}</h4>
+                                <p class="watch-price">${{ watch.price }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="image">
-                        <img src="/staticfiles/images/image 12.png" alt="">
-                        <div class="name-price-container">
-                            <h4 class="watch-name">ARNOLD & SON</h4>
-                            <p class="watch-price">$830</p>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="/staticfiles/images/image 9.png" alt="">
-                        <div class="name-price-container">
-                            <h4 class="watch-name">ARNOLD & SON</h4>
-                            <p class="watch-price">$830</p>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="watches-images">
-                    <div class="image">
-                        <img src="/staticfiles/images/image 11.png" alt="">
-                        <div class="name-price-container">
-                            <h4 class="watch-name">ARNOLD & SON</h4>
-                            <p class="watch-price">$830</p>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="/staticfiles/images/image 12.png" alt="">
-                        <div class="name-price-container">
-                            <h4 class="watch-name">ARNOLD & SON</h4>
-                            <p class="watch-price">$830</p>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="/staticfiles/images/image 9.png" alt="">
-                        <div class="name-price-container">
-                            <h4 class="watch-name">ARNOLD & SON</h4>
-                            <p class="watch-price">$830</p>
-                        </div>
-                    </div>
-
-
+                    {% endfor %}
                 </div>
             </div>
         </div>
