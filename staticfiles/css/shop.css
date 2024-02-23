@@ -4,96 +4,125 @@ main{
     background-color: #000000;
 }
 
+.first-section{
+    position: relative;
+}
 
-.watch{
-    padding: 80px 150px 90px 150px;
+.first-section-text{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+
+
+.first-section-text h3{
+    font-family: 'Poppins';
+    font-size: 34px;
+    font-weight: 300;
+    color: #272727;
+    margin-bottom: 4px;
+}
+
+.first-section-text p{
+    margin-top: 7px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: #272727;
+    width: 400px;
+
+}
+
+.filter-section{
+    color: #FFFFFF;
+    opacity: 80%;
+    margin-left: 50px;
     display: flex;
 }
 
-.about-watch{
-    padding-left: 200px;
-    width: 750px;
-}
-
-.watch-header{
+.filter-section-header{
     font-family: 'Poppins';
-    font-size: 70px;
+    font-size: 34px;
+    font-weight: 500;
+    padding-left: 65px;
     color: #FFFFFF;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 0;
-
+    opacity: 80%;
 }
 
-.watch-under-header{
+.filters{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins';
-    font-size: 30px;
-    font-weight: 400;
-    color: #FFFFFF;
-    margin-top: 10px;
+    font-size: 21px;
+    font-weight: 500;
+    width: 300px;
 }
 
-.watch-manufacture{
-    font-family: 'Poppins';
-    font-size: 27px;
-    font-weight: lighter;
-    color: #FFFFFF;
-
+.plus{
+    cursor: pointer;
 }
 
-.code-watch{
-    font-family: 'Poppins';
-    font-size: 22px;
-    font-weight: lighter;
-    color: #C2BCB2;
-}
-
-.price-watch{
-    font-family: 'Poppins';
-    font-size: 55px;
-    color: #FFFFFF;
-    font-weight: lighter;
-    margin-top: 5px;
-}
-
-.button-container{
-    margin-bottom: 50px;
-}
-
-.add-to-bag-button{
-    color: #000000;
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 30px;
-    background-color: #FFFFFF;
-    text-decoration: none;
-    padding: 10px 170px 10px 170px;
-    margin-bottom: 100px;
-}
-
-.watch-specifications{
-    padding-top: 60px;
-}
-
-.watch-specifications-row-1{
+.toggle-ul-container{
     display: flex;
-    width: 520px;
-    border-bottom: 1px solid #C2BCB2;
 }
 
-.watch-specifications-row-1 h3{
-    font-family: 'Poppins';
-    font-weight: lighter;
-    font-size: 28px;
-    color: #FFFFFF;
-    margin: 15px auto 15px 0;
+.toggle-ul-container input{
+    color: black;
+    margin-right: 12px;
+    accent-color: #FFFFFF;
 }
 
-.watch-specifications-row-1 p{
+.toggle-ul-container li{
     font-family: 'Poppins';
+    font-size: 15px;
     font-weight: lighter;
-    font-size: 28px;
     color: #FFFFFF;
-    opacity: 70%;
-    margin: 15px 0 15px 0;
+    opacity: 85%;
+    list-style-type: none;
+}
+
+.hidden{
+    display: none;
+    padding: 0;
+}
+
+.hidden-container{
+    padding-bottom: 5px;
+}
+
+.filters-container{
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.current-filters{
+    margin-bottom: 10px;
+    padding-left: 35px;
+    display: flex;
+}
+
+.current-filters img{
+    height: 25.95px;
+    width: 24px;
+    left: 16.5%;
+    position: absolute;
+}
+
+.watches-container{
+    width: 100%;
+}
+
+.watches-images{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.watch-name{
+    margin-top: 16px;
+}
+
+.name-price-container{
+    display: flex;
+    justify-content: space-between;
 }

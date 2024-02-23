@@ -3,13 +3,29 @@
     box-sizing: border-box;
 }
 
+* {
+  scrollbar-width: thin;
+}
+
+
+* {
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
 body {
     min-height: 100vh;
     margin: 0;
 }
 
 header {
-    background-color: #F2EBDF;
+    background-color: #959595;
     opacity: 100%;
     top: 0;
 }
@@ -20,7 +36,11 @@ header {
     font-family: 'Sawarabi Mincho';
     font-size: 28px;
     font-weight: normal;
-    cursor: pointer;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #000000;
 }
 
 .navbar {
@@ -57,7 +77,6 @@ header {
 
 .nav-links li a:hover {
     text-decoration: underline;
-    color: #B48D56;
     cursor: pointer;
 }
 
@@ -84,7 +103,7 @@ header {
 
 .main-header-home {
     font-family: Bungee Hairline;
-    color: #E7CFAC;
+    color: #959595;
     opacity: 100%;
     font-size: 95px;
     text-align: center;
@@ -100,13 +119,14 @@ header {
 }
 
 .shop-button {
-    color: #F2EBDF;
+    color: #959595;
     opacity: 67%;
     font-family: Poppins;
     font-size: 30px;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
+    text-decoration: nonew;
 }
 
 .something {
@@ -144,7 +164,7 @@ header {
 
 .collection-images {
     text-align: center;
-    height: 73.2vh;
+    height: 705px;
 }
 
 .second-section-image {
@@ -284,7 +304,7 @@ header {
 /* Footer */
 
 footer {
-    background-color: #F2EBDF;
+    background-color: #959595;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -317,7 +337,6 @@ footer {
 }
 
 .customer-service-content {
-    border-top: 1px solid #B48D56;
     width: 420px;
     padding-bottom: 17px;
 }
@@ -339,7 +358,6 @@ footer {
 
 .about-content {
     display: flex;
-    border-top: 1px solid #B48D56;
     width: 420px;
     padding-bottom: 17px;
 }

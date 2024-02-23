@@ -1,97 +1,9 @@
-/* HEADER */
-*{
-    box-sizing: border-box;
-}
-
-::-webkit-scrollbar {
-    width: 10px; /* Width of vertical scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color of the scrollbar track */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the scrollbar thumb */
-}
-
-/* Optional: Hover style for the scrollbar thumb */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color of the scrollbar thumb on hover */
-}
-
-body {
-    min-height: 100vh;
-    margin: 0;
-}
-
-header{
-    background-color: #F2EBDF;
-    opacity: 100%;
-    top: 0;
-}
-
-.logo {
-    color: #000000;
-    opacity: 100%;
-    font-family: 'Sawarabi Mincho';
-    font-size: 28px;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.nav-links{
-    width: 75%;
-    display: flex;
-    text-align: center;
-    list-style: none;
-    justify-content: center;
-    padding-left: 0;
-}
-
-.nav-links li{
-    font-family: Poppins;
-    font-size: 19px;
-    font-weight: 500;
-}
-
-.link{
-    padding-left: 2%;
-}
-
-
-.nav-links li:hover{
-    text-decoration: underline;
-    color: #B48D56;
-    cursor: pointer;
-}
-
-.icons-contaniner{
-    width: 10%;
-    text-align: end;
-}
-
-.icons-contaniner a{
-    padding-left: 5%;
-    cursor: pointer;
-}
-
-
-/* MAIN */
-
 main{
     background-color: #000000;
 }
 
 
-.watch{
+.watch-details-page-container{
     padding: 80px 150px 90px 150px;
     display: flex;
 }
@@ -120,8 +32,8 @@ main{
 }
 
 .watch-manufacture{
-    font-style: 'Poppins';
-    font-size: 30px;
+    font-family: 'Poppins';
+    font-size: 27px;
     font-weight: lighter;
     color: #FFFFFF;
 
@@ -142,118 +54,44 @@ main{
     margin-top: 5px;
 }
 
+.button-container{
+    margin-bottom: 50px;
+}
+
 .add-to-bag-button{
     color: #000000;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 32px;
-}
-
-/* Footer */
-
-footer{
-    background-color: #F2EBDF;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
-.customer-service-content{
-    display: flex;
-}
-
-.first-customer-service{
-    padding-right: 130px;
-}
-
-.customer-service-header{
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 16px;
-    color: #404040;
-    margin-top: 0;
-    margin-bottom: 2px;
-    padding-top: 17px;
-}
-
-.customer-service-content p{
-    font-family: 'Poppins';
-    font-weight: lighter;
-    color: #404040;
-    font-size: 14px;
-    margin-bottom: 0;
-    margin-top: 7px;
-}
-
-.customer-service-content{
-    border-top: 1px solid #B48D56;
-    width: 420px;
-    padding-bottom: 17px;
-}
-
-.footer-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-header{
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 16px;
-    color: #404040;
-    margin-top: 0;
-    margin-bottom: 2px;
-    padding-top: 17px;
-}
-
-.about-content{
-    display: flex;
-    border-top: 1px solid #B48D56;
-    width: 420px;
-    padding-bottom: 17px;
-}
-
-.first-about{
-    padding-right: 130px;
-}
-
-.about-content p{
-    font-family: 'Poppins';
-    font-weight: lighter;
-    color: #404040;
-    font-size: 14px;
-    margin-bottom: 0;
-    margin-top: 7px;
-}
-
-
-
-.email{
-    display: flex;
-}
-
-.subscribe-header{
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: bold;
-    color: #404040;
-    margin-bottom: 7px;
-}
-
-.input-email{
+    font-size: 30px;
     background-color: #FFFFFF;
-    width: 400px;
-    height: 4vh;
-    border: 0;
-    padding-left: 30px;
+    text-decoration: none;
+    padding: 10px 170px 10px 170px;
+    margin-bottom: 100px;
 }
 
-.sign-up-button{
+.watch-specifications{
+    padding-top: 60px;
+}
+
+.watch-specifications-row-1{
+    display: flex;
+    width: 520px;
+    border-bottom: 1px solid #C2BCB2;
+}
+
+.watch-specifications-row-1 h3{
     font-family: 'Poppins';
-    font-size: 13px;
-    font-weight: 500;
+    font-weight: lighter;
+    font-size: 26px;
+    color: #FFFFFF; 
+    margin: 15px auto 15px 0;
+}
+
+.watch-specifications-row-1 p{
+    font-family: 'Poppins';
+    font-weight: lighter;
+    font-size: 26px;
     color: #FFFFFF;
-    background-color: #000000;
-    opacity: 90%;
-    padding: 8px;
-    cursor: pointer;
+    opacity: 70%;
+    margin: 15px 0 15px 0;
 }
