@@ -9,4 +9,3 @@ class WatchAdmin(admin.ModelAdmin):
     list_display = ['brand', 'model', 'watch_code', 'price']
     filter = ['brand']
 
-
