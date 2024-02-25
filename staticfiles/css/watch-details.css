@@ -95,3 +95,8 @@ main{
     opacity: 70%;
     margin: 15px 0 15px 0;
 }
+
+.second-images img{
+    width: 332px;
+    height: 350px;
+}

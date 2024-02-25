@@ -3,15 +3,17 @@
     <main>
         <div class="watch-details-page-container">
             <div>
-                <img src="/staticfiles/images/Arnold-and-Son-Nebula-41-5-Gold_web_1024x1024%201(5).png" alt="" class="first-watch-image">
+                <img src="{{ current_watch.main_image.url }}" alt="" class="first-watch-image">
                 <div class="second-images">
-                    <img src="/staticfiles/images/image%2033.png" alt="">
-                    <img src="/staticfiles/images/image%2034.png" alt="">
+                    <img src="{{ current_watch.first_small_image.url }}" alt="">
+                    <img src="{{ current_watch.second_small_image.url }}" alt="">
                 </div>
-                <div class="third-images">
-                    <img src="/staticfiles/images/image%2035.png" alt="">
-                    <img src="/staticfiles/images/image%2037.png" alt="">
-                </div>
+                {% if current_watch.third_small_image %}
+                    <div class="third-images">
+                        <img src="{{ current_watch.third_small_image.url }}" alt="">
+                        <img src="{{ current_watch.fourth_small_image.url }}" alt="">
+                    </div>
+                {% endif %}
             </div>
             <div class="about-watch">
                 <h2 class="watch-header">

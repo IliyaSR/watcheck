@@ -156,7 +156,9 @@
                 <div class="watches-images">
                     {% for watch in watches %}
                         <div class="image">
-                            <img src="{{ watch.image_for_shop_page.url }}" alt="">
+                            <a href="{% url 'watch_details' watch.pk %}">
+                                <img src="{{ watch.image_for_shop_page.url }}" alt="">
+                            </a>
                             <div class="name-price-container">
                                 <h4 class="watch-name">{{ watch.brand }}</h4>
                                 <p class="watch-price">${{ watch.price }}</p>
