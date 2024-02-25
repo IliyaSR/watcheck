@@ -14,4 +14,9 @@ def shop(request):
 
 
 def watch_details(request, pk):
-    return render(request, template_name='watch/watch-details.html')
+    current_watch = Watch.objects.get(pk=pk)
+    context = {
+        'current_watch': current_watch
+    }
+
+    return render(request, template_name='watch/watch-details.html', context=context)
