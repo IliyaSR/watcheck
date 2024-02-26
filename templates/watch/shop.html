@@ -10,148 +10,55 @@
         </div>
         <h2 class="filter-section-header">Filters</h2>
         <div class="filter-section">
-            <div class="filter-container">
+            <form class="filter-container" action="{% url 'filter_watches' %}" method="get" id="MyForm">
                 <ul class="filters">
-                    <div class="filters-container">
+                    <div class="filters-container" onclick="secondList(this)">
                         <div class="current-filters">
                             <li>Brand</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
-                                 onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"  onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
                                 <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
+                                    <input type="checkbox" name="brand" value="ARNOLD & SON">
+                                    <li>ARNOLD & SON</li>
                                 </div>
                                 <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
+                                    <input type="checkbox" name="brand" value="FESTINA">
+                                    <li>FESTINA</li>
                                 </div>
                                 <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
+                                    <input type="checkbox" name="brand" value="LIGE">
+                                    <li>LIGE</li>
                                 </div>
                             </div>
                         </ul>
                     </div>
-                    <div class="filters-container">
+                    <div class="filters-container" onclick="secondList(this)">
                         <div class="current-filters">
-                            <li>Style</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
-                                 onclick="toggleList(this)">
+                            <li>Brand</li>
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"  onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
                                 <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
+                                    <input type="checkbox" name="brand" value="ARNOLD & SON">
+                                    <li>ARNOLD & SON</li>
                                 </div>
                                 <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
+                                    <input type="checkbox" name="brand" value="FESTINA">
+                                    <li>FESTINA</li>
                                 </div>
                                 <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="filters-container">
-                        <div class="current-filters">
-                            <li>Case Material</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
-                                 onclick="toggleList(this)">
-                        </div>
-                        <ul class="hidden">
-                            <div class="hidden-container">
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="filters-container">
-                        <div class="current-filters">
-                            <li>Price</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
-                                 onclick="toggleList(this)">
-                        </div>
-                        <ul class="hidden">
-                            <div class="hidden-container">
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="filters-container">
-                        <div class="current-filters">
-                            <li>Dial Color</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
-                                 onclick="toggleList(this)">
-                        </div>
-                        <ul class="hidden">
-                            <div class="hidden-container">
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="filters-container">
-                        <div class="current-filters">
-                            <li>Case Diameter</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
-                                 onclick="toggleList(this)">
-                        </div>
-                        <ul class="hidden">
-                            <div class="hidden-container">
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
-                                </div>
-                                <div class="toggle-ul-container">
-                                    <input type="checkbox">
-                                    <li>Item 1</li>
+                                    <input type="checkbox" name="brand" value="LIGE">
+                                    <li>LIGE</li>
                                 </div>
                             </div>
                         </ul>
                     </div>
                 </ul>
-            </div>
+                <button type="submit">FILTER</button>
+            </form>
             <div class="watches-container">
                 <div class="watches-images">
                     {% for watch in watches %}
@@ -171,8 +78,18 @@
     </main>
     <script>
         function toggleList(element) {
-            var ul = element.parentElement.nextElementSibling;
+            element.stopPropagation();
+            const ul = element.parentElement.nextElementSibling;
             ul.classList.toggle("hidden");
+        }
+
+        function secondList(element) {
+            const childElement = element.children[0]
+            const ul = childElement.nextElementSibling
+            ul.classList.toggle("hidden");
+            ul.addEventListener("click", function (event){
+                event.stopPropagation();
+            })
         }
     </script>
 {% endblock %}

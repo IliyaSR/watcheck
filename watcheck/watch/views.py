@@ -13,6 +13,16 @@ def shop(request):
     return render(request, template_name='watch/shop.html', context=context)
 
 
+def filter_watches(request):
+    brand = request.GET.getlist('brand')
+    watches = Watch.objects.all()
+
+    if brand:
+        watches = watches.filter(brand__in=brand)
+
+    return render(request, template_name='watch/shop.html', context={"watches": watches})
+
+
 def watch_details(request, pk):
     current_watch = Watch.objects.get(pk=pk)
     context = {
