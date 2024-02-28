@@ -18,11 +18,13 @@ class Watch(models.Model):
     strap_material = models.CharField(max_length=30)
     movement = models.CharField(max_length=30)
     water_resistance = models.IntegerField()
-    case_diameter = models.FloatField()
+    case_diameter = models.IntegerField()
     case_thickness = models.FloatField()
     glass = models.CharField(max_length=30)
 
+    class Meta:
+        verbose_name = 'Watch'
+        verbose_name_plural = 'Watches'
+
     def __str__(self):
         return self.brand
-
-

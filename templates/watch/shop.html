@@ -68,6 +68,32 @@
                             </div>
                         </ul>
                     </div>
+                    <div class="filters-container" onclick="secondList(this)">
+                        <div class="current-filters">
+                            <li>Case Diameter</li>
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"  onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="40, 42">
+                                    <li>40 - 42</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="43, 45">
+                                    <li>43 - 45</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="46, 48">
+                                    <li>46 - 48</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="49, 51">
+                                    <li>49 - 51</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
                 </ul>
                 <button type="submit">FILTER</button>
             </form>
