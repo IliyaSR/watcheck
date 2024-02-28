@@ -6,6 +6,17 @@ from django.shortcuts import render
 from watcheck.watch.models import Watch
 
 
+def string_to_integer_func(element):
+    if len(element) == 1:
+        current_elements = [int(current_element) for current_element in element[0].split(',')]
+    else:
+        current_elements = []
+        for index in range(len(element)):
+            current_elements.append([int(current_element) for current_element in element[index].split(',')])
+
+    return current_elements
+
+
 # Create your views here.
 def shop(request):
     watches = Watch.objects.all()
@@ -19,14 +30,11 @@ def shop(request):
 def filter_watches(request):
     brand = request.GET.getlist('brand')
     price = request.GET.getlist('price')
+    case_diameter = request.GET.getlist('case_diameter')
     watches = Watch.objects.all()
 
-    if len(price) == 1:
-        current_price = [int(watch_price) for watch_price in price[0].split(', ')]
-    else:
-        current_price = []
-        for index in range(len(price)):
-            current_price.append([int(watch_price) for watch_price in price[index].split(', ')])
+    current_price = string_to_integer_func(price)
+    current_case_diameters = string_to_integer_func(case_diameter)
 
     if brand:
         watches = watches.filter(brand__in=brand)
@@ -37,6 +45,17 @@ def filter_watches(request):
             result = []
             for price in current_price:
                 result.append(watches.filter(price__range=price))
+
+            watches = list(chain(*result))
+
+    if case_diameter:
+        if len(case_diameter) == 1:
+            watches = watches.filter(case_diameter__range=current_case_diameters)
+        else:
+            print(case_diameter)
+            result = []
+            for case_diameter in current_case_diameters:
+                result.append(watches.filter(case_diameter__range=case_diameter))
 
             watches = list(chain(*result))
 
