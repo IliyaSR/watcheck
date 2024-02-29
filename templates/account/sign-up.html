@@ -20,32 +20,26 @@
                     <p>FACEBOOK</p>
                 </a>
             </div>
-            <p class="sign-up-social">Signing up with social is super quick. No extra passwords to remember - no brain fail.
+            <p class="sign-up-social">Signing up with social is super quick. No extra passwords to remember - no brain
+                fail.
                 Don't worry, we'd never share any of your data or post anything on your behalf.</p>
-            <div class="container-main">
+            <form class="container-main" method="post" action="{% url 'sign_up' %}">
                 <h3>OR SIGN UP WITH EMAIL</h3>
                 <p class="email-sign-in">EMAIL ADDRESS:</p>
-                <input type="text" name="" class="email-sign-in-input">
+                {{ form.email }}
                 <p class="confirm-email">We’ll send your order confirmation here.</p>
+                <p class="first-name-sign-in">USERNAME:</p>
+                {{ form.username }}
                 <p class="first-name-sign-in">FIRST NAME:</p>
-                <input type="text" name="" class="email-sign-in-input">
-                <p class="first-name-sign-in">LAST NAME:</p>
-                <input type="text" name="" class="email-sign-in-input">
+                {{ form.first_name }}
                 <p class="password-sign-in">PASSWORD:</p>
-                <input type="text" name="" class="password-sign-in-input">
+                {{ form.password1 }}
                 <p class="password-sign-in">CONFIRM PASSWORD:</p>
-                <input type="text" name="" class="password-sign-in-input">
-                <p class="first-name-sign-in">DATE OF BIRTH:</p>
-                <form action="#">
-                    <div class="dob-inputs">
-                      <input type="number" class="day" name="day" placeholder="DD" min="1" max="31" required>
-                      <input type="text" class="month" name="month" placeholder="Month" required>
-                      <input type="number" class="year" name="year" placeholder="YYYY" min="1900" max="2024" required>
-                    </div>
-                  </form>
-                <p class="year-recomended">You need to be 16 or over to use WATCHECK.</p>
-                <a href="" class="sign-in-button">JOIN WATCHECK</a>
-            </div>
+                {{ form.password2 }}
+
+                {% csrf_token %}
+                <button class="sign-in-button">JOIN WATCHECK</button>
+            </form>
         </div>
         <div class="some"></div>
     </main>

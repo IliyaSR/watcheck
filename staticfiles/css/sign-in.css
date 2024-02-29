@@ -5,25 +5,25 @@ main{
 
 .main-header-sign-in{
     font-family: 'Sawarabi Mincho';
-    font-size: 36px;
+    font-size: 32px;
     color: #FFFFFF;
     font-weight: 600;
     text-align: center;
     margin: 0;
     padding-top: 25px;
     padding-bottom: 25px;
-}   
+}
 
 .sign-in-container{
     width: 1000px;
-    height: 850px;
+    height: 750px;
     background-color: #FFFFFF;
     margin: auto;
 }
 
 .container-header a{
     font-family: 'Poppins';
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 600;
     color: #000000;
     text-decoration: none;
@@ -50,23 +50,23 @@ main{
 
 .email-sign-in{
     font-family: 'Poppins';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     color: #000000;
     position: relative;
     left: 29%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 80px;
 }
 
 .password-sign-in{
     font-family: 'Poppins';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     color: #000000;
     position: relative;
     left: 29%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .email-sign-in-input{
@@ -74,8 +74,8 @@ main{
     margin: 0 auto;
     border: 2px solid #000000;
     height: 50px;
-    width: 480px;
-    font-size: 22px;
+    width: 420px;
+    font-size: 17px;
 }
 
 .password-sign-in-input{
@@ -83,30 +83,31 @@ main{
     margin: 0 auto;
     border: 2px solid #000000;
     height: 50px;
-    width: 480px;
-    font-size: 22px;
+    width: 420px;
+    font-size: 17px;
 }
 
 .sign-in-button{
     display: block;
     text-decoration: none;
-    width: 480px;
+    width: 420px;
     height: 50px;
-    font-size: 27px;
+    font-size: 22px;
     color: #FFFFFF;
     background-color: #000000;
     font-weight: 500;
     margin: 35px auto;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 3px;
     font-family: 'Poppins';
+    border: 0;
 }
 
 .forgot-password{
     display: block;
     color: #000000;
     font-family: 'Poppins';
-    font-size: 22px;
+    font-size: 17px;
     font-weight: lighter;
     text-align: center;
     text-decoration: none;
@@ -117,7 +118,7 @@ main{
 .some-p{
     display: block;
     font-family: 'Poppins';
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 600;
     text-align: center;
     margin-top: 40px;
@@ -131,14 +132,14 @@ main{
 
 .google{
     display: flex;
-    width: 280px;
+    width: 240px;
     border: 1px solid black;
     justify-content: space-evenly;
 }
 
 .google p{
     font-family: 'Poppins';
-    font-size: 26px;
+    font-size: 21px;
     font-weight: 600;
     color: #000000;
     margin: 15px;
@@ -152,14 +153,14 @@ main{
 
 .facebook{
     display: flex;
-    width: 280px;
+    width: 240px;
     border: 1px solid black;
     justify-content: space-evenly;
 }
 
 .facebook p{
     font-family: 'Poppins';
-    font-size: 26px;
+    font-size: 21px;
     font-weight: 600;
     color: #000000;
     margin: 15px;

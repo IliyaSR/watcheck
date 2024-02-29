@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'watcheck.watch',
 ]
 
+AUTH_USER_MODEL = 'account.Account'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

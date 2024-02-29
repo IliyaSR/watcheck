@@ -9,13 +9,16 @@
                 <a href="">SIGN IN</a>
             </div>
             <div class="horizontal-line"></div>
-            <div class="container-main">
+            <form method="post" class="container-main">
                 <p class="email-sign-in">EMAIL ADDRESS:</p>
-                <input type="text" name="" class="email-sign-in-input">
+                {{ form.username }}
                 <p class="password-sign-in">PASSWORD:</p>
-                <input type="text" name="" class="password-sign-in-input">
-                <a href="" class="sign-in-button">SIGN IN</a>
-            </div>
+                {{ form.password }}
+
+                {% csrf_token %}
+
+                <button class="sign-in-button">SIGN IN</button>
+            </form>
             <a href="" class="forgot-password">Forgot password?</a>
             <p class="some-p">OR SIGN IN WITH...</p>
             <div class="icons">

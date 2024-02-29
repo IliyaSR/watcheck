@@ -12,11 +12,11 @@ main{
     margin: 0;
     padding-top: 25px;
     padding-bottom: 25px;
-}   
+}
 
 .sign-up-container{
     width: 1000px;
-    height: 1400px;
+    height: 1200px;
     background-color: #FFFFFF;
     margin: auto;
 }
@@ -34,8 +34,8 @@ main{
     font-size: 22px;
     font-weight: 600;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .sign-up-social{
@@ -117,16 +117,16 @@ main{
     font-size: 17px;
 }
 
-.sign-in-button{
+.join-button{
     display: block;
     text-decoration: none;
-    width: 420px;
+    width: 480px;
     height: 50px;
     font-size: 22px;
     color: #FFFFFF;
     background-color: #000000;
     font-weight: 500;
-    margin: 35px auto;
+    margin: 50px auto 30px auto;
     text-align: center;
     padding-top: 8px;
     font-family: 'Poppins';
@@ -207,37 +207,4 @@ main{
 
 .dob-inputs{
     text-align: center;
-}
-
-
-.day{
-    width: 60px;
-    height: 40px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    margin-right: 40px;
-}
-
-.month{
-    height: 40px;
-    width: 160px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    margin-right: 40px;
-}
-
-.year{
-    height: 40px;
-    width: 110px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-}
-
-.year-recomended{
-    font-family: 'Poppins';
-    font-size: 15px;
-    color: #000000;
-    opacity: 95%;
-    position: relative;
-    left: 29%;
 }
