@@ -20,3 +20,7 @@ class LoginView(auth_views.LoginView):
     form_class = LoginForm
     template_name = 'account/sign-in.html'
     next_page = reverse_lazy('home')
+
+
+class LogoutView(auth_views.LogoutView):
+    next_page = reverse_lazy('home')

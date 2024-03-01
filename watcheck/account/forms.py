@@ -1,4 +1,5 @@
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
 from django import forms
 
 from watcheck.account.models import Account
@@ -38,12 +39,13 @@ class UserForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm):
-    class Meta(AuthenticationForm):
-        widgets = {
-            'email': forms.TextInput(
-                attrs={'class': 'email-sign-in-input'}
-            )
-        }
+    username = UsernameField(
+        widget=forms.TextInput(
+            attrs={
+                'class': 'email-sign-in-input'
+            }
+        )
+    )
 
     password = forms.CharField(
         widget=forms.PasswordInput(
@@ -52,3 +54,4 @@ class LoginForm(AuthenticationForm):
             }
         )
     )
+
