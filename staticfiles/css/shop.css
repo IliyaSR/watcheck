@@ -1,21 +1,21 @@
 /* MAIN */
 
-main{
+main {
     background-color: #000000;
 }
 
-.first-section{
+.first-section {
     position: relative;
 }
 
-.first-section-text{
+.first-section-text {
     position: absolute;
     top: 30%;
     left: 3%;
 }
 
 
-.first-section-text h3{
+.first-section-text h3 {
     font-family: 'Poppins';
     font-size: 34px;
     font-weight: 300;
@@ -23,7 +23,7 @@ main{
     margin-bottom: 4px;
 }
 
-.first-section-text p{
+.first-section-text p {
     margin-top: 7px;
     font-size: 20px;
     font-family: 'Poppins';
@@ -33,14 +33,14 @@ main{
 
 }
 
-.filter-section{
+.filter-section {
     color: #FFFFFF;
     opacity: 80%;
     margin-left: 50px;
     display: flex;
 }
 
-.filter-section-header{
+.filter-section-header {
     font-family: 'Poppins';
     font-size: 34px;
     font-weight: 500;
@@ -49,7 +49,7 @@ main{
     opacity: 80%;
 }
 
-.filters{
+.filters {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -59,21 +59,21 @@ main{
     width: 300px;
 }
 
-.plus{
+.plus {
     cursor: pointer;
 }
 
-.toggle-ul-container{
+.toggle-ul-container {
     display: flex;
 }
 
-.toggle-ul-container input{
+.toggle-ul-container input {
     color: black;
     margin-right: 12px;
     accent-color: #FFFFFF;
 }
 
-.toggle-ul-container li{
+.toggle-ul-container li {
     font-family: 'Poppins';
     font-size: 15px;
     font-weight: lighter;
@@ -82,48 +82,58 @@ main{
     list-style-type: none;
 }
 
-.hidden{
+.hidden {
     display: none;
     padding: 0;
 }
 
-.hidden-container{
+.hidden-container {
     padding-bottom: 5px;
 }
 
-.filters-container{
+.filters-container {
     border-bottom: 1px solid #FFFFFF;
     margin-bottom: 10px;
 }
 
-.current-filters{
+.current-filters {
     margin-bottom: 10px;
     padding-left: 35px;
     display: flex;
     cursor: pointer;
 }
 
-.current-filters img{
+.current-filters img {
     height: 25.95px;
     width: 24px;
     left: 16.5%;
     position: absolute;
 }
 
-.watches-container{
+.watches-container {
     width: 100%;
 }
 
-.watches-images .image{
+.watches-images .image {
     display: inline-block;
     padding-left: 100px;
 }
 
-.watch-name{
+.watch-name {
     margin-top: 16px;
 }
 
-.name-price-container{
+.name-price-container {
     display: flex;
     justify-content: space-between;
+}
+
+.filter-button {
+    font-size: 21px;
+    font-family: 'Poppins';
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 50px;
+    cursor: pointer;
+
 }
