@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 
-from watcheck.account.forms import UserForm, LoginForm
+from watcheck.account.forms import RegisterForm, LoginForm
 from watcheck.account.models import Account
 
 
@@ -11,7 +11,7 @@ from watcheck.account.models import Account
 
 class RegisterView(CreateView):
     model = Account
-    form_class = UserForm
+    form_class = RegisterForm
     template_name = 'account/sign-up.html'
     success_url = reverse_lazy('sign_in')
 

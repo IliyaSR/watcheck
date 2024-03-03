@@ -5,7 +5,7 @@ from django import forms
 from watcheck.account.models import Account
 
 
-class UserForm(UserCreationForm):
+class RegisterForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = Account
         fields = ('username', 'email', 'first_name')
@@ -20,6 +20,10 @@ class UserForm(UserCreationForm):
                 attrs={'class': 'email-sign-in-input'}
             )
         }
+
+    def __init__(self, *args, **kwargs):
+        super(RegisterForm, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.pop('autofocus', None)
 
     password1 = forms.CharField(
         widget=forms.PasswordInput(
