@@ -72,19 +72,37 @@ main{
 .email-sign-in-input{
     display: block;
     margin: 0 auto;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     height: 50px;
     width: 420px;
     font-size: 17px;
+    outline: none;
+}
+
+.email-sign-in-input:hover{
+    border: 2px solid #000000;
+}
+
+.email-sign-in-input:focus{
+    border: 2px solid #000000;
 }
 
 .password-sign-in-input{
     display: block;
     margin: 0 auto;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     height: 50px;
     width: 420px;
     font-size: 17px;
+    outline: none;
+}
+
+.password-sign-in-input:hover{
+    border: 2px solid #000000;
+}
+
+.password-sign-in-input:hover{
+    border: 2px solid #000000;
 }
 
 .sign-in-button{

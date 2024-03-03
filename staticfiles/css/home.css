@@ -394,14 +394,15 @@ footer {
     height: 4vh;
     border: 0;
     padding-left: 30px;
+    outline: none;
 }
 
 .input-email:hover{
     border: 1px solid black;
 }
 
-.input-email:focus{
-    border-color: black;
+input.input-email:focus{
+    border: 1px solid black;
 }
 
 .sign-up-button {
@@ -411,6 +412,12 @@ footer {
     color: #FFFFFF;
     background-color: #000000;
     opacity: 90%;
-    padding: 8px;
     cursor: pointer;
+    height: 4vh;
+    padding: 4px ;
+}
+
+.about-us-footer{
+    text-decoration: none;
+    color: #404040;
 }
