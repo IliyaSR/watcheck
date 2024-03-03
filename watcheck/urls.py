@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('watcheck.common.urls')),
     path('watch/', include('watcheck.watch.urls')),
-    path('account/', include('watcheck.account.urls')),
+    path('account/', include('watcheck.accounts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
