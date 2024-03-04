@@ -9,9 +9,9 @@
         {% csrf_token %}
         <button>Logout</button>
     </form>
-    <form method="post" action="{% url 'delete' request.user.pk %}">
+    <form method="post" action="{% url 'account-delete' request.user.pk %}">
         {% csrf_token %}
         <button type="submit">Delete</button>
     </form>
 </body>
-</html>s
+</html>
