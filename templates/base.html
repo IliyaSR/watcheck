@@ -27,7 +27,11 @@
             <div class="icons-contaniner">
                 <a><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a><i class="fa-solid fa-bag-shopping"></i></a>
-                <a href="{% url 'account-details' %}" class="account-icon"><i class="fa-solid fa-user" style="color: black;"></i></a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'account-details' user.pk %}"><i class="fa-solid fa-user" style="color: black;"></i></a>
+                {% else %}
+                    <a href="{% url 'sign_in' %}"><i class="fa-solid fa-user" style="color: black;"></i></a>
+                {% endif %}
             </div>
         </nav>
     </header>

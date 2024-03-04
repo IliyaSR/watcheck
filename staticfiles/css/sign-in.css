@@ -119,6 +119,7 @@ main{
     padding-top: 3px;
     font-family: 'Poppins';
     border: 0;
+    cursor: pointer;
 }
 
 .forgot-password{
