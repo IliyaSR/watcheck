@@ -1,7 +1,7 @@
 from django.contrib.auth import views as auth_views
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 
 from watcheck.accounts.forms import RegisterForm, LoginForm
 from watcheck.accounts.models import Account
@@ -26,5 +26,18 @@ class LogoutView(auth_views.LogoutView):
     next_page = reverse_lazy('home')
 
 
-def profile_details(request):
-    return render(request, template_name='account/account-details.html')
+class AccountDeleteView(DeleteView):
+    model = Account
+    template_name = 'account/account-details.html'
+
+    def post(self, *args, pk):
+        self.request.user.delete()
+        return redirect('home')
+
+
+def account_details(request, pk):
+    current_account = Account.objects.get(pk=pk)
+    context = {
+        'current_account':current_account
+    }
+    return render(request, template_name='account/account-details.html', context=context)

@@ -5,5 +5,8 @@ urlpatterns = [
     path('sign_in/', views.LoginView.as_view(), name='sign_in'),
     path('sign_up/', views.RegisterView.as_view(), name='sign_up'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
-    path('account_details/', views.profile_details, name='account-details')
+    path('profile/<int:pk>/', include([
+        path('details/', views.account_details, name='account-details'),
+        path('delete/', views.AccountDeleteView.as_view(), name='account-delete')
+    ]))
 ]
