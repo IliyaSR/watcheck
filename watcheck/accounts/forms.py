@@ -8,7 +8,7 @@ from watcheck.accounts.models import Account
 class RegisterForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = Account
-        fields = ('username', 'email', 'first_name')
+        fields = ('username', 'email', 'first_name', 'last_name')
         widgets = {
             'email': forms.TextInput(
                 attrs={'class': 'email-sign-in-input'}
@@ -17,6 +17,9 @@ class RegisterForm(UserCreationForm):
                 attrs={'class': 'email-sign-in-input'}
             ),
             'first_name': forms.TextInput(
+                attrs={'class': 'email-sign-in-input'}
+            ),
+            'last_name': forms.TextInput(
                 attrs={'class': 'email-sign-in-input'}
             )
         }
@@ -58,4 +61,3 @@ class LoginForm(AuthenticationForm):
             }
         )
     )
-

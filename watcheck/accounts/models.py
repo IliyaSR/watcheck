@@ -6,5 +6,7 @@ from django.db import models
 class Account(AbstractUser):
     email = models.EmailField(unique=True)
     first_name = models.CharField(unique=True, max_length=30)
+    last_name = models.CharField(unique=True, max_length=30)
+    profile_picture = models.ImageField(blank=True, null=True)
 
 
