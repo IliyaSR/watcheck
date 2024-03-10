@@ -83,7 +83,7 @@ main{
     font-family: 'Poppins';
     font-weight: lighter;
     font-size: 26px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     margin: 15px auto 15px 0;
 }
 
@@ -135,9 +135,11 @@ main{
 
 .person{
     width: 400px;
-    height: 250px;
+    max-height: 230px;
     background-color: #FFFFFF;
     padding: 10px;
+    display: inline-block;
+    margin: 15px;
 }
 
 #small-stars{
@@ -160,10 +162,10 @@ main{
 }
 
 .person-reviews{
-    display: flex;
     justify-content: space-between;
     width: 1360px;
     margin: 60px auto;
+    text-align: center;
 }
 
 .reviews-text{
@@ -171,8 +173,9 @@ main{
     margin-right: 50px;
     font-size: 18px;
     color: #404040;
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: lighter;
+    height: 50px;
 }
 
 .profile-image{
@@ -192,11 +195,26 @@ main{
     color: #404040;
     margin: 8px;
     border-bottom: 1px solid #A8927B;
+    margin-top: 17px;
 }
 
-.country{
+
+.add-review-button{
+    background-color: #959595;
+    padding: 5px;
     color: #404040;
-    opacity: 70%;
-    font-weight: lighter;
-    margin: 8px;
+    font-family: 'Poppins';
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.add-review{
+    margin-left: 85%;
+    position: absolute;
+}
+
+.add-review h2{
+    color: #404040;
+    font-size: 28px;
+    font-weight: 500;
 }

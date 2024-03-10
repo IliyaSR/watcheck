@@ -12,3 +12,7 @@ def about(request):
 
 def stores(request):
     return render(request, template_name='common/stores.html')
+
+
+def search_view(request):
+    pass
