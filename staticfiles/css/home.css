@@ -90,6 +90,26 @@ header {
     cursor: pointer;
 }
 
+.search-input{
+    margin-left: 39.5%;
+    margin-top: 10px;
+    width: 400px;
+    border-radius: 25px;
+    height: 30px;
+    font-family: 'Poppins';
+    border: 1px solid white;
+    outline: none;
+    padding: 2px;
+}
+
+.search-container{
+    display: none;
+}
+
+.search-input:focus{
+    border: 1px solid white;
+}
+
 /* MAIN */
 
 
