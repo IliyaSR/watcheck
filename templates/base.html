@@ -18,17 +18,23 @@
         <input type="text" class="search-input" placeholder="Search...">
     </div>
     <nav class="navbar">
-        <h1 class="logo"><a>WATCHECK</a></h1>
+        <h1 class="logo"><a href="{% url 'home' %}">WATCHECK</a></h1>
         <ul class="nav-links">
-            <li><a>Home</a></li>
-            <li class="link"><a>Men's</a></li>
-            <li class="link"><a>Stores</a></li>
-            <li class="link"><a>About Us</a></li>
+            {% if request %}
+            {% endif %}
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li class="link"><a href="{% url 'shop' %}">Shop</a></li>
+            <li class="link"><a href="{% url 'stores' %}">Stores</a></li>
+            <li class="link"><a href="{% url 'about' %}">About Us</a></li>
         </ul>
         <div class="icons-contaniner">
             <a onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a><i class="fa-solid fa-bag-shopping"></i></a>
-            <a><i class="fa-solid fa-user"></i></a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'account-details' user.pk %}"><i class="fa-solid fa-user" style="color: black;"></i></a>
+            {% else %}
+                <a href="{% url 'sign_in' %}"><i class="fa-solid fa-user" style="color: black;"></i></a>
+            {% endif %}
         </div>
     </nav>
 </header>
@@ -73,11 +79,11 @@
 </body>
 </html>
 <script>
-    function toggleSearch() {
+    function toggleSearch(){
         const search = document.getElementById('search')
-        if (search.style.display === 'none' || search.style.display === '') {
+        if (search.style.display === 'none' || search.style.display === ''){
             search.style.display = 'block'
-        } else {
+        } else{
             search.style.display = 'none'
         }
     }
