@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from watcheck.watch.models import Watch
 
 
 # Create your views here.
@@ -15,4 +17,13 @@ def stores(request):
 
 
 def search_view(request):
-    pass
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        watches = Watch.objects.filter(brand__icontains=searched)
+        if watches:
+            context = {
+                'watches': watches
+            }
+            return render(request, 'watch/shop.html', context=context)
+        else:
+            return render(request, 'common/search.html')

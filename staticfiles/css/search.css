@@ -1,0 +1,146 @@
+/* MAIN */
+
+main {
+    background-color: #000000;
+}
+
+.first-section {
+    position: relative;
+}
+
+.first-section-text {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+
+
+.first-section-text h3 {
+    font-family: 'Poppins';
+    font-size: 34px;
+    font-weight: 300;
+    color: #272727;
+    margin-bottom: 4px;
+}
+
+.first-section-text p {
+    margin-top: 7px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: #272727;
+    width: 400px;
+
+}
+
+.filter-section {
+    color: #FFFFFF;
+    opacity: 80%;
+    margin-left: 50px;
+    display: flex;
+}
+
+.filter-section-header {
+    font-family: 'Poppins';
+    font-size: 34px;
+    font-weight: 500;
+    padding-left: 65px;
+    color: #FFFFFF;
+    opacity: 80%;
+}
+
+.filters {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-size: 21px;
+    font-weight: 500;
+    width: 300px;
+}
+
+.plus {
+    cursor: pointer;
+}
+
+.toggle-ul-container {
+    display: flex;
+}
+
+.toggle-ul-container input {
+    color: black;
+    margin-right: 12px;
+    accent-color: #FFFFFF;
+}
+
+.toggle-ul-container li {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    opacity: 85%;
+    list-style-type: none;
+}
+
+.hidden {
+    display: none;
+    padding: 0;
+}
+
+.hidden-container {
+    padding-bottom: 5px;
+}
+
+.filters-container {
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.current-filters {
+    margin-bottom: 10px;
+    padding-left: 35px;
+    display: flex;
+    cursor: pointer;
+}
+
+.current-filters img {
+    height: 25.95px;
+    width: 24px;
+    left: 16.5%;
+    position: absolute;
+}
+
+.watches-container {
+    width: 100%;
+}
+
+.search-header {
+    position: absolute;
+    margin-left: 500px;
+    font-size: 28px;
+    font-family: 'Poppins';
+    color: #959595;
+}
+
+.search-text {
+    position: absolute;
+    margin-left: 500px;
+    font-size: 28px;
+    font-family: 'Poppins';
+    color: #959595;
+    margin-top: 80px;
+}
+
+.filter-button {
+    font-size: 21px;
+    font-family: 'Poppins';
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 50px;
+    cursor: pointer;
+
+}
+
+.search-not-found{
+    height: 1000px;
+}

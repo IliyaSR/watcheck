@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block main_content %}
+    <main class="search-not-found">
+        <div class="first-section">
+            <img src="/staticfiles/images/image%201%2010.png" alt="">
+            <div class="first-section-text">
+                <h3>Men's Watches</h3>
+                <p>Experience the Ultimate in Luxury and Style, Because You Deserve it!</p>
+            </div>
+        </div>
+        <div class="watches-container">
+            <div class="watches-images">
+                <h3 class="search-header">No result found</h3>
+            </div>
+            <h3 class="search-text">Please enter another search term</h3>
+        </div>
+        <h2 class="filter-section-header">Filters</h2>
+        <div class="filter-section">
+            <form class="filter-container" action="{% url 'filter_watches' %}" method="get" id="MyForm">
+                <ul class="filters">
+                    <div class="filters-container" onclick="secondList(this)">
+                        <div class="current-filters">
+                            <li>Brand</li>
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="brand" value="ARNOLD & SON">
+                                    <li>ARNOLD & SON</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="brand" value="FESTINA">
+                                    <li>FESTINA</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="brand" value="LIGE">
+                                    <li>LIGE</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="brand" value="MVMT">
+                                    <li>MVMT</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="brand" value="FOSSIL">
+                                    <li>FOSSIL</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="filters-container" onclick="secondList(this)">
+                        <div class="current-filters">
+                            <li>Price</li>
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="price" value="100, 199">
+                                    <li>100 - 199</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="price" value="200, 499">
+                                    <li>200 - 499</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="price" value="500, 999">
+                                    <li>500 - 999</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="price" value="1000, 1999">
+                                    <li>1000 - 1999</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="filters-container" onclick="secondList(this)">
+                        <div class="current-filters">
+                            <li>Case Diameter</li>
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
+                        </div>
+                        <ul class="hidden">
+                            <div class="hidden-container">
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="40, 42">
+                                    <li>40 - 42</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="43, 45">
+                                    <li>43 - 45</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="46, 48">
+                                    <li>46 - 48</li>
+                                </div>
+                                <div class="toggle-ul-container">
+                                    <input type="checkbox" name="case_diameter" value="49, 51">
+                                    <li>49 - 51</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+                <button type="submit" class="filter-button">FILTER</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        function toggleList(element) {
+            element.stopPropagation();
+            const ul = element.parentElement.nextElementSibling;
+            ul.classList.toggle("hidden");
+        }
+
+        function secondList(element) {
+            const childElement = element.children[0]
+            const ul = childElement.nextElementSibling
+            ul.classList.toggle("hidden");
+            ul.addEventListener("click", function (event) {
+                event.stopPropagation();
+            })
+        }
+    </script>
+{% endblock %}
