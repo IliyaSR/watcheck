@@ -69,8 +69,38 @@
         <div class="reviews">
             <div class="add-review">
                 <h2>Write a Review</h2>
-                <a class="add-review-button">Add Review</a>
+                <a class="add-review-button" href="#" id="add-review-button">Add Review</a>
             </div>
+            <div id="overlay" class="overlay"></div>
+
+            <div class="add-review-container" id="add-review-container">
+                <div class="add-review-container-header">
+                    <img src="/staticfiles/images/Arnold-and-Son-Nebula-41-5-Gold_web_1024x1024 1(5).png" alt=""
+                         class="review-watch-image">
+                    <h3>Add a review for:<br>
+                        Arnold & Son
+                    </h3>
+                    <i class="fa-solid fa-xmark" id="close-icon"></i>
+                </div>
+                <hr></hr>
+                <div class="add-review-container-main">
+                    <div class="stars-add-review-container">
+                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(1)" value="5"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(2)" value="4"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(3)" value="3"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(4)" value="2"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(5)" value="1"></i>
+                    </div>
+                    <h3>
+                        Review:
+                    </h3>
+                    <textarea name="" id="" cols="30" rows="10" class="review-text"></textarea>
+                    <button class="add-review-button">
+                        Add Review
+                    </button>
+                </div>
+            </div>
+
             <h3 class="reviews-header">Reviews</h3>
             <div class="evaluation-container">
                 <p class="evaluation">4.8</p>
@@ -97,7 +127,8 @@
                         </p>
                     </div>
                     <p class="reviews-text">
-                        Great selection. Found a watch at a good price. Excited to see my son reaction when he opens this gift.
+                        Great selection. Found a watch at a good price. Excited to see my son reaction when he opens
+                        this gift.
                     </p>
                     <div class="profile-details">
                         <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
@@ -121,75 +152,6 @@
                     </div>
                     <p class="reviews-text">
                         Great selection.
-                    </p>
-                    <div class="profile-details">
-                        <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
-                        <div>
-                            <h4 class="account-name">Oliver Munch</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="person">
-                    <div class="stars-and-date">
-                        <div class="stars">
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                        </div>
-                        <p class="date">
-                            01 Feb 2023
-                        </p>
-                    </div>
-                    <p class="reviews-text">
-                        Great selection.
-                    </p>
-                    <div class="profile-details">
-                        <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
-                        <div>
-                            <h4 class="account-name">Oliver Munch</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="person">
-                    <div class="stars-and-date">
-                        <div class="stars">
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                        </div>
-                        <p class="date">
-                            01 Feb 2023
-                        </p>
-                    </div>
-                    <p class="reviews-text">
-                        Great selection. Found a watch at a good price. Excited to see my son reaction when he opens this gift.
-                    </p>
-                    <div class="profile-details">
-                        <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
-                        <div>
-                            <h4 class="account-name">Oliver Munch</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="person">
-                    <div class="stars-and-date">
-                        <div class="stars">
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                        </div>
-                        <p class="date">
-                            01 Feb 2023
-                        </p>
-                    </div>
-                    <p class="reviews-text">
-                        Great selection. Found a watch at a good price. Excited to see my son reaction when he opens this gift.
                     </p>
                     <div class="profile-details">
                         <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
@@ -201,4 +163,40 @@
             </div>
         </div>
     </main>
+    <script>
+        const addButton = document.getElementById('add-review-button')
+        const overlay = document.getElementById('overlay')
+        const addReviewContainer = document.getElementById('add-review-container')
+        const closeButton = document.getElementById('close-icon')
+
+        function openContainer(event) {
+            event.preventDefault()
+            overlay.style.display = 'block';
+            addReviewContainer.style.display = 'block';
+        }
+
+        function closeContainer(event) {
+            event.preventDefault()
+            overlay.style.display = 'none';
+            addReviewContainer.style.display = 'none';
+        }
+
+        addButton.addEventListener('click', openContainer);
+
+        closeButton.addEventListener('click', closeContainer)
+
+
+        function rateStar(selectedStar) {
+            const stars = document.querySelectorAll('.stars-add-review-container .fa-star');
+            stars.forEach((star, index) => {
+                if (index >= selectedStar - 1) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+        }
+
+
+    </script>
 {% endblock %}

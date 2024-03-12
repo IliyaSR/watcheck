@@ -206,6 +206,7 @@ main{
     font-family: 'Poppins';
     margin-left: 30px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .add-review{
@@ -213,8 +214,99 @@ main{
     position: absolute;
 }
 
-.add-review h2{
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;
+}
+
+.add-review-container{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    width: 500px;
+    height: 550px;
+}
+
+.review-watch-image{
+    width: 72px;
+    height: 72px;
+    padding-right: 10px;
+}
+
+.add-review-container-header{
+    display: flex;
+    padding: 10px;
+}
+
+.add-review-container-header h3{
+    font-family: 'Poppins';
+    font-size: 18px;
     color: #404040;
-    font-size: 28px;
-    font-weight: 500;
+    margin-top: 5px;
+}
+
+.add-review-container-main{
+    padding: 15px;
+}
+
+#big-star-add-review{
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #cccccc;
+}
+
+.stars-add-review-container{
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: left;
+}
+
+#big-star-add-review.selected,
+#big-star-add-review:hover,
+#big-star-add-review.selected ~ .fa-star,
+#big-star-add-review:hover ~ .fa-star{
+    color: #F8D77A;
+}
+
+.fa-xmark{
+    position: absolute;
+    margin-left: 463px;
+    cursor: pointer;
+}
+
+.review-text{
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Poppins';
+    color: #404040;
+    outline: none;
+}
+
+.review-text:hover{
+    outline: none;
+}
+
+.add-review-container-main h3{
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: #404040;
+
+}
+
+.add-review-button{
+    font-size: 18px;
+    border: 0px;
+    margin-left: 0;
+    margin-top: 20px;
 }
