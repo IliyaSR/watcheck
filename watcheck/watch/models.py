@@ -1,4 +1,7 @@
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
+
+from watcheck.accounts.models import Account
 
 
 # Create your models here.
@@ -28,3 +31,11 @@ class Watch(models.Model):
 
     def __str__(self):
         return self.brand
+
+
+class Review(models.Model):
+    rating = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    text_review = models.TextField(max_length=120)
+    date_post = models.DateField(auto_now_add=True)
+    person_review = models.ForeignKey(Account, on_delete=models.CASCADE)
+    rated_watch = models.ForeignKey(Watch, on_delete=models.CASCADE)

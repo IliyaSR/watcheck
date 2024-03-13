@@ -113,53 +113,37 @@
                 </div>
             </div>
             <div class="person-reviews">
-                <div class="person">
-                    <div class="stars-and-date">
-                        <div class="stars">
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
+                {% for review in reviews %}
+                    <div class="person">
+                        <div class="stars-and-date">
+                            <div class="stars">
+                                {% if review.rating >= 1%}
+                                    <i class="fa-solid fa-star" id="small-stars" style="color: red"></i>
+                                {% endif %}
+                                <i class="fa-solid fa-star" id="small-stars"></i>
+                                <i class="fa-solid fa-star" id="small-stars"></i>
+                                <i class="fa-solid fa-star" id="small-stars"></i>
+                                <i class="fa-solid fa-star" id="small-stars"></i>
+                            </div>
+                            <p class="date">
+                                {{ review.date_post|date:'d M Y' }}
+                            </p>
                         </div>
-                        <p class="date">
-                            01 Feb 2023
+                        <p class="reviews-text">
+                            {{ review.text_review }}
                         </p>
-                    </div>
-                    <p class="reviews-text">
-                        Great selection. Found a watch at a good price. Excited to see my son reaction when he opens
-                        this gift.
-                    </p>
-                    <div class="profile-details">
-                        <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
-                        <div>
-                            <h4 class="account-name">Oliver Munch</h4>
+                        <div class="profile-details">
+                            {% if review.person_review.profile_picture %}
+                                <img src="{{ review.person_review.profile_picture.url }}" alt="" class="profile-image">
+                            {% else %}
+                                <img src="/staticfiles/images/istockphoto-1337144146-612x612.jpg" alt="" class="profile-image">
+                            {% endif %}
+                            <div>
+                                <h4 class="account-name">{{ review.person_review.full_name }}</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="person">
-                    <div class="stars-and-date">
-                        <div class="stars">
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                            <i class="fa-solid fa-star" id="small-stars"></i>
-                        </div>
-                        <p class="date">
-                            01 Feb 2023
-                        </p>
-                    </div>
-                    <p class="reviews-text">
-                        Great selection.
-                    </p>
-                    <div class="profile-details">
-                        <img src="/staticfiles/images/man-looking-attractive.webp" alt="" class="profile-image">
-                        <div>
-                            <h4 class="account-name">Oliver Munch</h4>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </main>

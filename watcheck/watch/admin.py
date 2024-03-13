@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from watcheck.watch.models import Watch
+from watcheck.watch.models import Watch, Review
 
 
 # Register your models here.
@@ -11,3 +11,7 @@ class WatchAdmin(admin.ModelAdmin):
     ordering = ['brand']
     search_fields = ['brand']
 
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    pass

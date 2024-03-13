@@ -3,7 +3,7 @@ from itertools import chain
 from django.db.models import Q
 from django.shortcuts import render
 
-from watcheck.watch.models import Watch
+from watcheck.watch.models import Watch, Review
 
 
 def string_to_integer_func(element):
@@ -64,8 +64,11 @@ def filter_watches(request):
 
 def watch_details(request, pk):
     current_watch = Watch.objects.get(pk=pk)
+    reviews = Review.objects.filter(rated_watch__pk=pk)
+
     context = {
-        'current_watch': current_watch
+        'current_watch': current_watch,
+        'reviews': reviews
     }
 
     return render(request, template_name='watch/watch-details.html', context=context)
