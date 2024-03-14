@@ -69,47 +69,58 @@
         <div class="reviews">
             <div class="add-review">
                 <h2>Write a Review</h2>
-                <a class="add-review-button" href="#" id="add-review-button">Add Review</a>
+                <a class="add-review-button" href="{% url 'add_review' current_watch.pk %}" id="add-review-button">Add
+                    Review</a>
             </div>
             <div id="overlay" class="overlay"></div>
 
-            <div class="add-review-container" id="add-review-container">
+            <form class="add-review-container" id="add-review-container" method="post"
+                  action="{% url 'add_review' current_watch.pk %}">
                 <div class="add-review-container-header">
-                    <img src="/staticfiles/images/Arnold-and-Son-Nebula-41-5-Gold_web_1024x1024 1(5).png" alt=""
+                    <img src="{{ current_watch.main_image.url }}" alt=""
                          class="review-watch-image">
                     <h3>Add a review for:<br>
-                        Arnold & Son
+                        {{ current_watch.brand }}
                     </h3>
                     <i class="fa-solid fa-xmark" id="close-icon"></i>
                 </div>
                 <hr></hr>
                 <div class="add-review-container-main">
                     <div class="stars-add-review-container">
-                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(1)" value="5"></i>
-                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(2)" value="4"></i>
-                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(3)" value="3"></i>
-                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(4)" value="2"></i>
-                        <i class="fa-solid fa-star" id="big-star-add-review" onclick="rateStar(5)" value="1"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" name="rated" onclick="rateStar(1)"
+                           value="5"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" name="rated" onclick="rateStar(2)"
+                           value="4"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" name="rated" onclick="rateStar(3)"
+                           value="3"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" name="rated" onclick="rateStar(4)"
+                           value="2"></i>
+                        <i class="fa-solid fa-star" id="big-star-add-review" name="rated" onclick="rateStar(5)"
+                           value="1"></i>
                     </div>
                     <h3>
                         Review:
                     </h3>
-                    <textarea name="" id="" cols="30" rows="10" class="review-text"></textarea>
+                    {% csrf_token %}
+                    {{ review_form.rating }}
+                    {{ review_form.text_review }}
                     <button class="add-review-button">
                         Add Review
                     </button>
                 </div>
-            </div>
+            </form>
 
             <h3 class="reviews-header">Reviews</h3>
             <div class="evaluation-container">
-                <p class="evaluation">4.8</p>
+                <p class="evaluation">{{ average_rating|floatformat:1 }}</p>
                 <div class="stars">
-                    <i class="fa-solid fa-star" id="big-star"></i>
-                    <i class="fa-solid fa-star" id="big-star"></i>
-                    <i class="fa-solid fa-star" id="big-star"></i>
-                    <i class="fa-solid fa-star" id="big-star"></i>
-                    <i class="fa-solid fa-star" id="big-star"></i>
+                    {% for star in numbers_stars %}
+                        {% if average_rating >= star %}
+                            <i class="fa-solid fa-star" id="big-star" style="color: #F8D77A"></i>
+                        {% else %}
+                            <i class="fa-solid fa-star" id="big-star" style="color: #cccccc"></i>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
             <div class="person-reviews">
@@ -117,13 +128,13 @@
                     <div class="person">
                         <div class="stars-and-date">
                             <div class="stars">
-                                {% if review.rating >= 1%}
-                                    <i class="fa-solid fa-star" id="small-stars" style="color: red"></i>
-                                {% endif %}
-                                <i class="fa-solid fa-star" id="small-stars"></i>
-                                <i class="fa-solid fa-star" id="small-stars"></i>
-                                <i class="fa-solid fa-star" id="small-stars"></i>
-                                <i class="fa-solid fa-star" id="small-stars"></i>
+                                {% for star in numbers_stars %}
+                                    {% if review.rating >= star %}
+                                        <i class="fa-solid fa-star" id="small-stars" style="color: #F8D77A"></i>
+                                    {% else %}
+                                        <i class="fa-solid fa-star" id="small-stars" style="color: #cccccc"></i>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <p class="date">
                                 {{ review.date_post|date:'d M Y' }}
@@ -136,7 +147,8 @@
                             {% if review.person_review.profile_picture %}
                                 <img src="{{ review.person_review.profile_picture.url }}" alt="" class="profile-image">
                             {% else %}
-                                <img src="/staticfiles/images/istockphoto-1337144146-612x612.jpg" alt="" class="profile-image">
+                                <img src="/staticfiles/images/istockphoto-1337144146-612x612.jpg" alt=""
+                                     class="profile-image">
                             {% endif %}
                             <div>
                                 <h4 class="account-name">{{ review.person_review.full_name }}</h4>

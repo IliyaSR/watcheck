@@ -1,19 +1,19 @@
-main{
+main {
     background-color: #000000;
 }
 
 
-.watch-details-page-container{
+.watch-details-page-container {
     padding: 80px 150px 90px 150px;
     display: flex;
 }
 
-.about-watch{
+.about-watch {
     padding-left: 200px;
     width: 750px;
 }
 
-.watch-header{
+.watch-header {
     font-family: 'Poppins';
     font-size: 70px;
     color: #FFFFFF;
@@ -23,7 +23,7 @@ main{
 
 }
 
-.watch-under-header{
+.watch-under-header {
     font-family: 'Poppins';
     font-size: 30px;
     font-weight: 400;
@@ -31,7 +31,7 @@ main{
     margin-top: 10px;
 }
 
-.watch-manufacture{
+.watch-manufacture {
     font-family: 'Poppins';
     font-size: 27px;
     font-weight: lighter;
@@ -39,14 +39,14 @@ main{
 
 }
 
-.code-watch{
+.code-watch {
     font-family: 'Poppins';
     font-size: 22px;
     font-weight: lighter;
     color: #C2BCB2;
 }
 
-.price-watch{
+.price-watch {
     font-family: 'Poppins';
     font-size: 55px;
     color: #FFFFFF;
@@ -54,11 +54,11 @@ main{
     margin-top: 5px;
 }
 
-.button-container{
+.button-container {
     margin-bottom: 50px;
 }
 
-.add-to-bag-button{
+.add-to-bag-button {
     color: #000000;
     font-family: 'Poppins';
     font-weight: 600;
@@ -69,17 +69,17 @@ main{
     margin-bottom: 100px;
 }
 
-.watch-specifications{
+.watch-specifications {
     padding-top: 60px;
 }
 
-.watch-specifications-row-1{
+.watch-specifications-row-1 {
     display: flex;
     width: 520px;
     border-bottom: 1px solid #C2BCB2;
 }
 
-.watch-specifications-row-1 h3{
+.watch-specifications-row-1 h3 {
     font-family: 'Poppins';
     font-weight: lighter;
     font-size: 26px;
@@ -87,7 +87,7 @@ main{
     margin: 15px auto 15px 0;
 }
 
-.watch-specifications-row-1 p{
+.watch-specifications-row-1 p {
     font-family: 'Poppins';
     font-weight: lighter;
     font-size: 26px;
@@ -96,18 +96,18 @@ main{
     margin: 15px 0 15px 0;
 }
 
-.second-images img{
+.second-images img {
     width: 332px;
     height: 350px;
 }
 
-.reviews{
+.reviews {
     background-color: #C2BCB2;
     margin-top: 50px;
     padding-bottom: 40px;
 }
 
-.reviews-header{
+.reviews-header {
     text-align: center;
     color: #404040;
     font-size: 28px;
@@ -115,12 +115,12 @@ main{
     padding-top: 30px;
 }
 
-.evaluation-container{
+.evaluation-container {
     display: flex;
     justify-content: center;
 }
 
-.evaluation{
+.evaluation {
     color: black;
     font-weight: lighter;
     font-size: 24px;
@@ -128,12 +128,12 @@ main{
     margin-right: 10px;
 }
 
-#big-star{
+#big-star {
     font-size: 40px;
     color: #F8D77A;
 }
 
-.person{
+.person {
     width: 400px;
     max-height: 230px;
     background-color: #FFFFFF;
@@ -142,17 +142,17 @@ main{
     margin: 15px;
 }
 
-#small-stars{
+#small-stars {
     font-size: 20px;
     color: #F8D77A;
 }
 
-.stars-and-date{
+.stars-and-date {
     display: flex;
     justify-content: space-between;
 }
 
-.date{
+.date {
     margin-top: 2px;
     margin-left: 8px;
     color: #404040;
@@ -161,14 +161,14 @@ main{
     font-weight: lighter;
 }
 
-.person-reviews{
+.person-reviews {
     justify-content: space-between;
     width: 1360px;
     margin: 60px auto;
     text-align: center;
 }
 
-.reviews-text{
+.reviews-text {
     margin-left: 50px;
     margin-right: 50px;
     font-size: 18px;
@@ -178,17 +178,17 @@ main{
     height: 50px;
 }
 
-.profile-image{
+.profile-image {
     width: 73px;
     height: 73px;
     border-radius: 100%;
 }
 
-.profile-details{
+.profile-details {
     display: flex;
 }
 
-.account-name{
+.account-name {
     font-size: 16px;
     font-family: 'Poppins';
     font-weight: 400;
@@ -199,7 +199,7 @@ main{
 }
 
 
-.add-review-button{
+.add-review-button {
     background-color: #959595;
     padding: 5px;
     color: #404040;
@@ -209,12 +209,12 @@ main{
     text-decoration: none;
 }
 
-.add-review{
+.add-review {
     margin-left: 85%;
     position: absolute;
 }
 
-.overlay{
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -225,7 +225,7 @@ main{
     z-index: 1;
 }
 
-.add-review-container{
+.add-review-container {
     display: none;
     position: fixed;
     top: 50%;
@@ -237,36 +237,36 @@ main{
     height: 550px;
 }
 
-.review-watch-image{
+.review-watch-image {
     width: 72px;
     height: 72px;
     padding-right: 10px;
 }
 
-.add-review-container-header{
+.add-review-container-header {
     display: flex;
     padding: 10px;
 }
 
-.add-review-container-header h3{
+.add-review-container-header h3 {
     font-family: 'Poppins';
     font-size: 18px;
     color: #404040;
     margin-top: 5px;
 }
 
-.add-review-container-main{
+.add-review-container-main {
     padding: 15px;
 }
 
-#big-star-add-review{
+#big-star-add-review {
     padding-right: 10px;
     cursor: pointer;
     font-size: 30px;
     color: #cccccc;
 }
 
-.stars-add-review-container{
+.stars-add-review-container {
     flex-direction: row-reverse;
     display: flex;
     justify-content: left;
@@ -275,17 +275,17 @@ main{
 #big-star-add-review.selected,
 #big-star-add-review:hover,
 #big-star-add-review.selected ~ .fa-star,
-#big-star-add-review:hover ~ .fa-star{
+#big-star-add-review:hover ~ .fa-star {
     color: #F8D77A;
 }
 
-.fa-xmark{
+.fa-xmark {
     position: absolute;
     margin-left: 463px;
     cursor: pointer;
 }
 
-.review-text{
+.review-text {
     width: 100%;
     font-size: 14px;
     font-family: 'Poppins';
@@ -293,18 +293,18 @@ main{
     outline: none;
 }
 
-.review-text:hover{
+.review-text:hover {
     outline: none;
 }
 
-.add-review-container-main h3{
+.add-review-container-main h3 {
     font-family: 'Poppins';
     font-size: 20px;
     color: #404040;
 
 }
 
-.add-review-button{
+.add-review-button {
     font-size: 18px;
     border: 0px;
     margin-left: 0;
