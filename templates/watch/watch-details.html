@@ -76,6 +76,7 @@
 
             <form class="add-review-container" id="add-review-container" method="post"
                   action="{% url 'add_review' current_watch.pk %}">
+                {% csrf_token %}
                 <div class="add-review-container-header">
                     <img src="{{ current_watch.main_image.url }}" alt=""
                          class="review-watch-image">
@@ -101,9 +102,10 @@
                     <h3>
                         Review:
                     </h3>
-                    {% csrf_token %}
-                    {{ review_form.rating }}
                     {{ review_form.text_review }}
+                    <label>
+                        <input class= 'invisible-input' id="invisible-input" name="rating" value="2">
+                    </label>
                     <button class="add-review-button">
                         Add Review
                     </button>
@@ -181,18 +183,19 @@
 
         closeButton.addEventListener('click', closeContainer)
 
-
         function rateStar(selectedStar) {
             const stars = document.querySelectorAll('.stars-add-review-container .fa-star');
+            const ratings = []
             stars.forEach((star, index) => {
                 if (index >= selectedStar - 1) {
                     star.classList.add('selected');
+                    ratings.push(star.getAttribute('value'))
                 } else {
                     star.classList.remove('selected');
                 }
             });
+            document.getElementById('invisible-input').value = ratings[0]
         }
-
 
     </script>
 {% endblock %}

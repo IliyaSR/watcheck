@@ -88,19 +88,19 @@ def watch_details(request, pk):
 
 
 def add_review(request, watch_id):
-    rated = request.GET.getlist('selected')
-    print(rated)
-
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         watch = Watch.objects.get(id=watch_id)
+        review_rating = request.POST.get('rating')
 
         if form.is_valid():
             review = form.save(commit=False)
             review.rated_watch = watch
             review.person_review = request.user
+            review.rating = review_rating
             review.save()
 
             return redirect(request.META['HTTP_REFERER'] + f'#{watch_id}')
-
-
+    else:
+        # Handle GET request here if needed
+        pass
