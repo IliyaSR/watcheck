@@ -1,0 +1,89 @@
+main {
+    background-color: #000000;
+    height: 750px;
+}
+
+.account-details-header {
+    margin-top: 0;
+    padding-top: 30px;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+}
+
+.account-sections-container {
+    height: 520px;
+    width: 1200px;
+    background-color: #FFFFFF;
+    padding: 60px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.section-names a {
+    font-family: 'Poppins';
+    font-size: 27px;
+    opacity: 60%;
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.section-names button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-family: 'Poppins';
+    font-size: 27px;
+    opacity: 60%;
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.section-names {
+    padding-right: 100px;
+}
+
+.shipping-addresses-header {
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: #000000;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.no-orders {
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    background-color: #C2BCB2;
+    padding: 8px;
+}
+
+.no-orders i {
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+.no-orders p {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 140px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.no-orders a {
+    color: #FFFFFF;
+    padding-top: 3px;
+}

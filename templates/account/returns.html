@@ -1,0 +1,13 @@
+{% extends 'account.html' %}
+
+{% block  div_content %}
+
+    <div class="user-orders">
+        <h3 class="shipping-addresses-header">My returns</h3>
+        <div class="no-orders">
+            <i class="fa-solid fa-info"></i>
+            <p>No orders in the selected period</p>
+            <a href="{% url 'shop' %}">View products</a>
+        </div>
+    </div>
+{% endblock %}

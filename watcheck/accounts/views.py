@@ -28,7 +28,7 @@ class LogoutView(auth_views.LogoutView):
 
 class AccountDeleteView(DeleteView):
     model = Account
-    template_name = 'account/account-details.html'
+    template_name = 'account/shipping-addresses.html'
 
     def post(self, *args, pk):
         self.request.user.delete()
@@ -38,6 +38,18 @@ class AccountDeleteView(DeleteView):
 def account_details(request, pk):
     current_account = Account.objects.get(pk=pk)
     context = {
-        'current_account':current_account
+        'current_account': current_account
     }
     return render(request, template_name='account/account-details.html', context=context)
+
+
+def addresses(request, pk):
+    return render(request, template_name='account/shipping-addresses.html')
+
+
+def orders(request, pk):
+    return render(request, template_name='account/orders.html')
+
+
+def returns(request, pk):
+    return render(request, template_name='account/returns.html')
