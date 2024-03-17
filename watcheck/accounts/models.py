@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django_countries.fields import CountryField
 
 
 # Create your models here.
@@ -11,3 +12,12 @@ class Account(AbstractUser):
 
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
+
+
+class Address(models.Model):
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    country = CountryField()
+    address = models.CharField(max_length=30)
+    town = models.CharField(max_length=20)
+    postcode = models.IntegerField()
