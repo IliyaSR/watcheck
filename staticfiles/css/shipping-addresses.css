@@ -1,6 +1,6 @@
 /* MAIN */
 
-.shipping-addresses-header{
+.shipping-addresses-header {
     font-family: 'Poppins';
     font-weight: 500;
     color: #000000;
@@ -8,36 +8,36 @@
     margin-top: 0;
 }
 
-.shipping-addresses label,input{
+.shipping-addresses label, input {
     display: block;
     margin-right: 20px;
     font-family: 'Poppins';
 }
 
-.shipping-addresses input{
+.shipping-addresses input {
     height: 2em;
     margin-bottom: 10px;
 }
 
-.first-name{
+.first-name {
     width: 300px;
 }
 
-.user-names{
+.user-names {
     display: flex;
 }
 
-.county-region{
+.county-region {
     width: 640px;
     margin-bottom: 10px;
 }
 
-.address-input{
+.address-input {
     width: 640px;
     margin-bottom: 10px;
 }
 
-.address-button{
+.address-button {
     margin-top: 20px;
     font-size: 16px;
     color: #FFFFFF;
@@ -46,4 +46,6 @@
     padding: 10px;
     text-decoration: none;
     width: 150px;
+    border: 0;
+    cursor: pointer;
 }

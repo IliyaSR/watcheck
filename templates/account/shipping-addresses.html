@@ -2,40 +2,35 @@
 
 {% block  div_content %}
 
-    <div class="shipping-addresses">
+    <form class="shipping-addresses" method="post" action="{% url 'addresses' user.pk %}">
         <h3 class="shipping-addresses-header">My address</h3>
         <div class="user-names">
             <label for="">
                 FIRST NAME
-                <input type="text" name="" id="" class="first-name">
+                {{ form.first_name }}
             </label>
             <label for="">
                 LAST NAME
-                <input type="text" name="" id="" class="first-name">
+                {{ form.last_name }}
             </label>
         </div>
         <label for="">
-            COUNTRY / REGION
-            <input type="text" name="" id="" class="county-region">
-        </label>
-        <label for="">
             ADDRESS
-            <input type="text" name="" id="" class="address-input">
+            {{ form.address }}
         </label>
         <div class="user-names">
             <label for="">
                 TOWN
-                <input type="text" name="" id="" class="first-name">
+                {{ form.town }}
             </label>
             <label for="">
                 POST CODE
-                <input type="text" name="" id="" class="first-name">
+                {{ form.postcode }}
             </label>
         </div>
-        <div class="address-button">
-            <a href="#" class="address-button">
-                Save address
-            </a>
-        </div>
-    </div>
+        {% csrf_token %}
+        <button class="address-button">
+            Save address
+        </button>
+    </form>
 {% endblock %}

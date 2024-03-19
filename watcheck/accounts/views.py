@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView
 
-from watcheck.accounts.forms import RegisterForm, LoginForm
+from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm
 from watcheck.accounts.models import Account
 
 
@@ -44,7 +44,22 @@ def account_details(request, pk):
 
 
 def addresses(request, pk):
-    return render(request, template_name='account/shipping-addresses.html')
+    if request.method == 'POST':
+        form = AddressForm(request.POST)
+        user = Account.objects.get(pk=pk)
+        if form.is_valid():
+            address = form.save(commit=False)
+            address.current_profile = user
+            address.save()
+            return redirect('account-details', pk)
+    else:
+        form = AddressForm()
+
+        context = {
+            'form': form
+        }
+
+        return render(request, template_name='account/shipping-addresses.html', context=context)
 
 
 def orders(request, pk):

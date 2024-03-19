@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
 from django import forms
 
-from watcheck.accounts.models import Account
+from watcheck.accounts.models import Account, Address
 
 
 class RegisterForm(UserCreationForm):
@@ -61,3 +61,27 @@ class LoginForm(AuthenticationForm):
             }
         )
     )
+
+
+class AddressForm(forms.ModelForm):
+    class Meta:
+        model = Address
+        fields = ['first_name', 'last_name', 'address', 'town', 'postcode']
+        widgets = {
+            'first_name': forms.TextInput(
+                attrs={'class': 'first-name'}
+            ),
+            'last_name': forms.TextInput(
+                attrs={'class': 'first-name'}
+            ),
+            'address': forms.TextInput(
+                attrs={'class': 'address-input'}
+            ),
+            'town': forms.TextInput(
+                attrs={'class': 'first-name'}
+            ),
+            'postcode': forms.TextInput(
+                attrs={'class': 'first-name'}
+            )
+
+        }

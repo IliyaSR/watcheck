@@ -17,7 +17,7 @@ class Account(AbstractUser):
 class Address(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    country = CountryField()
-    address = models.CharField(max_length=30)
+    address = models.CharField(max_length=20)
     town = models.CharField(max_length=20)
     postcode = models.IntegerField()
+    current_profile = models.ForeignKey(Account, on_delete=models.CASCADE)
