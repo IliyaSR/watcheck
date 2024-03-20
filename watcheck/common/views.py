@@ -27,3 +27,7 @@ def search_view(request):
             return render(request, 'watch/shop.html', context=context)
         else:
             return render(request, 'common/search.html')
+
+
+def bag_view(request):
+    return render(request, template_name='common/bag.html')

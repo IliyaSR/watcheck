@@ -1,0 +1,184 @@
+.bag-main{
+    background-color: #000000;
+    padding-bottom: 100px;
+}
+
+.bag-header{
+    margin-top: 0;
+    padding-top: 30px;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+}
+
+.bag-container{
+    display: flex;
+    width: 1500px;
+    height: 1200px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.shopping-cart-container{
+    background-color: #FFFFFF;
+    width: 55%;
+}
+
+.shopping-cart-header{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+    padding-left: 70px;
+}
+
+.bag-current-watch{
+    display: flex;
+    margin: 0 auto 50px auto;
+    width: 740px;
+    height: 300px;
+}
+
+.bag-watch-name{
+    margin-left: 30px;
+}
+
+.bag-watch-brand{
+    color: #000000;
+    font-family: 'Poppins';
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.bag-watch-model{
+    color: #000000;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.price-remove-icon{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.numbers{
+    font-size: 17px;
+    padding: 8px 16px;
+    margin-top: 105px;
+}
+
+.remove-icon{
+    display: flex;
+    font-size: 18px;
+}
+
+.remove-icon p{
+    margin: 0;
+    margin-left: 4px;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+.bag-watch-price{
+    font-size: 30px;
+    margin-top: 170px;
+    font-weight: 600;
+}
+
+.price-section{
+    background-color: #c2bcb2;
+    width: 45%;
+}
+
+.first-div-price-container{
+    margin-top: 90px;
+}
+
+.price-container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.price-container p{
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.price-container-paragraphs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-button{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Poppins';
+    padding: 12px ;
+    position: absolute;
+    margin-top: 30px;
+    text-align: center;
+    width: 500px;
+    display: block;
+}
+
+.delivery-to-the-store-container{
+    margin-top: 120px;
+    display: flex;
+}
+
+.delivery-to-the-store-container p{
+    font-family: 'Poppins';
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+}
+
+.delivery-to-the-store-container i{
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+.free-delivery-container{
+    display: flex;
+    margin-top: 15px;
+}
+
+.free-delivery-container p{
+    font-family: 'Poppins';
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+}
+
+.free-delivery-container i{
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+.free-return-container{
+    display: flex;
+    margin-top: 15px;
+}
+
+.free-return-container p{
+    font-family: 'Poppins';
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+}
+
+.free-return-container i{
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 17px;
+}
