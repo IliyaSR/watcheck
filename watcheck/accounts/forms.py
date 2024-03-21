@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField, PasswordChangeForm
 from django import forms
 
 from watcheck.accounts.models import Account, Address
@@ -85,3 +85,42 @@ class AddressForm(forms.ModelForm):
             )
 
         }
+
+
+class EditAccountForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = ('first_name', 'last_name', 'username', 'email')
+
+        widgets = {
+            'first_name': forms.TextInput(
+                attrs={'class': 'first-name'}),
+            'last_name': forms.TextInput(
+                attrs={'class': 'first-name'}),
+            'username': forms.TextInput(
+                attrs={'class': 'username'}),
+            'email': forms.TextInput(
+                attrs={'class': 'email'})
+        }
+
+
+class ChangePassword(PasswordChangeForm):
+
+    old_password = forms.CharField(
+        widget=forms.TextInput(
+            attrs={'class': 'password'}
+        )
+    )
+
+    new_password1 = forms.CharField(
+        widget=forms.TextInput(
+            attrs={'class': 'password'}
+        )
+    )
+
+    new_password2 = forms.CharField(
+        widget=forms.TextInput(
+            attrs={'class': 'password'}
+        )
+    )
+

@@ -1,6 +1,30 @@
 {% extends 'account.html' %}
 
 {% block  div_content %}
-    
-    <h1 style="color: black">{{ current_account.first_name }}</h1>
+    <form class="shipping-addresses" method="post" action="{% url 'account-details' user.pk %}">
+        <h3 class="shipping-addresses-header">My account</h3>
+        <div class="user-names">
+            <label for="">
+                FIRST NAME
+                {{ form.first_name }}
+            </label>
+            <label for="">
+                LAST NAME
+                {{ form.last_name }}
+            </label>
+        </div>
+        <label for="">
+            Username
+            {{ form.username }}
+        </label>
+        <label for="">
+            Email
+            {{ form.email }}
+        </label>
+        {% csrf_token %}
+        <button class="address-button">
+            Save changes
+        </button>
+
+    </form>
 {% endblock %}

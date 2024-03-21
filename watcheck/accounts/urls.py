@@ -10,6 +10,6 @@ urlpatterns = [
         path('addresses/', views.addresses, name='addresses'),
         path('orders/', views.orders, name='orders'),
         path('returns/', views.returns, name='returns'),
-        path('delete/', views.AccountDeleteView.as_view(), name='account-delete')
+        path('delete/', views.AccountDeleteView.as_view(), name='account-delete'),
     ]))
 ]

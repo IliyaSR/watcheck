@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView
 
-from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm
+from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm, EditAccountForm, ChangePassword
 from watcheck.accounts.models import Account
 
 
@@ -36,11 +36,19 @@ class AccountDeleteView(DeleteView):
 
 
 def account_details(request, pk):
-    current_account = Account.objects.get(pk=pk)
-    context = {
-        'current_account': current_account
-    }
-    return render(request, template_name='account/account-details.html', context=context)
+    if request.method == 'POST':
+        form = EditAccountForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('account-details', pk)
+    else:
+        form = EditAccountForm(instance=request.user)
+
+        context = {
+            'form': form,
+        }
+
+        return render(request, template_name='account/account-details.html', context=context)
 
 
 def addresses(request, pk):

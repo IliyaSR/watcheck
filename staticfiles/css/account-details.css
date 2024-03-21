@@ -1,0 +1,51 @@
+.shipping-addresses-header{
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: #000000;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.shipping-addresses label,input{
+    display: block;
+    margin-right: 20px;
+    font-family: 'Poppins';
+}
+
+.shipping-addresses input{
+    height: 2em;
+    margin-bottom: 10px;
+}
+
+.first-name{
+    width: 300px;
+}
+
+.password{
+    width: 187px;
+}
+
+.user-names{
+    display: flex;
+}
+
+.email{
+    width: 640px;
+    margin-bottom: 10px;
+}
+
+.username{
+    width: 640px;
+    margin-bottom: 10px;
+}
+
+.address-button{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Poppins';
+    padding: 10px;
+    text-decoration: none;
+    width: 154px;
+}
