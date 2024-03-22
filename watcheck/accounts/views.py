@@ -1,4 +1,6 @@
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import PasswordChangeView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView
@@ -76,3 +78,11 @@ def orders(request, pk):
 
 def returns(request, pk):
     return render(request, template_name='account/returns.html')
+
+
+class MyPasswordChangeView(PasswordChangeView):
+    form_class = ChangePassword
+    template_name = 'account/change-password.html'
+
+    def get_success_url(self):
+        return reverse_lazy('account-details', kwargs={'pk': self.request.user.pk})

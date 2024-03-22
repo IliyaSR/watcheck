@@ -105,22 +105,23 @@ class EditAccountForm(forms.ModelForm):
 
 
 class ChangePassword(PasswordChangeForm):
+    class Meta:
+        model = Account
 
     old_password = forms.CharField(
-        widget=forms.TextInput(
+        widget=forms.PasswordInput(
             attrs={'class': 'password'}
         )
     )
 
     new_password1 = forms.CharField(
-        widget=forms.TextInput(
+        widget=forms.PasswordInput(
             attrs={'class': 'password'}
         )
     )
 
     new_password2 = forms.CharField(
-        widget=forms.TextInput(
+        widget=forms.PasswordInput(
             attrs={'class': 'password'}
         )
     )
-

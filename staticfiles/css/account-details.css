@@ -1,4 +1,4 @@
-.shipping-addresses-header{
+.shipping-addresses-header {
     font-family: 'Poppins';
     font-weight: 500;
     color: #000000;
@@ -6,40 +6,45 @@
     margin-top: 0;
 }
 
-.shipping-addresses label,input{
+.shipping-addresses label, input {
     display: block;
     margin-right: 20px;
     font-family: 'Poppins';
 }
 
-.shipping-addresses input{
+.shipping-addresses input {
     height: 2em;
     margin-bottom: 10px;
 }
 
-.first-name{
+.shipping-addresses {
+    position: absolute;
+    margin-left: 366px;
+}
+
+.first-name {
     width: 300px;
 }
 
-.password{
+.password {
     width: 187px;
 }
 
-.user-names{
+.user-names {
     display: flex;
 }
 
-.email{
+.email {
     width: 640px;
     margin-bottom: 10px;
 }
 
-.username{
+.username {
     width: 640px;
     margin-bottom: 10px;
 }
 
-.address-button{
+.address-button {
     margin-top: 20px;
     font-size: 16px;
     color: #FFFFFF;
@@ -48,4 +53,34 @@
     padding: 10px;
     text-decoration: none;
     width: 154px;
+}
+
+.delete-button {
+    margin-top: 281px;
+    margin-left: 485px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: red;
+    font-family: 'Poppins';
+    padding: 10px;
+    text-decoration: none;
+    width: 154px;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
+}
+
+.change-password-button {
+    margin-top: 281px;
+    margin-left: 601px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Poppins';
+    padding: 10px;
+    text-decoration: none;
+    width: 168px;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
 }

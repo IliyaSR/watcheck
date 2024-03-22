@@ -22,9 +22,19 @@
             {{ form.email }}
         </label>
         {% csrf_token %}
-        <button class="address-button">
-            Save changes
-        </button>
-
+        <div class="save-delete-buttons">
+            <button class="address-button">
+                Save changes
+            </button>
+        </div>
     </form>
+    <form method="post" action="{% url 'account-delete' user.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="delete-button">
+            Delete account
+        </button>
+    </form>
+    <a href="{% url 'change-password' user.pk %}" class="change-password-button">
+        Change password
+    </a>
 {% endblock %}
