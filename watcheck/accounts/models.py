@@ -21,3 +21,4 @@ class Address(models.Model):
     town = models.CharField(max_length=20)
     postcode = models.IntegerField()
     current_profile = models.ForeignKey(Account, on_delete=models.CASCADE)
+

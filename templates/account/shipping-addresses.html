@@ -1,7 +1,6 @@
 {% extends 'account.html' %}
 
 {% block  div_content %}
-
     <form class="shipping-addresses" method="post" action="{% url 'addresses' user.pk %}">
         <h3 class="shipping-addresses-header">My address</h3>
         <div class="user-names">
@@ -29,8 +28,22 @@
             </label>
         </div>
         {% csrf_token %}
-        <button class="address-button">
-            Save address
-        </button>
+        {% if address %}
+            <button class="address-button">
+                Save changes
+            </button>
+        {% else %}
+            <button class="address-button">
+                Save address
+            </button>
+        {% endif %}
+    </form>
+    <form method="post" action="{% url 'delete_address' user.pk %}">
+        {% csrf_token %}
+        {% if address %}
+            <button type="submit" class="delete-button">
+                Delete address
+            </button>
+        {% endif %}
     </form>
 {% endblock %}

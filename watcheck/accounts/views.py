@@ -5,8 +5,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView
 
-from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm, EditAccountForm, ChangePassword
-from watcheck.accounts.models import Account
+from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm, EditAccountForm, ChangePassword, \
+    EditAddressForm
+from watcheck.accounts.models import Account, Address
 
 
 # Create your views here.
@@ -54,22 +55,49 @@ def account_details(request, pk):
 
 
 def addresses(request, pk):
-    if request.method == 'POST':
-        form = AddressForm(request.POST)
-        user = Account.objects.get(pk=pk)
-        if form.is_valid():
-            address = form.save(commit=False)
-            address.current_profile = user
-            address.save()
-            return redirect('account-details', pk)
+    if Address.objects.first():
+        address = Address.objects.get(current_profile_id=pk)
+        if request.method == 'POST':
+            form = AddressForm(request.POST, instance=address)
+            user = Account.objects.get(pk=pk)
+            if form.is_valid():
+                address = form.save(commit=False)
+                address.current_profile = user
+                address.save()
+                return redirect('account-details', pk)
+        else:
+            form = EditAddressForm(instance=address, initial=address.__dict__)
+
+            context = {
+                'form': form,
+                'address': address
+            }
+
+            return render(request, template_name='account/shipping-addresses.html', context=context)
     else:
-        form = AddressForm()
+        if request.method == 'POST':
+            form = AddressForm(request.POST)
+            user = Account.objects.get(pk=pk)
+            if form.is_valid():
+                address = form.save(commit=False)
+                address.current_profile = user
+                address.save()
+                return redirect('account-details', pk)
+        else:
+            form = EditAddressForm()
 
-        context = {
-            'form': form
-        }
+            context = {
+                'form': form,
+            }
 
-        return render(request, template_name='account/shipping-addresses.html', context=context)
+            return render(request, template_name='account/shipping-addresses.html', context=context)
+
+
+def delete_address(request, pk):
+    current_address = Address.objects.get(current_profile_id=pk)
+    current_address.delete()
+
+    return redirect('addresses', pk)
 
 
 def orders(request, pk):

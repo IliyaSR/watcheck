@@ -87,6 +87,10 @@ class AddressForm(forms.ModelForm):
         }
 
 
+class EditAddressForm(AddressForm):
+    pass
+
+
 class EditAccountForm(forms.ModelForm):
     class Meta:
         model = Account
