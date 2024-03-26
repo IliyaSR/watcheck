@@ -31,7 +31,7 @@
                 <p class="price-watch">
                     ${{ current_watch.price }}
                 </p>
-                <a href="" class="add-to-bag-button">
+                <a href="{% url 'add_to_bag' current_watch.id %}" class="add-to-bag-button">
                     ADD TO BAG
                 </a>
                 <div class="watch-specifications">

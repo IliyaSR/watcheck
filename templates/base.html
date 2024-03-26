@@ -30,6 +30,7 @@
         </ul>
         <div class="icons-contaniner">
             <a onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <span class="count-elements-in-bag">{{ count_watches_on_bag }}</span>
             <a href="{% url 'bag' %}" style="color: #000000"><i class="fa-solid fa-bag-shopping"></i></a>
             {% if user.is_authenticated %}
                 <a href="{% url 'account-details' user.pk %}"><i class="fa-solid fa-user" style="color: black;"></i></a>
@@ -80,11 +81,11 @@
 </body>
 </html>
 <script>
-    function toggleSearch(){
+    function toggleSearch() {
         const search = document.getElementById('search')
-        if (search.style.display === 'none' || search.style.display === ''){
+        if (search.style.display === 'none' || search.style.display === '') {
             search.style.display = 'block'
-        } else{
+        } else {
             search.style.display = 'none'
         }
     }

@@ -30,6 +30,7 @@
         </ul>
         <div class="icons-contaniner">
             <a onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <span class="count-elements-in-bag">{{ count_watches_on_bag }}</span>
             <a href="{% url 'bag' %}"><i class="fa-solid fa-bag-shopping" style="color: #000000"></i></a>
             {% if user.is_authenticated %}
                 <a href="{% url 'account-details' user.pk %}"><i class="fa-solid fa-user" style="color: black;"></i></a>

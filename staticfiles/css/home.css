@@ -320,6 +320,21 @@ header {
     margin-bottom: 0;
 }
 
+.count-elements-in-bag{
+    padding-right: 0.5px;
+    background-color: black;
+    border-radius: 4rem;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    top: 23px;
+    margin-left: 18px;
+    font-family: 'Poppins';
+}
+
 /* Footer */
 
 footer {

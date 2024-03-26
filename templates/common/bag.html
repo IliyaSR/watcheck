@@ -7,78 +7,35 @@
                 <h3 class="shopping-cart-header">
                     SHOPPING CART
                 </h3>
-                <div class="bag-current-watch">
-                    <img src="/staticfiles/images/image 12.bag.png" alt="">
-                    <div class="bag-watch-name">
-                        <h3 class="bag-watch-brand">
-                            ARNOLD & SON
-                        </h3>
-                        <h4 class="bag-watch-model">
-                            ODYSSEY TWO TONE GOLD BLUE LIN
-                        </h4>
-                        <select class="numbers" name="numbers">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="price-remove-icon">
-                        <div class="remove-icon">
-                            <i class="fa-solid fa-trash-can"></i>
-                            <p>Remove</p>
+                {% for current_element in bag_elements %}
+                    <div class="bag-current-watch">
+                        <img src="{{ current_element.watch_image.url }}" alt="">
+                        <div class="watch-details-price">
+                            <div class="bag-watch-name">
+                                <h3 class="bag-watch-brand">
+                                    {{ current_element.brand_watch }}
+                                </h3>
+                                <h4 class="bag-watch-model">
+                                    {{ current_element.model_watch }}
+                                </h4>
+                                <select class="numbers" name="numbers">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <form class="price-remove-icon" action="{% url 'remove_item' current_element.id %}">
+                                {% csrf_token %}
+                                <button class="remove-icon">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    <p>Remove</p>
+                                </button>
+                                <p class="bag-watch-price">${{ current_element.price }}</p>
+                            </form>
                         </div>
-                        <p class="bag-watch-price">$1200</p>
                     </div>
-                </div>
-                <div class="bag-current-watch">
-                    <img src="/staticfiles/images/image 12.bag.png" alt="">
-                    <div class="bag-watch-name">
-                        <h3 class="bag-watch-brand">
-                            ARNOLD & SON
-                        </h3>
-                        <h4 class="bag-watch-model">
-                            ODYSSEY TWO TONE GOLD BLUE LIN
-                        </h4>
-                        <select class="numbers" name="numbers">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="price-remove-icon">
-                        <div class="remove-icon">
-                            <i class="fa-solid fa-trash-can"></i>
-                            <p>Remove</p>
-                        </div>
-                        <p class="bag-watch-price">$1200</p>
-                    </div>
-                </div>
-                <div class="bag-current-watch">
-                    <img src="/staticfiles/images/image 12.bag.png" alt="">
-                    <div class="bag-watch-name">
-                        <h3 class="bag-watch-brand">
-                            ARNOLD & SON
-                        </h3>
-                        <h4 class="bag-watch-model">
-                            ODYSSEY TWO TONE GOLD BLUE LIN
-                        </h4>
-                        <select class="numbers" name="numbers">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="price-remove-icon">
-                        <div class="remove-icon">
-                            <i class="fa-solid fa-trash-can"></i>
-                            <p>Remove</p>
-                        </div>
-                        <p class="bag-watch-price">$1200</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <section class="price-section">
                 <div class="price-container">
@@ -106,7 +63,7 @@
                     <div class="free-delivery-container">
                         <i class="fa-solid fa-cube"></i>
                         <p>Free delivery on purchases non-discounted
-                            products over 100 $</p>
+                            products over 200 $</p>
                     </div>
                     <div class="free-return-container">
                         <i class="fa-solid fa-arrow-rotate-left"></i>
