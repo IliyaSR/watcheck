@@ -18,12 +18,6 @@
                                 <h4 class="bag-watch-model">
                                     {{ current_element.model_watch }}
                                 </h4>
-                                <select class="numbers" name="numbers">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
                             </div>
                             <form class="price-remove-icon" action="{% url 'remove_item' current_element.id %}">
                                 {% csrf_token %}
@@ -42,15 +36,23 @@
                     <div class="first-div-price-container">
                         <div class="price-container-paragraphs">
                             <p>Products price</p>
-                            <p>$2100</p>
+                            <p>${{ product_price }}</p>
                         </div>
                         <div class="price-container-paragraphs">
                             <p>Delivery</p>
-                            <p>from 0.00</p>
+                            {% if product_price > 200%}
+                                <p>from $0.00</p>
+                            {% else %}
+                                <p>from $8.00</p>
+                            {% endif %}
                         </div>
                         <div class="price-container-paragraphs">
                             <p>Total</p>
-                            <p>$2100</p>
+                            {% if product_price > 200 %}
+                                <p>${{ product_price }}</p>
+                            {% else %}
+                                <p>${{ sum_with_delivery }}</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div>

@@ -27,6 +27,16 @@
                 {{ form.postcode }}
             </label>
         </div>
+        <div class="user-names">
+            <label for="">
+                PHONE
+                {{ form.phone }}
+            </label>
+            <label for="">
+                EMAIL
+                {{ form.email }}
+            </label>
+        </div>
         {% csrf_token %}
         {% if address %}
             <button class="address-button">

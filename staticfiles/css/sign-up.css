@@ -50,7 +50,6 @@ main{
     font-weight: 600;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 10px;
 }
 
 .sign-up-social{
@@ -90,7 +89,7 @@ main{
     position: relative;
     left: 29%;
     margin-bottom: 15px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .first-name-sign-in{

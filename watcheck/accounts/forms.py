@@ -66,7 +66,7 @@ class LoginForm(AuthenticationForm):
 class AddressForm(forms.ModelForm):
     class Meta:
         model = Address
-        fields = ['first_name', 'last_name', 'address', 'town', 'postcode']
+        fields = ['first_name', 'last_name', 'address', 'town', 'postcode', 'phone', 'email']
         widgets = {
             'first_name': forms.TextInput(
                 attrs={'class': 'first-name'}
@@ -82,7 +82,14 @@ class AddressForm(forms.ModelForm):
             ),
             'postcode': forms.TextInput(
                 attrs={'class': 'first-name'}
-            )
+            ),
+            'phone': forms.TextInput(
+                attrs={'class': 'first-name'}
+            ),
+            'email': forms.TextInput(
+                attrs={'class': 'first-name'}
+            ),
+
 
         }
 

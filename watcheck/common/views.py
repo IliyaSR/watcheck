@@ -32,9 +32,15 @@ def search_view(request):
 
 def bag_view(request):
     bag_elements = Bag.objects.all()
+    product_price = 0
+    for current_element in bag_elements:
+        product_price += current_element.price
 
+    sum_with_delivery = product_price + 8
     context = {
-        'bag_elements': bag_elements
+        'bag_elements': bag_elements,
+        'product_price': product_price,
+        'sum_with_delivery': sum_with_delivery
     }
     return render(request, template_name='common/bag.html', context=context)
 

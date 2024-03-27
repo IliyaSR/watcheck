@@ -1,4 +1,5 @@
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import MaxValueValidator
 from django.db import models
 from django_countries.fields import CountryField
 
@@ -20,5 +21,7 @@ class Address(models.Model):
     address = models.CharField(max_length=20)
     town = models.CharField(max_length=20)
     postcode = models.IntegerField()
+    phone = models.PositiveIntegerField(validators=[MaxValueValidator(9999999999)])
+    email = models.EmailField(max_length=202)
     current_profile = models.ForeignKey(Account, on_delete=models.CASCADE)
 
