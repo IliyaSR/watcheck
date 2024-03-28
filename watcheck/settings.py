@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'watcheck.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "watcheck",
+        "NAME": "",
         "USER": "postgres-user",
         "PASSWORD": "password",
         "HOST": "127.0.0.1",

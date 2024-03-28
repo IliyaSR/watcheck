@@ -1,9 +1,9 @@
-.bag-main{
+.bag-main {
     background-color: #000000;
     padding-bottom: 100px;
 }
 
-.bag-header{
+.bag-header {
     margin-top: 0;
     padding-top: 30px;
     font-size: 36px;
@@ -12,20 +12,20 @@
     font-weight: 400;
 }
 
-.bag-container{
+.bag-container {
     display: flex;
     width: 1500px;
-    height: 1200px;
     background-color: white;
     margin: 0 auto;
 }
 
-.shopping-cart-container{
+.shopping-cart-container {
     background-color: #FFFFFF;
     width: 55%;
+    padding-bottom: 70px;
 }
 
-.shopping-cart-header{
+.shopping-cart-header {
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 30px;
@@ -33,24 +33,24 @@
     padding-left: 70px;
 }
 
-.bag-current-watch{
+.bag-current-watch {
     display: flex;
     margin: 0 auto 50px auto;
     width: 800px;
     height: 300px;
 }
 
-.watch-details-price{
+.watch-details-price {
     display: flex;
     justify-content: space-between;
     width: 490px;
 }
 
-.bag-watch-name{
+.bag-watch-name {
     margin-left: 30px;
 }
 
-.bag-watch-brand{
+.bag-watch-brand {
     color: #000000;
     font-family: 'Poppins';
     font-size: 28px;
@@ -58,7 +58,7 @@
     margin-bottom: 8px;
 }
 
-.bag-watch-model{
+.bag-watch-model {
     color: #000000;
     font-family: 'Poppins';
     font-size: 20px;
@@ -66,55 +66,56 @@
     margin-top: 0;
 }
 
-.price-remove-icon{
+.price-remove-icon {
     margin-top: 50px;
     margin-left: 100px;
 }
 
-.numbers{
+.numbers {
     font-size: 17px;
     padding: 8px 16px;
     margin-top: 105px;
 }
 
-.remove-icon{
+.remove-icon {
     display: flex;
     font-size: 20px;
     background: none;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	outline: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
 }
 
-.remove-icon p{
+.remove-icon p {
     margin: 0;
     margin-left: 4px;
     font-family: 'Poppins';
     font-size: 14px;
 }
 
-.bag-watch-price{
+.bag-watch-price {
     font-size: 30px;
     margin-top: 170px;
     font-weight: 600;
 }
 
-.price-section{
+.price-section {
     background-color: #c2bcb2;
     width: 45%;
+    padding-bottom: 70px;
 }
 
-.first-div-price-container{
-    margin-top: 90px;
+.first-div-price-container {
+    margin-top: 60px;
 }
 
-.price-container{
+.price-container {
     width: 500px;
     margin: 0 auto;
 }
 
-.price-container p{
+.price-container p {
     font-size: 20px;
     font-family: 'Poppins';
     font-weight: 500;
@@ -122,17 +123,17 @@
     margin-bottom: 8px;
 }
 
-.price-container-paragraphs{
+.price-container-paragraphs {
     display: flex;
     justify-content: space-between;
 }
 
-.checkout-button{
+.checkout-button {
     text-decoration: none;
     color: #FFFFFF;
     background-color: #000000;
     font-family: 'Poppins';
-    padding: 12px ;
+    padding: 12px;
     position: absolute;
     margin-top: 30px;
     text-align: center;
@@ -140,55 +141,55 @@
     display: block;
 }
 
-.delivery-to-the-store-container{
+.delivery-to-the-store-container {
     margin-top: 120px;
     display: flex;
 }
 
-.delivery-to-the-store-container p{
+.delivery-to-the-store-container p {
     font-family: 'Poppins';
     font-size: 17px;
     color: #000000;
     margin: 0;
 }
 
-.delivery-to-the-store-container i{
+.delivery-to-the-store-container i {
     margin-top: 5px;
     margin-right: 15px;
     font-size: 17px;
 }
 
-.free-delivery-container{
+.free-delivery-container {
     display: flex;
     margin-top: 15px;
 }
 
-.free-delivery-container p{
+.free-delivery-container p {
     font-family: 'Poppins';
     font-size: 17px;
     color: #000000;
     margin: 0;
 }
 
-.free-delivery-container i{
+.free-delivery-container i {
     margin-top: 5px;
     margin-right: 15px;
     font-size: 17px;
 }
 
-.free-return-container{
+.free-return-container {
     display: flex;
     margin-top: 15px;
 }
 
-.free-return-container p{
+.free-return-container p {
     font-family: 'Poppins';
     font-size: 17px;
     color: #000000;
     margin: 0;
 }
 
-.free-return-container i{
+.free-return-container i {
     margin-top: 5px;
     margin-right: 15px;
     font-size: 17px;

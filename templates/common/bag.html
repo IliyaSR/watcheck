@@ -40,7 +40,7 @@
                         </div>
                         <div class="price-container-paragraphs">
                             <p>Delivery</p>
-                            {% if product_price > 200%}
+                            {% if product_price > 200 %}
                                 <p>from $0.00</p>
                             {% else %}
                                 <p>from $8.00</p>
@@ -51,12 +51,16 @@
                             {% if product_price > 200 %}
                                 <p>${{ product_price }}</p>
                             {% else %}
-                                <p>${{ sum_with_delivery }}</p>
+                                {% if bag_elements %}
+                                    <p>${{ sum_with_delivery }}</p>
+                                {% else %}
+                                    <p>$0.00</p>
+                                {% endif %}
                             {% endif %}
                         </div>
                     </div>
                     <div>
-                        <a href="#" class="checkout-button">Go to checkout</a>
+                        <a href="{% url 'checkout' user.pk %}" class="checkout-button">Go to checkout</a>
                     </div>
                     <div class="delivery-to-the-store-container">
                         <i class="fa-solid fa-store"></i>

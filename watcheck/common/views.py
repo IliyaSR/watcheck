@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 
+from watcheck.accounts.models import Account
+from watcheck.common.forms import OrderForm
 from watcheck.common.models import Bag
 from watcheck.watch.models import Watch
 
@@ -59,3 +61,31 @@ def remove_item_from_bag(request, pk):
     current_element.delete()
 
     return redirect('bag')
+
+
+def checkout(request, pk):
+    bag_elements = Bag.objects.all()
+    product_price = 0
+    for current_element in bag_elements:
+        product_price += current_element.price
+
+    sum_with_delivery = product_price + 8
+
+    if request.method == "POST":
+        form = OrderForm(request.POST)
+        user = Account.objects.get(pk=pk)
+        if form.is_valid():
+            order = form.save(commit=False)
+            order.current_profile = user
+            order.save()
+
+    form = OrderForm()
+
+    context = {
+        'bag_elements': bag_elements,
+        'product_price': product_price,
+        'sum_with_delivery': sum_with_delivery,
+        'form': form
+    }
+
+    return render(request, template_name='common/checkout.html', context=context)

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block main_content %}
+    <main class="bag-main">
+        <h2 class="bag-header">WATCHECK</h2>
+        <form class="bag-container" method="post">
+            {% csrf_token %}
+            <div class="shopping-cart-container">
+                <h3 class="shopping-cart-header">
+                    Delivery details
+                </h3>
+                <div class="ready-container">
+                    <a class="checkout-ready-address-button" href="#">
+                        Ready address
+                    </a>
+                </div>
+                <div class="checkout-container">
+                    <div class="checkout-user-names">
+                        <label for="">
+                            FIRST NAME
+                            {{ form.first_name }}
+                        </label>
+                        <label for="">
+                            LAST NAME
+                            {{ form.last_name }}
+                        </label>
+                    </div>
+                    <label for="">
+                        ADDRESS
+                        {{ form.address }}
+                    </label>
+                    <div class="checkout-user-names">
+                        <label for="">
+                            TOWN
+                            {{ form.town }}
+                        </label>
+                        <label for="">
+                            POSTCODE
+                            {{ form.postcode }}
+                        </label>
+                    </div>
+                    <div class="checkout-user-names">
+                        <label for="">
+                            PHONE
+                            {{ form.phone }}
+                        </label>
+                        <label for="">
+                            EMAIL
+                            {{ form.email }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <section class="price-section">
+                <div class="price-container">
+                    <h2 class="delivery-details-header">
+                        Delivery details
+                    </h2>
+                    <h3 class="checkout-bag-header">
+                        Bag
+                    </h3>
+                    {% for element_details in bag_elements %}
+                        <div class="checkout-details">
+                            <img src="{{ element_details.watch_image.url }}" alt=""
+                                 class="checkout-details-img">
+                            <div>
+                                <p>{{ element_details.brand_watch }}</p>
+                                <p>{{ element_details.model_watch }}</p>
+                            </div>
+                            <p>${{ element_details.price }}</p>
+                        </div>
+                    {% endfor %}
+                    <div class="checkout-total-price">
+                        <p>Total price</p>
+                        {% if product_price > 200 %}
+                            <p>${{ product_price }}</p>
+                        {% else %}
+                            <p>${{ sum_with_delivery }}</p>
+                        {% endif %}
+                    </div>
+                    <button class="ordering-button">Ordering</button>
+                </div>
+            </section>
+        </form>
+    </main>
+{% endblock %}

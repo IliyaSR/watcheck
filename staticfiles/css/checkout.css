@@ -1,0 +1,132 @@
+.bag-main {
+    background-color: #000000;
+    padding-bottom: 100px;
+}
+
+.bag-header {
+    margin-top: 0;
+    padding-top: 30px;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.shopping-cart-container {
+    background-color: #FFFFFF;
+    width: 55%;
+}
+
+.shopping-cart-header {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+    padding-left: 70px;
+}
+
+.price-section {
+    background-color: #c2bcb2;
+    width: 45%;
+}
+
+
+.price-container {
+    width: 530px;
+    margin: 0 auto;
+}
+
+.checkout-container {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.checkout-user-names {
+    display: flex;
+}
+
+.checkout-first-name {
+    width: 322px;
+}
+
+.checkout-container label, input {
+    display: block;
+    margin-right: 20px;
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+.checkout-container input {
+    height: 2em;
+    margin-bottom: 25px;
+}
+
+.checkout-address {
+    width: 684px;
+}
+
+.checkout-ready-address-button {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 18px;
+    padding: 12px;
+    background-color: #000000;
+}
+
+.ready-container {
+    margin: 10px 0 35px 70px;
+}
+
+.delivery-details-header {
+    margin-top: 30px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+}
+
+.checkout-bag-header {
+    margin-top: 0px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.checkout-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.checkout-details p {
+    font-size: 17px;
+    font-family: 'Poppins';
+}
+
+.checkout-details-img {
+    width: 150px;
+    height: 190px;
+}
+
+.checkout-total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.ordering-button {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Poppins';
+    color: #FFFFFF;
+    background-color: #000000;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+}
