@@ -1,3 +1,5 @@
+from itertools import chain
+
 from django.shortcuts import render, redirect
 
 from watcheck.accounts.models import Account
@@ -51,7 +53,7 @@ def add_to_bag_view(request, pk):
     current_watch = Watch.objects.get(pk=pk)
     bag_element = Bag(watch_image=current_watch.main_image, brand_watch=current_watch.brand,
                       model_watch=current_watch.model,
-                      price=current_watch.price)
+                      price=current_watch.price, watch_code=current_watch.watch_code)
     bag_element.save()
     return redirect('watch_details', pk)
 
@@ -65,9 +67,11 @@ def remove_item_from_bag(request, pk):
 
 def checkout(request, pk):
     bag_elements = Bag.objects.all()
+    watches = []
     product_price = 0
     for current_element in bag_elements:
         product_price += current_element.price
+        watches.append(Watch.objects.filter(watch_code=current_element.watch_code))
 
     sum_with_delivery = product_price + 8
 
@@ -77,9 +81,12 @@ def checkout(request, pk):
         if form.is_valid():
             order = form.save(commit=False)
             order.current_profile = user
+            print(a)
+            bag_elements.delete()
             order.save()
-
-    form = OrderForm()
+            return redirect('home')
+    else:
+        form = OrderForm()
 
     context = {
         'bag_elements': bag_elements,

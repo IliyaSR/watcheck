@@ -62,22 +62,26 @@
                         <div class="checkout-details">
                             <img src="{{ element_details.watch_image.url }}" alt=""
                                  class="checkout-details-img">
-                            <div>
-                                <p>{{ element_details.brand_watch }}</p>
-                                <p>{{ element_details.model_watch }}</p>
+                            <div class="checkout-details-name-price">
+                                <div    >
+                                    <p>{{ element_details.brand_watch }}</p>
+                                    <p>{{ element_details.model_watch }}</p>
+                                </div>
+                                <div>
+                                    <p>${{ element_details.price }}</p>
+                                </div>
                             </div>
-                            <p>${{ element_details.price }}</p>
                         </div>
                     {% endfor %}
                     <div class="checkout-total-price">
-                        <p>Total price</p>
+                        <p>Total price with delivery</p>
                         {% if product_price > 200 %}
                             <p>${{ product_price }}</p>
                         {% else %}
                             <p>${{ sum_with_delivery }}</p>
                         {% endif %}
                     </div>
-                    <button class="ordering-button">Ordering</button>
+                    <button class="ordering-button" type="submit">Ordering</button>
                 </div>
             </section>
         </form>

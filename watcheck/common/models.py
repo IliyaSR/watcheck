@@ -10,6 +10,7 @@ class Bag(models.Model):
     brand_watch = models.CharField(max_length=30)
     model_watch = models.CharField(max_length=60)
     price = models.IntegerField()
+    watch_code = models.CharField(max_length=10)
 
 
 class Order(models.Model):

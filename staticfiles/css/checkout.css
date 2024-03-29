@@ -97,8 +97,15 @@
 
 .checkout-details {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 30px;
+}
+
+.checkout-details-name-price{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 400px;
 }
 
 .checkout-details p {
