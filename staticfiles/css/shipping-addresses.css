@@ -50,3 +50,18 @@
     border: 0;
     cursor: pointer;
 }
+
+.delete-button-address {
+    margin-top: 356px;
+    margin-left: 485px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: red;
+    font-family: 'Poppins';
+    padding: 10px;
+    text-decoration: none;
+    width: 154px;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
+}

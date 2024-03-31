@@ -5,13 +5,13 @@
             <div>
                 <img src="{{ current_watch.main_image.url }}" alt="" class="first-watch-image">
                 <div class="second-images">
-                    <img src="{{ current_watch.first_small_image.url }}" alt="">
-                    <img src="{{ current_watch.second_small_image.url }}" alt="">
+                    <img src="{{ current_watch.first_small_image.url }}" alt="" class="watch-details-image">
+                    <img src="{{ current_watch.second_small_image.url }}" alt="" class="watch-details-image">
                 </div>
-                {% if current_watch.third_small_image %}
+                {% if current_watch.third_small_image and current_watch.fourth_small_image %}
                     <div class="third-images">
-                        <img src="{{ current_watch.third_small_image.url }}" alt="">
-                        <img src="{{ current_watch.fourth_small_image.url }}" alt="">
+                        <img src="{{ current_watch.third_small_image.url }}" alt="" class="watch-details-image">
+                        <img src="{{ current_watch.fourth_small_image.url }}" alt="" class="watch-details-image">
                     </div>
                 {% endif %}
             </div>

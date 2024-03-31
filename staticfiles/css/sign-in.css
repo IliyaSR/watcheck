@@ -69,6 +69,17 @@ main{
     margin-bottom: 15px;
 }
 
+.errorlist{
+    text-align: center;
+    list-style: none;
+    color: darkred;
+    font-family: "Poppins";
+    text-align: center;
+    padding: 0;
+    margin: 8px;
+    margin-bottom: 0px;
+}
+
 .email-sign-in-input{
     display: block;
     margin: 0 auto;

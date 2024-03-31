@@ -15,6 +15,7 @@ main {
 }
 
 
+
 .first-section-text h3 {
     font-family: 'Poppins';
     font-size: 34px;
@@ -117,6 +118,11 @@ main {
 .watches-images .image {
     display: inline-block;
     padding-left: 100px;
+}
+
+.watches-images img{
+    width: 350px;
+    height: 350px;
 }
 
 .watch-name {

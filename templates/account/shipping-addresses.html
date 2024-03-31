@@ -51,7 +51,7 @@
     <form method="post" action="{% url 'delete_address' user.pk %}">
         {% csrf_token %}
         {% if address %}
-            <button type="submit" class="delete-button">
+            <button type="submit" class="delete-button-address">
                 Delete address
             </button>
         {% endif %}

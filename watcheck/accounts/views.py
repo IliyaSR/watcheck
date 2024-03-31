@@ -101,7 +101,12 @@ def delete_address(request, pk):
 
 
 def orders(request, pk):
-    return render(request, template_name='account/orders.html')
+    current_user = Account.objects.get(pk=pk)
+    context = {
+        'current_user': current_user
+    }
+
+    return render(request, template_name='account/orders.html', context=context)
 
 
 def returns(request, pk):

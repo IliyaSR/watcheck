@@ -2,7 +2,7 @@
 main{
     background-color: #000000;
 }
-.sign-in-button{
+.sign-up-button-big{
     display: block;
     text-decoration: none;
     width: 420px;
@@ -11,7 +11,7 @@ main{
     color: #FFFFFF;
     background-color: #000000;
     font-weight: 500;
-    margin: 35px auto;
+    margin: 45px auto;
     text-align: center;
     padding-top: 3px;
     font-family: 'Poppins';
@@ -31,7 +31,7 @@ main{
 
 .sign-up-container{
     width: 1000px;
-    height: 1300px;
+    height: 1100px;
     background-color: #FFFFFF;
     margin: auto;
 }

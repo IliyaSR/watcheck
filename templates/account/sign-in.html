@@ -14,7 +14,11 @@
                 {{ form.username }}
                 <p class="password-sign-in">PASSWORD:</p>
                 {{ form.password }}
-
+                {% if form.errors %}
+                    {% for field, error_list  in form.errors.items %}
+                        <div class="error-login">{{ error_list }}</div>
+                    {% endfor %}
+                {% endif %}
                 {% csrf_token %}
 
                 <button class="sign-in-button" style="cursor:pointer;">SIGN IN</button>

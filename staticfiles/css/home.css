@@ -17,6 +17,9 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+html{
+    background-color: #959595;
+}
 
 
 body {
@@ -97,9 +100,10 @@ header {
     border-radius: 25px;
     height: 30px;
     font-family: 'Poppins';
-    border: 1px solid white;
+    border: 1px solid black;
     outline: none;
     padding: 2px;
+    background-color: #959595;
 }
 
 .search-container{

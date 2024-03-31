@@ -27,20 +27,43 @@
                 <h3>OR SIGN UP WITH EMAIL</h3>
                 <p class="email-sign-in">EMAIL ADDRESS:</p>
                 {{ form.email }}
+                {% if form.errors %}
+                    {% for field, error_list in form.errors.items %}
+                        {% if field == 'email' %}
+                            <div>
+                                {{ error_list }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
                 <p class="confirm-email">We’ll send your order confirmation here.</p>
                 <p class="first-name-sign-in">USERNAME:</p>
                 {{ form.username }}
-                <p class="first-name-sign-in">FIRST NAME:</p>
-                {{ form.first_name }}
-                <p class="first-name-sign-in">LAST NAME:</p>
-                {{ form.last_name }}
+                {% if form.errors %}
+                    {% for field, error_list in form.errors.items %}
+                        {% if field == 'username' %}
+                            <div>
+                                {{ error_list }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
                 <p class="password-sign-in">PASSWORD:</p>
                 {{ form.password1 }}
                 <p class="password-sign-in">CONFIRM PASSWORD:</p>
                 {{ form.password2 }}
+                {% if form.errors %}
+                    {% for field, error_list in form.errors.items %}
+                        {% if field == 'password2' %}
+                            <div>
+                                {{ error_list }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
 
                 {% csrf_token %}
-                <button class="sign-in-button" style="cursor: pointer">JOIN WATCHECK</button>
+                <button class="sign-up-button-big" style="cursor: pointer">JOIN WATCHECK</button>
             </form>
         </div>
         <div class="some"></div>

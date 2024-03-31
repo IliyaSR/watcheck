@@ -67,21 +67,23 @@ def remove_item_from_bag(request, pk):
 
 def checkout(request, pk):
     bag_elements = Bag.objects.all()
-    watches = []
+    watches_codes = [current_element.watch_code for current_element in bag_elements]
     product_price = 0
     for current_element in bag_elements:
         product_price += current_element.price
-        watches.append(Watch.objects.filter(watch_code=current_element.watch_code))
 
     sum_with_delivery = product_price + 8
 
     if request.method == "POST":
         form = OrderForm(request.POST)
         user = Account.objects.get(pk=pk)
+        watches = Watch.objects.filter(watch_code__in=watches_codes)
+
         if form.is_valid():
             order = form.save(commit=False)
             order.current_profile = user
-            print(a)
+            for watch in watches:
+                order.brand_watch = watch
             bag_elements.delete()
             order.save()
             return redirect('home')

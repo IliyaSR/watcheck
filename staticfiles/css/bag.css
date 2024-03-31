@@ -40,6 +40,12 @@
     height: 300px;
 }
 
+.bag-current-watch img{
+    border: 0;
+    width: 260px;
+    height: 300px;
+}
+
 .watch-details-price {
     display: flex;
     justify-content: space-between;

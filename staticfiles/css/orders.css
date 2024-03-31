@@ -12,6 +12,12 @@
     font-weight: 400;
 }
 
+.account-count-of-orders{
+    font-family: 'Poppins';
+    font-size: 20px;
+
+}
+
 .account-sections-container {
     height: 520px;
     width: 1200px;
