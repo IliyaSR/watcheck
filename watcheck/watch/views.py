@@ -81,7 +81,7 @@ def watch_details(request, pk):
         'reviews': reviews,
         'numbers_stars': numbers_stars,
         'average_rating': average_rating,
-        'review_form': review_form
+        'review_form': review_form,
     }
 
     return render(request, template_name='watch/watch-details.html', context=context)
@@ -102,5 +102,6 @@ def add_review(request, watch_id):
 
             return redirect(request.META['HTTP_REFERER'] + f'#{watch_id}')
     else:
-        # Handle GET request here if needed
         pass
+
+

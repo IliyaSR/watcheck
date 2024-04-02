@@ -2,9 +2,10 @@ from itertools import chain
 
 from django.shortcuts import render, redirect
 
-from watcheck.accounts.models import Account
+from watcheck.accounts.forms import AddressForm
+from watcheck.accounts.models import Account, Address
 from watcheck.common.forms import OrderForm
-from watcheck.common.models import Bag
+from watcheck.common.models import Bag, Order
 from watcheck.watch.models import Watch
 
 
@@ -73,20 +74,23 @@ def checkout(request, pk):
         product_price += current_element.price
 
     sum_with_delivery = product_price + 8
+    user = Account.objects.get(pk=pk)
+    address = Address.objects.get(current_profile_id=pk)
 
     if request.method == "POST":
         form = OrderForm(request.POST)
-        user = Account.objects.get(pk=pk)
         watches = Watch.objects.filter(watch_code__in=watches_codes)
-
-        if form.is_valid():
-            order = form.save(commit=False)
-            order.current_profile = user
-            for watch in watches:
-                order.brand_watch = watch
-            bag_elements.delete()
-            order.save()
-            return redirect('home')
+        if 'ordering' in request.POST:
+            if form.is_valid():
+                order = form.save(commit=False)
+                order.current_profile = user
+                for watch in watches:
+                    order.brand_watch = watch
+                bag_elements.delete()
+                order.save()
+                return redirect('home')
+        if 'ready-address' in request.POST:
+            form = OrderForm(instance=address, initial=address.__dict__)
     else:
         form = OrderForm()
 
@@ -98,3 +102,4 @@ def checkout(request, pk):
     }
 
     return render(request, template_name='common/checkout.html', context=context)
+

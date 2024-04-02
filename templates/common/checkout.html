@@ -9,9 +9,9 @@
                     Delivery details
                 </h3>
                 <div class="ready-container">
-                    <a class="checkout-ready-address-button" href="#">
+                    <button class="checkout-ready-address-button" name="ready-address">
                         Ready address
-                    </a>
+                    </button>
                 </div>
                 <div class="checkout-container">
                     <div class="checkout-user-names">
@@ -63,7 +63,7 @@
                             <img src="{{ element_details.watch_image.url }}" alt=""
                                  class="checkout-details-img">
                             <div class="checkout-details-name-price">
-                                <div    >
+                                <div>
                                     <p>{{ element_details.brand_watch }}</p>
                                     <p>{{ element_details.model_watch }}</p>
                                 </div>
@@ -81,7 +81,7 @@
                             <p>${{ sum_with_delivery }}</p>
                         {% endif %}
                     </div>
-                    <button class="ordering-button" type="submit">Ordering</button>
+                    <button class="ordering-button" type="submit" name="ordering">Ordering</button>
                 </div>
             </section>
         </form>

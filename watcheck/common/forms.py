@@ -9,7 +9,7 @@ class OrderForm(forms.ModelForm):
         fields = ['first_name', 'last_name', 'address', 'town', 'postcode', 'phone', 'email']
         widgets = {
             'first_name': forms.TextInput(
-                attrs={'class': 'first-name'}
+                attrs={'class': 'first-name', 'name': 'first_name'}
             ),
             'last_name': forms.TextInput(
                 attrs={'class': 'first-name'}
