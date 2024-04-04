@@ -76,7 +76,6 @@ def checkout(request, pk):
     sum_with_delivery = product_price + 8
     user = Account.objects.get(pk=pk)
     address = Address.objects.get(current_profile_id=pk)
-
     if request.method == "POST":
         form = OrderForm(request.POST)
         watches = Watch.objects.filter(watch_code__in=watches_codes)
@@ -89,10 +88,10 @@ def checkout(request, pk):
                 bag_elements.delete()
                 order.save()
                 return redirect('home')
-        if 'ready-address' in request.POST:
-            form = OrderForm(instance=address, initial=address.__dict__)
+        if 'clean' in request.POST:
+            form = OrderForm()
     else:
-        form = OrderForm()
+        form = OrderForm(instance=address)
 
     context = {
         'bag_elements': bag_elements,
@@ -102,4 +101,3 @@ def checkout(request, pk):
     }
 
     return render(request, template_name='common/checkout.html', context=context)
-
