@@ -3,6 +3,9 @@
 {% block  div_content %}
     {% if current_user.order_set %}
         <p class="account-count-of-orders">Your profile have {{ current_user.order_set.count }} orders.</p>
+        {% for order in orders %}
+            {{ order.brand_watch.count }}
+        {% endfor %}
     {% else %}
         <div class="user-orders">
             <h3 class="shipping-addresses-header">My orders</h3>

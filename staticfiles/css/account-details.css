@@ -53,6 +53,7 @@
     padding: 10px;
     text-decoration: none;
     width: 154px;
+    border-radius: 3%;
 }
 
 .delete-button {
@@ -60,7 +61,7 @@
     margin-left: 485px;
     font-size: 16px;
     color: #FFFFFF;
-    background-color: red;
+    background-color: darkred;
     font-family: 'Poppins';
     padding: 10px;
     text-decoration: none;
@@ -68,9 +69,11 @@
     cursor: pointer;
     border: 0;
     position: absolute;
+    border-radius: 3%;
 }
 
 .change-password-button {
+    border-radius: 3%;
     margin-top: 291px;
     margin-left: 601px;
     font-size: 16px;

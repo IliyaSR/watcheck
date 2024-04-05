@@ -1,4 +1,4 @@
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% block main_content %}
     <main>
         <div class="first-section">
@@ -15,7 +15,8 @@
                     <div class="filters-container" onclick="secondList(this)">
                         <div class="current-filters">
                             <li>Brand</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"  onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -45,7 +46,8 @@
                     <div class="filters-container" onclick="secondList(this)">
                         <div class="current-filters">
                             <li>Price</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"  onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -71,7 +73,8 @@
                     <div class="filters-container" onclick="secondList(this)">
                         <div class="current-filters">
                             <li>Case Diameter</li>
-                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"  onclick="toggleList(this)">
+                            <img src="/staticfiles/images/Vector(10).png" alt="" class="plus"
+                                 onclick="toggleList(this)">
                         </div>
                         <ul class="hidden">
                             <div class="hidden-container">
@@ -99,17 +102,25 @@
             </form>
             <div class="watches-container">
                 <div class="watches-images">
-                    {% for watch in watches %}
-                        <div class="image">
-                            <a href="{% url 'watch_details' watch.pk %}">
-                                <img src="{{ watch.image_for_shop_page.url }}" alt="">
-                            </a>
-                            <div class="name-price-container">
-                                <h4 class="watch-name">{{ watch.brand }}</h4>
-                                <p class="watch-price">${{ watch.price }}</p>
+                    {% if watches %}
+                        {% for watch in watches %}
+                            <div class="image">
+                                <a href="{% url 'watch_details' watch.pk %}">
+                                    <img src="{{ watch.image_for_shop_page.url }}" alt="">
+                                </a>
+                                <div class="name-price-container">
+                                    <h4 class="watch-name">{{ watch.brand }}</h4>
+                                    <p class="watch-price">${{ watch.price }}</p>
+                                </div>
                             </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="empty-watch-container">
+                            <h2>
+                                No result for current filters.
+                            </h2>
                         </div>
-                    {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -125,7 +136,7 @@
             const childElement = element.children[0]
             const ul = childElement.nextElementSibling
             ul.classList.toggle("hidden");
-            ul.addEventListener("click", function (event){
+            ul.addEventListener("click", function (event) {
                 event.stopPropagation();
             })
         }

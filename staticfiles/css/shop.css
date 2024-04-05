@@ -115,6 +115,16 @@ main {
     width: 100%;
 }
 
+.empty-watch-container{
+    height: 400px;
+}
+
+.empty-watch-container h2{
+    margin-left: 200px;
+    font-family: Poppins;
+    font-size: 25px;
+}
+
 .watches-images .image {
     display: inline-block;
     padding-left: 100px;

@@ -1,5 +1,6 @@
 from itertools import chain
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from watcheck.accounts.forms import AddressForm
@@ -35,6 +36,7 @@ def search_view(request):
             return render(request, 'common/search.html')
 
 
+@login_required(login_url='sign_in')
 def bag_view(request):
     bag_elements = Bag.objects.all()
     product_price = 0
@@ -75,7 +77,6 @@ def checkout(request, pk):
 
     sum_with_delivery = product_price + 8
     user = Account.objects.get(pk=pk)
-    address = Address.objects.get(current_profile_id=pk)
     if request.method == "POST":
         form = OrderForm(request.POST)
         watches = Watch.objects.filter(watch_code__in=watches_codes)
@@ -83,15 +84,19 @@ def checkout(request, pk):
             if form.is_valid():
                 order = form.save(commit=False)
                 order.current_profile = user
-                for watch in watches:
-                    order.brand_watch = watch
-                bag_elements.delete()
+                order_watches_brand = [watch.brand for watch in watches]
+                order.brand_watch = tuple(order_watches_brand)
                 order.save()
+                bag_elements.delete()
                 return redirect('home')
         if 'clean' in request.POST:
             form = OrderForm()
     else:
-        form = OrderForm(instance=address)
+        if user.address_set.all():
+            address = Address.objects.get(current_profile_id=pk)
+            form = OrderForm(instance=address)
+        else:
+            form = OrderForm()
 
     context = {
         'bag_elements': bag_elements,

@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, DeleteView
 from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm, EditAccountForm, ChangePassword, \
     EditAddressForm
 from watcheck.accounts.models import Account, Address
+from watcheck.common.models import Order
 
 
 # Create your views here.
@@ -55,7 +56,8 @@ def account_details(request, pk):
 
 
 def addresses(request, pk):
-    if Address.objects.first():
+    user = Account.objects.get(pk=pk)
+    if user.address_set.all():
         address = Address.objects.get(current_profile_id=pk)
         if request.method == 'POST':
             form = AddressForm(request.POST, instance=address)
@@ -102,8 +104,10 @@ def delete_address(request, pk):
 
 def orders(request, pk):
     current_user = Account.objects.get(pk=pk)
+    orders = Order.objects.filter(current_profile_id=pk)
     context = {
-        'current_user': current_user
+        'current_user': current_user,
+        'orders': orders
     }
 
     return render(request, template_name='account/orders.html', context=context)
