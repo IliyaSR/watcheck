@@ -10,7 +10,6 @@ urlpatterns = [
         path('addresses/', views.addresses, name='addresses'),
         path('delete_address/', views.delete_address, name='delete_address'),
         path('orders/', views.orders, name='orders'),
-        path('returns/', views.returns, name='returns'),
         path('delete/', views.AccountDeleteView.as_view(), name='account-delete'),
         path('change_password', views.MyPasswordChangeView.as_view(), name='change-password')
     ]))

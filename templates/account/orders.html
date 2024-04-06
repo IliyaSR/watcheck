@@ -1,19 +1,16 @@
 {% extends 'account.html' %}
 
 {% block  div_content %}
-    {% if current_user.order_set %}
-        <p class="account-count-of-orders">Your profile have {{ current_user.order_set.count }} orders.</p>
-        {% for order in orders %}
-            {{ order.brand_watch.count }}
-        {% endfor %}
-    {% else %}
-        <div class="user-orders">
-            <h3 class="shipping-addresses-header">My orders</h3>
+    <div class="user-orders">
+        <h3 class="shipping-addresses-header">My orders</h3>
+        {% if current_user.order_set.count >= 1 %}
+            <p class="account-count-of-orders">Your profile have {{ current_user.order_set.count }} orders.</p>
+        {% else %}
             <div class="no-orders">
                 <i class="fa-solid fa-info"></i>
-                <p>No orders in the selected period</p>
+                <p>No orders at the moment</p>
                 <a href="{% url 'shop' %}">View products</a>
             </div>
-        </div>
-    {% endif %}
+        {% endif %}
+    </div>
 {% endblock %}

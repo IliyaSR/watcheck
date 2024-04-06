@@ -1,35 +1,39 @@
 {% extends 'base.html' %}
 {% block main_content %}
-    <main class="bag-main">
+    <main id="bag-main">
         <h2 class="bag-header">WATCHECK</h2>
         <div class="bag-container">
             <div class="shopping-cart-container">
                 <h3 class="shopping-cart-header">
                     SHOPPING CART
                 </h3>
-                {% for current_element in bag_elements %}
-                    <div class="bag-current-watch">
-                        <img src="{{ current_element.watch_image.url }}" alt="">
-                        <div class="watch-details-price">
-                            <div class="bag-watch-name">
-                                <h3 class="bag-watch-brand">
-                                    {{ current_element.brand_watch }}
-                                </h3>
-                                <h4 class="bag-watch-model">
-                                    {{ current_element.model_watch }}
-                                </h4>
+                {% if bag_elements %}
+                    {% for current_element in bag_elements %}
+                        <div class="bag-current-watch">
+                            <img src="{{ current_element.watch_image.url }}" alt="">
+                            <div class="watch-details-price">
+                                <div class="bag-watch-name">
+                                    <h3 class="bag-watch-brand">
+                                        {{ current_element.brand_watch }}
+                                    </h3>
+                                    <h4 class="bag-watch-model">
+                                        {{ current_element.model_watch }}
+                                    </h4>
+                                </div>
+                                <form class="price-remove-icon" action="{% url 'remove_item' current_element.id %}">
+                                    {% csrf_token %}
+                                    <button class="remove-icon">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        <p>Remove</p>
+                                    </button>
+                                    <p class="bag-watch-price">${{ current_element.price }}</p>
+                                </form>
                             </div>
-                            <form class="price-remove-icon" action="{% url 'remove_item' current_element.id %}">
-                                {% csrf_token %}
-                                <button class="remove-icon">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                    <p>Remove</p>
-                                </button>
-                                <p class="bag-watch-price">${{ current_element.price }}</p>
-                            </form>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <h3 style="display: none" id="empty-bag">Bag is empty, please add elements!</h3>
+                {% endif %}
             </div>
             <section class="price-section">
                 <div class="price-container">
@@ -59,9 +63,15 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div>
-                        <a href="{% url 'checkout' user.pk %}" class="checkout-button">Go to checkout</a>
-                    </div>
+                    {% if bag_elements %}
+                        <div>
+                            <a href="{% url 'checkout' user.pk %}" class="checkout-button">Go to checkout</a>
+                        </div>
+                    {% else %}
+                        <div>
+                            <a href="#" class="checkout-button" onclick="changeDisplay()">Go to checkout</a>
+                        </div>
+                    {% endif %}
                     <div class="delivery-to-the-store-container">
                         <i class="fa-solid fa-store"></i>
                         <p>Delivery to the store always free</p>
@@ -79,4 +89,12 @@
             </section>
         </div>
     </main>
+    <script>
+        function changeDisplay() {
+            const emptyBag = document.getElementById('empty-bag')
+            if (emptyBag.style.display === 'none') {
+                emptyBag.style.display = 'block'
+            }
+        }
+    </script>
 {% endblock %}

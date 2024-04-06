@@ -345,10 +345,12 @@ footer {
     background-color: #959595;
     padding-left: 3%;
     padding-right: 3%;
+    height: 100px;
 }
 
 .customer-service-content {
     display: flex;
+    padding-bottom: 10px;
 }
 
 .first-customer-service {
@@ -362,7 +364,7 @@ footer {
     color: #404040;
     margin-top: 0;
     margin-bottom: 2px;
-    padding-top: 17px;
+    padding-top: 10px;
 }
 
 .customer-service-content p {
@@ -376,7 +378,6 @@ footer {
 
 .customer-service-content {
     width: 420px;
-    padding-bottom: 17px;
 }
 
 .footer-container {
@@ -391,13 +392,13 @@ footer {
     color: #404040;
     margin-top: 0;
     margin-bottom: 2px;
-    padding-top: 17px;
+    padding-top: 10px;
 }
 
 .about-content {
     display: flex;
     width: 420px;
-    padding-bottom: 17px;
+    padding-bottom: 10px;
 }
 
 .first-about {
@@ -425,15 +426,18 @@ footer {
     font-weight: bold;
     color: #404040;
     margin-bottom: 7px;
+    margin-top: 10px;
 }
 
 .input-email {
     background-color: #FFFFFF;
     width: 400px;
-    height: 4vh;
+    height: 3vh;
     border: 0;
-    padding-left: 30px;
+    padding-left: 5px;
     outline: none;
+    font-size: 14px;
+    margin-right: 0;
 }
 
 .input-email:hover{
@@ -452,11 +456,16 @@ input.input-email:focus{
     background-color: #000000;
     opacity: 90%;
     cursor: pointer;
-    height: 4vh;
-    padding: 4px ;
+    height: 3vh;
+    padding: 3px ;
 }
 
 .about-us-footer{
     text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: lighter;
     color: #404040;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 7px;
 }

@@ -73,6 +73,8 @@
     font-size: 18px;
     padding: 12px;
     background-color: #000000;
+    border: none;
+    cursor: pointer;
 }
 
 .ready-container {
@@ -114,7 +116,7 @@
 }
 
 .checkout-details-img {
-    width: 150px;
+    width: 160px;
     height: 190px;
 }
 

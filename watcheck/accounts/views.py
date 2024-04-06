@@ -113,8 +113,6 @@ def orders(request, pk):
     return render(request, template_name='account/orders.html', context=context)
 
 
-def returns(request, pk):
-    return render(request, template_name='account/returns.html')
 
 
 class MyPasswordChangeView(PasswordChangeView):

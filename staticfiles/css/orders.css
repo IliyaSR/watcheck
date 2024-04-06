@@ -1,6 +1,6 @@
 .account-main {
     background-color: #000000;
-    height: 750px;
+    height: 770px;
 }
 
 .account-details-header {
@@ -92,4 +92,8 @@
 .no-orders a {
     color: #FFFFFF;
     padding-top: 3px;
+}
+
+.image-1{
+    display: block;
 }

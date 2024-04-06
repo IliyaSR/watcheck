@@ -1,6 +1,7 @@
-.bag-main {
+#bag-main {
     background-color: #000000;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
+    height: 770px;
 }
 
 .bag-header {
@@ -41,7 +42,6 @@
 }
 
 .bag-current-watch img{
-    border: 0;
     width: 260px;
     height: 300px;
 }
@@ -200,4 +200,12 @@
     margin-top: 5px;
     margin-right: 15px;
     font-size: 17px;
+}
+
+#empty-bag{
+    font-family: Poppins;
+    font-size: 22px;
+    color: #000000;
+    font-weight: 500;
+    padding-left: 70px;
 }

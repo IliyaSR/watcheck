@@ -1,6 +1,7 @@
 from itertools import chain
 
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from django.shortcuts import render, redirect
 
 from watcheck.accounts.forms import AddressForm
@@ -26,7 +27,7 @@ def stores(request):
 def search_view(request):
     if request.method == 'POST':
         searched = request.POST['searched']
-        watches = Watch.objects.filter(brand__icontains=searched)
+        watches = Watch.objects.filter(Q(brand__icontains=searched) | Q(watch_code__icontains=searched))
         if watches:
             context = {
                 'watches': watches
@@ -68,6 +69,7 @@ def remove_item_from_bag(request, pk):
     return redirect('bag')
 
 
+@login_required(login_url='sign_in')
 def checkout(request, pk):
     bag_elements = Bag.objects.all()
     watches_codes = [current_element.watch_code for current_element in bag_elements]
