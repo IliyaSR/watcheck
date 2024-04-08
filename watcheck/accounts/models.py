@@ -7,9 +7,8 @@ from django_countries.fields import CountryField
 # Create your models here.
 class Account(AbstractUser):
     email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    profile_picture = models.ImageField(blank=True, null=True, upload_to='images/')
+    first_name = models.CharField(max_length=30, blank=True, null=True)
+    last_name = models.CharField(max_length=30, blank=True, null=True)
 
     def full_name(self):
         return f'{self.first_name} {self.last_name}'

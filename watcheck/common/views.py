@@ -1,6 +1,8 @@
 from itertools import chain
 
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
+from django.core.mail import send_mail
 from django.db.models import Q
 from django.shortcuts import render, redirect
 
@@ -33,8 +35,7 @@ def search_view(request):
                 'watches': watches
             }
             return render(request, 'watch/shop.html', context=context)
-        else:
-            return render(request, 'common/search.html')
+        return render(request, 'common/search.html')
 
 
 @login_required(login_url='sign_in')

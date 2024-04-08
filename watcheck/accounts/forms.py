@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField, PasswordChangeForm, \
+    PasswordResetForm
 from django import forms
 
 from watcheck.accounts.models import Account, Address
@@ -108,7 +109,7 @@ class EditAccountForm(forms.ModelForm):
             'username': forms.TextInput(
                 attrs={'class': 'username'}),
             'email': forms.TextInput(
-                attrs={'class': 'email'})
+                attrs={'class': 'email', 'readonly': 'readonly'})
         }
 
 
@@ -133,3 +134,7 @@ class ChangePassword(PasswordChangeForm):
             attrs={'class': 'password'}
         )
     )
+
+
+class PasswordReset(PasswordResetForm):
+    pass

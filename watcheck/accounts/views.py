@@ -1,12 +1,12 @@
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.views import PasswordChangeView, PasswordResetView
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView
 
 from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm, EditAccountForm, ChangePassword, \
-    EditAddressForm
+    EditAddressForm, PasswordReset
 from watcheck.accounts.models import Account, Address
 from watcheck.common.models import Order
 
@@ -45,6 +45,10 @@ def account_details(request, pk):
         if form.is_valid():
             form.save()
             return redirect('account-details', pk)
+        else:
+            error_message = "Username is taken"
+            return render(request, template_name='account/account-details.html',
+                          context={'form': form, 'error_message': error_message})
     else:
         form = EditAccountForm(instance=request.user)
 
@@ -111,8 +115,6 @@ def orders(request, pk):
     }
 
     return render(request, template_name='account/orders.html', context=context)
-
-
 
 
 class MyPasswordChangeView(PasswordChangeView):

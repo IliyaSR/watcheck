@@ -21,6 +21,4 @@ class Order(models.Model):
     postcode = models.IntegerField()
     phone = models.PositiveIntegerField(validators=[MaxValueValidator(9999999999)])
     email = models.EmailField(max_length=202)
-    brand_watch = models.CharField(max_length=100)
-    watch_image = models.ImageField()
     current_profile = models.ForeignKey(Account, on_delete=models.CASCADE)

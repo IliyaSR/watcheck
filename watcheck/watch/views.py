@@ -1,6 +1,5 @@
 from itertools import chain
 
-from django.db.models import Q
 from django.shortcuts import render, redirect
 
 from watcheck.watch.forms import ReviewForm
@@ -105,3 +104,15 @@ def add_review(request, watch_id):
         pass
 
 
+def high_rated_watch(request):
+    watches = Watch.objects.all()
+    all_ratings = {}
+    for watch in watches:
+        watch_reviews = watch.review_set.all()
+        ratings = [current_review.rating for current_review in watch_reviews]
+        if len(ratings) > 0:
+            average_rating = sum(ratings) / len(ratings)
+            all_ratings.update({watch.id: average_rating})
+
+    high_rating_watch_pk = max(all_ratings, key=all_ratings.get)
+    return redirect('watch_details', high_rating_watch_pk)

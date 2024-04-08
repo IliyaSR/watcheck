@@ -205,3 +205,10 @@ main{
 .some{
     height: 100px;
 }
+
+.red_error_message{
+    color: darkred;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 69px;
+}
