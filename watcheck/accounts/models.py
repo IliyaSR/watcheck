@@ -9,8 +9,9 @@ class Account(AbstractUser):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30, blank=True, null=True)
     last_name = models.CharField(max_length=30, blank=True, null=True)
+    account_image = models.ImageField(upload_to='images/', blank=True, null=True)
 
-    def full_name(self):
+    def get_full_name(self):
         return f'{self.first_name} {self.last_name}'
 
 
@@ -23,4 +24,3 @@ class Address(models.Model):
     phone = models.IntegerField(validators=[MaxValueValidator(9999999999)])
     email = models.EmailField(max_length=202)
     current_profile = models.ForeignKey(Account, on_delete=models.CASCADE)
-

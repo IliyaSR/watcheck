@@ -109,3 +109,7 @@ def checkout(request, pk):
     }
 
     return render(request, template_name='common/checkout.html', context=context)
+
+
+def guarantee(request):
+    return render(request, template_name='common/guarantee and warranty.html')

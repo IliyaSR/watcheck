@@ -104,7 +104,7 @@
                     </h3>
                     {{ review_form.text_review }}
                     <label>
-                        <input class= 'invisible-input' id="invisible-input" name="rating" value="2">
+                        <input class='invisible-input' id="invisible-input" name="rating" value="2">
                     </label>
                     <button class="add-review-button">
                         Add Review
@@ -146,14 +146,20 @@
                             {{ review.text_review }}
                         </p>
                         <div class="profile-details">
-                            {% if review.person_review.profile_picture %}
-                                <img src="{{ review.person_review.profile_picture.url }}" alt="" class="profile-image">
+                            {% if review.person_review.account_image %}
+                                <img src="{{ review.person_review.account_image.url }}" alt="" class="profile-image">
                             {% else %}
                                 <img src="/staticfiles/images/istockphoto-1337144146-612x612.jpg" alt=""
                                      class="profile-image">
                             {% endif %}
                             <div>
-                                <h4 class="account-name">{{ review.person_review.full_name }}</h4>
+                                {% if review.person_review.first_name and not review.person_review.last_name %}
+                                    <h4 class="account-name">{{ review.person_review.first_name }}</h4>
+                                {% elif review.person_review.first_name and review.person_review.last_name %}
+                                    <h4 class="account-name">{{ review.person_review.get_full_name }}</h4>
+                                {% else %}
+                                    <h4 class="account-name">{{ review.person_review.username }}</h4>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

@@ -12,12 +12,18 @@
                 LAST NAME
                 {{ form.last_name }}
             </label>
-        <p class="red_error_message">{{ error_message }}</p>
+            <p class="red_error_message">{{ error_message }}</p>
         </div>
-        <label for="">
-            Username
-            {{ form.username }}
-        </label>
+        <div class="user-names">
+            <label for="">
+                Username
+                {{ form.username }}
+            </label>
+            <label for="">
+                Image
+                {{ form.account_image }}
+            </label>
+        </div>
         <label for="">
             Email
             {{ form.email }}

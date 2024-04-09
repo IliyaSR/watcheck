@@ -4,20 +4,20 @@
 }
 
 * {
-  scrollbar-width: thin;
+    scrollbar-width: thin;
 }
 
 
 * {
-  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
 }
 
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-html{
+html {
     background-color: #959595;
 }
 
@@ -41,7 +41,7 @@ header {
     font-weight: normal;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
     color: #000000;
 }
@@ -93,7 +93,7 @@ header {
     cursor: pointer;
 }
 
-.search-input{
+.search-input {
     margin-left: 39.5%;
     margin-top: 10px;
     width: 400px;
@@ -106,18 +106,15 @@ header {
     background-color: #959595;
 }
 
-.search-container{
+.search-container {
     display: none;
 }
 
-.search-input:focus{
+.search-input:focus {
     border: 1px solid white;
 }
 
 /* MAIN */
-
-
-
 
 
 .first-section {
@@ -324,7 +321,7 @@ header {
     margin-bottom: 0;
 }
 
-.count-elements-in-bag{
+.count-elements-in-bag {
     padding-right: 0.5px;
     background-color: black;
     border-radius: 4rem;
@@ -376,6 +373,16 @@ footer {
     margin-top: 7px;
 }
 
+.customer-service-content a {
+    font-family: 'Poppins';
+    font-weight: lighter;
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 7px;
+    text-decoration: none;
+}
+
 .customer-service-content {
     width: 420px;
 }
@@ -415,6 +422,16 @@ footer {
     margin-top: 7px;
 }
 
+.about-content a {
+    font-family: 'Poppins';
+    font-weight: lighter;
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 7px;
+    text-decoration: none;
+}
+
 
 .email {
     display: flex;
@@ -440,11 +457,11 @@ footer {
     margin-right: 0;
 }
 
-.input-email:hover{
+.input-email:hover {
     border: 1px solid black;
 }
 
-input.input-email:focus{
+input.input-email:focus {
     border: 1px solid black;
 }
 
@@ -457,10 +474,10 @@ input.input-email:focus{
     opacity: 90%;
     cursor: pointer;
     height: 3vh;
-    padding: 3px ;
+    padding: 3px;
 }
 
-.about-us-footer{
+.about-us-footer {
     text-decoration: none;
     font-family: 'Poppins';
     font-weight: lighter;

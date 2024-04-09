@@ -99,7 +99,7 @@ class EditAddressForm(AddressForm):
 class EditAccountForm(forms.ModelForm):
     class Meta:
         model = Account
-        fields = ('first_name', 'last_name', 'username', 'email')
+        fields = ('first_name', 'last_name', 'username', 'email', 'account_image')
 
         widgets = {
             'first_name': forms.TextInput(
@@ -107,9 +107,9 @@ class EditAccountForm(forms.ModelForm):
             'last_name': forms.TextInput(
                 attrs={'class': 'first-name'}),
             'username': forms.TextInput(
-                attrs={'class': 'username'}),
+                attrs={'class': 'first-name'}),
             'email': forms.TextInput(
-                attrs={'class': 'email', 'readonly': 'readonly'})
+                attrs={'class': 'email', 'readonly': 'readonly'}),
         }
 
 
