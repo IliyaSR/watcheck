@@ -112,6 +112,14 @@ class EditAccountForm(forms.ModelForm):
                 attrs={'class': 'email', 'readonly': 'readonly'}),
         }
 
+    account_image = forms.ImageField(
+        widget=forms.FileInput(
+            attrs={
+                'class': 'first-name'
+            }
+        )
+    )
+
 
 class ChangePassword(PasswordChangeForm):
     class Meta:

@@ -1,7 +1,8 @@
 {% extends 'account.html' %}
 
 {% block  div_content %}
-    <form class="shipping-addresses" method="post" action="{% url 'account-details' user.pk %}">
+    <form class="shipping-addresses" method="post" action="{% url 'account-details' user.pk %}"
+          enctype="multipart/form-data">
         <h3 class="shipping-addresses-header">My account</h3>
         <div class="user-names">
             <label for="">
@@ -21,7 +22,12 @@
             </label>
             <label for="">
                 Image
-                {{ form.account_image }}
+                {% if form.account_image %}
+                    {{ form.account_image.value }}
+                    {{ form.account_image }}
+                {% else %}
+                    {{ form.account_image }}
+                {% endif %}
             </label>
         </div>
         <label for="">

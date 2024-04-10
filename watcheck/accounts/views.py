@@ -41,16 +41,16 @@ class AccountDeleteView(DeleteView):
 
 def account_details(request, pk):
     if request.method == 'POST':
-        form = EditAccountForm(request.POST, instance=request.user)
+        form = EditAccountForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             form.save()
             return redirect('account-details', pk)
-        else:
+        elif Account.objects.filter(username__exact=request.user.username):
             error_message = "Username is taken"
             return render(request, template_name='account/account-details.html',
                           context={'form': form, 'error_message': error_message})
     else:
-        form = EditAccountForm(instance=request.user)
+        form = EditAccountForm(instance=request.user, initial=request.user.__dict__)
 
         context = {
             'form': form,

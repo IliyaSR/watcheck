@@ -433,8 +433,9 @@ footer {
 }
 
 
-.email {
+.email-container {
     display: flex;
+    width: 430px;
 }
 
 .subscribe-header {
@@ -444,6 +445,7 @@ footer {
     color: #404040;
     margin-bottom: 7px;
     margin-top: 10px;
+    width: 430px    ;
 }
 
 .input-email {
@@ -475,6 +477,10 @@ input.input-email:focus {
     cursor: pointer;
     height: 3vh;
     padding: 3px;
+}
+
+.about{
+    width: 300px;
 }
 
 .about-us-footer {
