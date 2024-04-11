@@ -15,15 +15,18 @@ from watcheck.watch.models import Watch
 
 # Create your views here.
 def home(request):
-    return render(request, template_name='common/home.html')
+    is_open_home = 'the page is open'
+    return render(request, template_name='common/home.html', context={"is_open_home": is_open_home})
 
 
 def about(request):
-    return render(request, template_name='common/about-us.html')
+    is_open_about = 'the page is open'
+    return render(request, template_name='common/about-us.html', context={"is_open_about": is_open_about})
 
 
 def stores(request):
-    return render(request, template_name='common/stores.html')
+    is_open_stores = 'the page is open'
+    return render(request, template_name='common/stores.html', context={"is_open_stores": is_open_stores})
 
 
 def search_view(request):
@@ -87,8 +90,7 @@ def checkout(request, pk):
             if form.is_valid():
                 order = form.save(commit=False)
                 order.current_profile = user
-                order_watches_brand = [watch.brand for watch in watches]
-                order.brand_watch = tuple(order_watches_brand)
+                order.current_watch = Watch.objects.get(watch_code__in=watches_codes)
                 order.save()
                 bag_elements.delete()
                 return redirect('home')
@@ -113,3 +115,12 @@ def checkout(request, pk):
 
 def guarantee(request):
     return render(request, template_name='common/guarantee and warranty.html')
+
+
+def check_all_orders(request):
+    all_watches = Watch.objects.all()
+    context = {
+        'all_watches': all_watches
+    }
+
+    return render(request, template_name='common/all_orders.html', context=context)

@@ -1,7 +1,7 @@
 #bag-main {
     background-color: #000000;
     padding-bottom: 120px;
-    height: 770px;
+    min-height: 770px;
 }
 
 .bag-header {

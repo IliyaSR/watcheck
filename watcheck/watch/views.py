@@ -20,8 +20,10 @@ def string_to_integer_func(element):
 # Create your views here.
 def shop(request):
     watches = Watch.objects.all()
+    is_open_shop = 'the page is open'
     context = {
-        'watches': watches
+        'watches': watches,
+        'is_open_shop' : is_open_shop
     }
 
     return render(request, template_name='watch/shop.html', context=context)

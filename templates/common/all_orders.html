@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block main_content %}
+    <main class="all_orders-main">
+        <div class="all-orders-container">
+            <table>
+                <tr>
+                    <th>
+                        Watches
+                    </th>
+                    <th>
+                        Watches code
+                    </th>
+                    <th>
+                        Count orders
+                    </th>
+                </tr>
+                {% for watch in all_watches %}
+                    <tr>
+                        <td>
+                            {{ watch.brand }} {{ watch.model }}
+                        </td>
+                        <td>
+                            {{ watch.watch_code }}
+                        </td>
+                        <td>
+                            {{ watch.order_set.count }}
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+{% endblock %}

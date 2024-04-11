@@ -1,0 +1,22 @@
+.all_orders-main {
+    background-color: #000000;
+    padding: 100px;
+}
+
+.all-orders-container {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+table {
+    padding: 100px;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 10px;
+}
