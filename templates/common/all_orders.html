@@ -2,8 +2,12 @@
 {% block main_content %}
     <main class="all_orders-main">
         <div class="all-orders-container">
+            <h1>ALL ORDERS</h1>
             <table>
                 <tr>
+                    <th>
+                        Watches
+                    </th>
                     <th>
                         Watches
                     </th>
@@ -11,19 +15,22 @@
                         Watches code
                     </th>
                     <th>
-                        Count orders
+                        By user
                     </th>
                 </tr>
-                {% for watch in all_watches %}
+                {% for order in all_orders %}
                     <tr>
                         <td>
-                            {{ watch.brand }} {{ watch.model }}
+                            {{ order.pk}}
                         </td>
                         <td>
-                            {{ watch.watch_code }}
+                            {{ order.current_watch.brand }} {{ order.current_watch.model }}
                         </td>
                         <td>
-                            {{ watch.order_set.count }}
+                            {{ order.current_watch.watch_code }}
+                        </td>
+                        <td>
+                            {{ order.current_profile.username }}
                         </td>
 
                     </tr>

@@ -1,7 +1,7 @@
 from itertools import chain
 
-from django.contrib.auth.decorators import login_required
-from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.core.exceptions import ObjectDoesNotExist, PermissionDenied
 from django.core.mail import send_mail
 from django.db.models import Q
 from django.shortcuts import render, redirect
@@ -11,6 +11,10 @@ from watcheck.accounts.models import Account, Address
 from watcheck.common.forms import OrderForm
 from watcheck.common.models import Bag, Order
 from watcheck.watch.models import Watch
+
+
+def staff_required(user):
+    return user.is_superuser or user.is_staff
 
 
 # Create your views here.
@@ -117,10 +121,12 @@ def guarantee(request):
     return render(request, template_name='common/guarantee and warranty.html')
 
 
+@login_required(login_url='sign_in')
+@user_passes_test(staff_required)
 def check_all_orders(request):
-    all_watches = Watch.objects.all()
+    all_orders = Order.objects.all()
     context = {
-        'all_watches': all_watches
+        'all_orders': all_orders
     }
 
     return render(request, template_name='common/all_orders.html', context=context)
