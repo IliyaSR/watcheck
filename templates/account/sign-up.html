@@ -9,58 +9,20 @@
                 <a href="{% url 'sign_in' %}">SIGN IN</a>
             </div>
             <div class="horizontal-line"></div>
-            <p class="some-p">SIGN UP WITH...</p>
-            <div class="icons">
-                <a class="google">
-                    <img src="../../staticfiles/images/Group%201000003609.png" alt="">
-                    <p>GOOGLE</p>
-                </a>
-                <a class="facebook">
-                    <img src="../../staticfiles/images/Frame.png" alt="">
-                    <p>FACEBOOK</p>
-                </a>
-            </div>
-            <p class="sign-up-social">Signing up with social is super quick. No extra passwords to remember - no brain
-                fail.
-                Don't worry, we'd never share any of your data or post anything on your behalf.</p>
             <form class="container-main" method="post" action="{% url 'sign_up' %}">
-                <h3>OR SIGN UP WITH EMAIL</h3>
+                <h3>SIGN UP</h3>
                 <p class="email-sign-in">EMAIL ADDRESS:</p>
+                {{ form.email.errors }}
                 {{ form.email }}
-                {% if form.errors %}
-                    {% for field, error_list in form.errors.items %}
-                        {% if field == 'email' %}
-                            <div>
-                                {{ error_list }}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-                <p class="confirm-email">We’ll send your order confirmation here.</p>
                 <p class="first-name-sign-in">USERNAME:</p>
+                {{ form.username.errors }}
                 {{ form.username }}
-                {% if form.errors %}
-                    {% for field, error_list in form.errors.items %}
-                        {% if field == 'username' %}
-                            <div>
-                                {{ error_list }}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
                 <p class="password-sign-in">PASSWORD:</p>
+                {{ form.password1.errors }}
                 {{ form.password1 }}
                 <p class="password-sign-in">CONFIRM PASSWORD:</p>
+                {{ form.password2.errors }}
                 {{ form.password2 }}
-                {% if form.errors %}
-                    {% for field, error_list in form.errors.items %}
-                        {% if field == 'password2' %}
-                            <div>
-                                {{ error_list }}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
 
                 {% csrf_token %}
                 <button class="sign-up-button-big" style="cursor: pointer">JOIN WATCHECK</button>

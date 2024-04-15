@@ -364,22 +364,14 @@ footer {
     padding-top: 10px;
 }
 
-.customer-service-content p {
-    font-family: 'Poppins';
-    font-weight: lighter;
-    color: #404040;
-    font-size: 14px;
-    margin-bottom: 0;
-    margin-top: 7px;
-}
 
-.customer-service-content a {
+.customer-service a {
     font-family: 'Poppins';
     font-weight: lighter;
     color: #404040;
     font-size: 14px;
     margin-bottom: 0;
-    margin-top: 7px;
+    padding-top: 7px;
     text-decoration: none;
 }
 
@@ -409,26 +401,17 @@ footer {
 }
 
 .first-about {
-    margin-top: 7px;
     padding-right: 130px;
+    width: 200px;
 }
 
-.about-content p {
+
+.about a {
     font-family: 'Poppins';
     font-weight: lighter;
     color: #404040;
     font-size: 14px;
     margin-bottom: 0;
-    margin-top: 7px;
-}
-
-.about-content a {
-    font-family: 'Poppins';
-    font-weight: lighter;
-    color: #404040;
-    font-size: 14px;
-    margin-bottom: 0;
-    margin-top: 7px;
     text-decoration: none;
 }
 
@@ -445,7 +428,7 @@ footer {
     color: #404040;
     margin-bottom: 7px;
     margin-top: 10px;
-    width: 430px    ;
+    width: 430px;
 }
 
 .input-email {
@@ -479,7 +462,7 @@ input.input-email:focus {
     padding: 3px;
 }
 
-.about{
+.about {
     width: 300px;
 }
 
@@ -490,5 +473,9 @@ input.input-email:focus {
     color: #404040;
     font-size: 14px;
     margin-bottom: 0;
+    margin-top: 7px;
+}
+
+.guarantee-button {
     margin-top: 7px;
 }

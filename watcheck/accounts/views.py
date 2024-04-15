@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView
 
 from watcheck.accounts.forms import RegisterForm, LoginForm, AddressForm, EditAccountForm, ChangePassword, \
-    EditAddressForm, PasswordReset
+    EditAddressForm
 from watcheck.accounts.models import Account, Address
 from watcheck.common.models import Order
 
@@ -71,6 +71,8 @@ def addresses(request, pk):
                 address.current_profile = user
                 address.save()
                 return redirect('account-details', pk)
+            else:
+                return render(request, template_name='account/shipping-addresses.html', context={'form': form})
         else:
             form = EditAddressForm(instance=address, initial=address.__dict__)
 
@@ -89,6 +91,8 @@ def addresses(request, pk):
                 address.current_profile = user
                 address.save()
                 return redirect('account-details', pk)
+            else:
+                return render(request, template_name='account/shipping-addresses.html', context={'form': form})
         else:
             form = EditAddressForm()
 

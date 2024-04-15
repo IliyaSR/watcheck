@@ -1,6 +1,4 @@
-from django.contrib.auth import authenticate
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField, PasswordChangeForm, \
-    PasswordResetForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField, PasswordChangeForm
 from django import forms
 
 from watcheck.accounts.models import Account, Address
@@ -66,6 +64,15 @@ class AddressForm(forms.ModelForm):
     class Meta:
         model = Address
         fields = ['first_name', 'last_name', 'address', 'town', 'postcode', 'phone', 'email']
+        labels = {
+            'first_name': 'FIRST NAME',
+            'last_name': 'LAST NAME',
+            'address': 'ADDRESS',
+            'town': 'TOWN',
+            'postcode': 'POSTCODE',
+            'phone': 'PHONE',
+            'email': 'EMAIL '
+        }
         widgets = {
             'first_name': forms.TextInput(
                 attrs={'class': 'first-name'}
@@ -143,6 +150,3 @@ class ChangePassword(PasswordChangeForm):
         )
     )
 
-
-class PasswordReset(PasswordResetForm):
-    pass

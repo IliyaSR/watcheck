@@ -2,6 +2,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 from watcheck.accounts.models import Account
+from watcheck.common.validators import only_capital_letters
 
 
 # Create your models here.
@@ -12,10 +13,10 @@ class Watch(models.Model):
     second_small_image = models.ImageField(upload_to='images/')
     third_small_image = models.ImageField(upload_to='images/', blank=True, null=True)
     fourth_small_image = models.ImageField(upload_to='images/', blank=True, null=True)
-    brand = models.CharField(max_length=30)
+    brand = models.CharField(max_length=30, validators=(only_capital_letters,))
     model = models.CharField(max_length=30)
     details_text = models.TextField()
-    watch_code = models.CharField(max_length=20)
+    watch_code = models.CharField(max_length=20, validators=(only_capital_letters,))
     price = models.IntegerField()
     case_material = models.CharField(max_length=30)
     strap_material = models.CharField(max_length=30)

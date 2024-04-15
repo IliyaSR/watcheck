@@ -34,4 +34,5 @@ class AccountAdmin(auth_admin.UserAdmin):
 
 @admin.register(Address)
 class AddressAdmin(admin.ModelAdmin):
-    pass
+    model = Account
+    list_display = ('email', 'phone')

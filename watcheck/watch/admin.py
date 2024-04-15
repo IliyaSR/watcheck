@@ -14,4 +14,4 @@ class WatchAdmin(admin.ModelAdmin):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['id', 'rating', 'rated_watch', 'person_review']

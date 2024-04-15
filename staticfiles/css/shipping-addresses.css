@@ -6,6 +6,7 @@
     color: #000000;
     font-size: 30px;
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .shipping-addresses label, input {
@@ -23,20 +24,21 @@
 .first-name {
     width: 300px;
 }
-
-.user-names {
-    display: flex;
+.errorlist li{
+    font-size: 12px;
+    display: block;
 }
+
+.address-input {
+    width: 640px;
+}
+
 
 .county-region {
     width: 640px;
     margin-bottom: 10px;
 }
 
-.address-input {
-    width: 640px;
-    margin-bottom: 10px;
-}
 
 .address-button {
     margin-top: 20px;

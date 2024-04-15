@@ -130,3 +130,19 @@ def check_all_orders(request):
     }
 
     return render(request, template_name='common/all_orders.html', context=context)
+
+
+def contact_us(request):
+    return render(request, template_name='common/contact-us.html')
+
+
+def payment_options(request):
+    return render(request, template_name='common/payment-options.html')
+
+
+def shipping_policy(request):
+    return render(request, template_name='common/shipping-policy.html')
+
+
+def faq(request):
+    return render(request, template_name='common/faq.html')

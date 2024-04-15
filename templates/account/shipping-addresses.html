@@ -4,24 +4,34 @@
     <form class="shipping-addresses" method="post" action="{% url 'addresses' user.pk %}">
         <h3 class="shipping-addresses-header">My address</h3>
         <div class="user-names">
-            <label for="">
-                FIRST NAME
-                {{ form.first_name }}
-            </label>
-            <label for="">
+            <div>
+                {{ form.errors.first_name }}
+                <label for="">
+                    FIRST NAME
+                    {{ form.first_name }}
+                </label>
+            </div>
+            <div>
+                {{ form.errors.last_name }}
+                <label for="">
                 LAST NAME
                 {{ form.last_name }}
             </label>
+            </div>
         </div>
         <label for="">
+            {{ form.errors.address }}
             ADDRESS
             {{ form.address }}
         </label>
         <div class="user-names">
-            <label for="">
+           <div>
+               {{ form.errors.town }}
+                <label for="">
                 TOWN
                 {{ form.town }}
             </label>
+           </div>
             <label for="">
                 POST CODE
                 {{ form.postcode }}
@@ -32,10 +42,13 @@
                 PHONE
                 {{ form.phone }}
             </label>
-            <label for="">
+            <div>
+                {{ form.errors.email }}
+                <label for="">
                 EMAIL
                 {{ form.email }}
             </label>
+            </div>
         </div>
         {% csrf_token %}
         {% if address %}

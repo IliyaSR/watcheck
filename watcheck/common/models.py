@@ -1,7 +1,8 @@
-from django.core.validators import MaxValueValidator
+from django.core.validators import MaxValueValidator, MinLengthValidator
 from django.db import models
 
 from watcheck.accounts.models import Address, Account
+from watcheck.accounts.validators import only_letters_name, only_letters_town
 from watcheck.watch.models import Watch
 
 
@@ -15,10 +16,10 @@ class Bag(models.Model):
 
 
 class Order(models.Model):
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
+    first_name = models.CharField(max_length=20, validators=[MinLengthValidator(2), only_letters_name])
+    last_name = models.CharField(max_length=20, validators=[MinLengthValidator(2), only_letters_name])
     address = models.CharField(max_length=20)
-    town = models.CharField(max_length=20)
+    town = models.CharField(max_length=20, validators=[MinLengthValidator(2), only_letters_town])
     postcode = models.IntegerField()
     phone = models.PositiveIntegerField(validators=[MaxValueValidator(9999999999)])
     email = models.EmailField(max_length=202)
