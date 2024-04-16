@@ -94,8 +94,8 @@ def checkout(request, pk):
             if form.is_valid():
                 order = form.save(commit=False)
                 order.current_profile = user
-                order.current_watch = Watch.objects.get(watch_code__in=watches_codes)
                 order.save()
+                order.current_watch.set(watches)
                 bag_elements.delete()
                 return redirect('home')
         if 'clean' in request.POST:
@@ -125,6 +125,7 @@ def guarantee(request):
 @user_passes_test(staff_required)
 def check_all_orders(request):
     all_orders = Order.objects.all()
+
     context = {
         'all_orders': all_orders
     }

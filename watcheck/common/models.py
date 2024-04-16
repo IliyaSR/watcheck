@@ -24,4 +24,4 @@ class Order(models.Model):
     phone = models.PositiveIntegerField(validators=[MaxValueValidator(9999999999)])
     email = models.EmailField(max_length=202)
     current_profile = models.ForeignKey(Account, on_delete=models.CASCADE)
-    current_watch = models.ForeignKey(Watch, on_delete=models.CASCADE)
+    current_watch = models.ManyToManyField(Watch)

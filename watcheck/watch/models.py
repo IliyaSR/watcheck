@@ -7,13 +7,21 @@ from watcheck.common.validators import only_capital_letters
 
 # Create your models here.
 class Watch(models.Model):
+    specific_brands = (
+        ('ARNOLD & SON', "ARNOLD & SON"),
+        ('FESTINA', 'FESTINA'),
+        ('LIGE', 'LIGE'),
+        ('MVMT', 'MVMT'),
+        ('FOSSIL', 'FOSSIL')
+    )
+
     main_image = models.ImageField(upload_to='images/')
     image_for_shop_page = models.ImageField(upload_to='images/')
     first_small_image = models.ImageField(upload_to='images/')
     second_small_image = models.ImageField(upload_to='images/')
     third_small_image = models.ImageField(upload_to='images/', blank=True, null=True)
     fourth_small_image = models.ImageField(upload_to='images/', blank=True, null=True)
-    brand = models.CharField(max_length=30, validators=(only_capital_letters,))
+    brand = models.CharField(max_length=30, validators=(only_capital_letters,), choices=specific_brands)
     model = models.CharField(max_length=30)
     details_text = models.TextField()
     watch_code = models.CharField(max_length=20, validators=(only_capital_letters,))
