@@ -127,7 +127,7 @@ def check_all_orders(request):
     all_orders = Order.objects.all()
 
     context = {
-        'all_orders': all_orders
+        'all_orders': all_orders,
     }
 
     return render(request, template_name='common/all_orders.html', context=context)

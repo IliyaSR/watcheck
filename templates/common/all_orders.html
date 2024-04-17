@@ -6,16 +6,13 @@
             <table>
                 <tr>
                     <th>
-                        Watches
-                    </th>
-                    <th>
-                        Watches
-                    </th>
-                    <th>
-                        Watches code
+                        Orders
                     </th>
                     <th>
                         By user
+                    </th>
+                    <th>
+                        First Name
                     </th>
                 </tr>
                 {% for order in all_orders %}
@@ -24,13 +21,10 @@
                             {{ order.pk}}
                         </td>
                         <td>
-                            {{ order.current_watch }} {{ order.current_watch.model }}
-                        </td>
-                        <td>
-                            {{ order.current_watch.watch_code }}
-                        </td>
-                        <td>
                             {{ order.current_profile.username }}
+                        </td>
+                        <td>
+                            {{ order.first_name }}
                         </td>
 
                     </tr>
