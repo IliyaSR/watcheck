@@ -18,4 +18,4 @@ Watcheck is an exclusive online store dedicated to offering a carefully curated 
 - **Django**: Web framework
 - **HTML & CSS**: Frontend development
 - **PostgreSQL**: Database management
-- **JavaScript**: Interactive web elementss
+- **JavaScript**: Interactive web elements
